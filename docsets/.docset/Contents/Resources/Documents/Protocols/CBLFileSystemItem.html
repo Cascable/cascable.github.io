@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CBLFileSystemItem Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Protocol/CBLFileSystemItem" class="dashAnchor"></a>
+    <a title="CBLFileSystemItem Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html"> Docs</a>
+          <span class="no-mobile"> (99% documented)</span>
+        </p>
+    
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html"> Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          CBLFileSystemItem Protocol Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>CBLFileSystemItem</h1>
+                <div class="declaration">
+                  <div class="language">
+                    <p class="aside-title">Objective-C</p>
+                    <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLFileSystemItem</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                  </div>
+                  <div class="language">
+                    <p class="aside-title">Swift</p>
+                    <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">FileSystemItem</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                  </div>
+                </div>
+              <p>A filesystem item represents a file or folder on the camera&rsquo;s storage.</p>
+
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(py)metadataLoaded"></a>
+                      <a name="//apple_ref/objc/Property/metadataLoaded" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(py)metadataLoaded">metadataLoaded</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns <code>YES</code> if the item&rsquo;s metadata has been loaded, otherwise <code>NO</code>. </p>
+
+<p>If metadata hasn&rsquo;t been loaded, many properties will return <code>nil</code> or zero values.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">metadataLoaded</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">metadataLoaded</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(py)name"></a>
+                      <a name="//apple_ref/objc/Property/name" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(py)name">name</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the name of the file.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(py)size"></a>
+                      <a name="//apple_ref/objc/Property/size" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(py)size">size</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the size of the file, or zero for directories or items whose metadata hasn&rsquo;t been loaded.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">size</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">UInt</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(py)handle"></a>
+                      <a name="//apple_ref/objc/Property/handle" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(py)handle">handle</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the internal handle to the file.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span> <span class="n">handle</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">handle</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(py)isProtected"></a>
+                      <a name="//apple_ref/objc/Property/isProtected" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(py)isProtected">isProtected</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns <code>YES</code> if the file is protected (i.e., cannot be deleted), otherwise <code>NO</code>.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isProtected</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isProtected</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(py)dateCreated"></a>
+                      <a name="//apple_ref/objc/Property/dateCreated" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(py)dateCreated">dateCreated</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the creation date of the file, or <code>nil</code> for items whose metadata hasn&rsquo;t been loaded.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">dateCreated</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateCreated</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(py)rating"></a>
+                      <a name="//apple_ref/objc/Property/rating" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(py)rating">rating</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The item&rsquo;s rating. Follows the IPTC StarRating spec (0 = no rating, otherwise 1-5 stars).</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">rating</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">rating</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(py)parent"></a>
+                      <a name="//apple_ref/objc/Property/parent" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(py)parent">parent</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the parent item of this file, or <code>nil</code> if the receiver represents the root directory.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/CBLFileSystemFolderItem.html">CBLFileSystemFolderItem</a></span><span class="o">&gt;</span> <span class="n">parent</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">parent</span><span class="p">:</span> <span class="kt">FileSystemFolderItem</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(py)storage"></a>
+                      <a name="//apple_ref/objc/Property/storage" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(py)storage">storage</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the storage device on which this file is placed.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/CBLFileStorage.html">CBLFileStorage</a></span><span class="o">&gt;</span> <span class="n">storage</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">storage</span><span class="p">:</span> <span class="kt">FileStorage</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(py)isKnownImageType"></a>
+                      <a name="//apple_ref/objc/Property/isKnownImageType" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(py)isKnownImageType">isKnownImageType</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns <code>YES</code> if the file is a known image type, else <code>NO</code>.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isKnownImageType</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isKnownImageType</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(py)isKnownVideoType"></a>
+                      <a name="//apple_ref/objc/Property/isKnownVideoType" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(py)isKnownVideoType">isKnownVideoType</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns <code>YES</code> if the file is a know video type, else <code>NO</code>.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isKnownVideoType</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isKnownVideoType</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(im)removeFromDevice:"></a>
+                      <a name="//apple_ref/objc/Method/-removeFromDevice:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(im)removeFromDevice:">-removeFromDevice:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Permanently removes the file from the device.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeFromDevice</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeFromDevice</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ErrorableOperationCallback</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(py)removalRemovesPairedItems"></a>
+                      <a name="//apple_ref/objc/Property/removalRemovesPairedItems" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(py)removalRemovesPairedItems">removalRemovesPairedItems</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns <code>YES</code> if removing this item could have side effects — for example, removing one image from a RAW+JPEG pair will also remove the other.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">removalRemovesPairedItems</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">removalRemovesPairedItems</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(im)loadMetadata:"></a>
+                      <a name="//apple_ref/objc/Method/-loadMetadata:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(im)loadMetadata:">-loadMetadata:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Loads the metadata for the receiver if it hasn&rsquo;t already been loaded. </p>
+
+<p>If metadata has already been loaded, the callback block will be immediately called with no error.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">loadMetadata</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">loadMetadata</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ErrorableOperationCallback</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>block</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block to trigger after loading completes or fails. Will be called on the main queue.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(im)fetchThumbnailWithPreflightBlock:thumbnailDeliveryBlock:"></a>
+                      <a name="//apple_ref/objc/Method/-fetchThumbnailWithPreflightBlock:thumbnailDeliveryBlock:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(im)fetchThumbnailWithPreflightBlock:thumbnailDeliveryBlock:">-fetchThumbnailWithPreflightBlock:<wbr>thumbnailDeliveryBlock:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Fetch the thumbnail of the given file system item.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+    <span class="nf">fetchThumbnailWithPreflightBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImagePreflight">CBLPreviewImagePreflight</a></span><span class="p">)</span><span class="nv">preflight</span>
+              <span class="nf">thumbnailDeliveryBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImageDelivery">CBLPreviewImageDelivery</a></span><span class="p">)</span><span class="nv">delivery</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchThumbnail</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImagePreflight</span><span class="p">,</span> <span class="n">thumbnailDeliveryBlock</span> <span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImageDelivery</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>preflight</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A block that will be called when the thumbnail is about to be fetched. Return <code>YES</code> to allow the 
+operation to continue, or <code>NO</code> to cancel.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>delivery</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block that will be called when the thumbnail has successfully been fetched, or an error occurred.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(im)fetchThumbnailWithPreflightBlock:thumbnailDeliveryBlock:deliveryQueue:"></a>
+                      <a name="//apple_ref/objc/Method/-fetchThumbnailWithPreflightBlock:thumbnailDeliveryBlock:deliveryQueue:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(im)fetchThumbnailWithPreflightBlock:thumbnailDeliveryBlock:deliveryQueue:">-fetchThumbnailWithPreflightBlock:<wbr>thumbnailDeliveryBlock:<wbr>deliveryQueue:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Fetch the thumbnail of the given file system item.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+    <span class="nf">fetchThumbnailWithPreflightBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImagePreflight">CBLPreviewImagePreflight</a></span><span class="p">)</span><span class="nv">preflight</span>
+              <span class="nf">thumbnailDeliveryBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImageDelivery">CBLPreviewImageDelivery</a></span><span class="p">)</span><span class="nv">delivery</span>
+                       <span class="nf">deliveryQueue</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">deliveryQueue</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchThumbnail</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImagePreflight</span><span class="p">,</span> <span class="n">thumbnailDeliveryBlock</span> <span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImageDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>preflight</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A block that will be called when the thumbnail is about to be fetched. Return <code>YES</code> to allow the
+operation to continue, or <code>NO</code> to cancel.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>delivery</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block that will be called when the thumbnail has successfully been fetched, or an error occurred.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>deliveryQueue</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The queue on which the delivery block will be called.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(im)fetchEXIFMetadataWithPreflightBlock:metadataDeliveryBlock:"></a>
+                      <a name="//apple_ref/objc/Method/-fetchEXIFMetadataWithPreflightBlock:metadataDeliveryBlock:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(im)fetchEXIFMetadataWithPreflightBlock:metadataDeliveryBlock:">-fetchEXIFMetadataWithPreflightBlock:<wbr>metadataDeliveryBlock:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Fetch image metadata (EXIF, IPTC, etc) for the given file system item. Only works with known image types.</p>
+
+<p>The returned metadata is in the form of an ImageIO-compatible dictionary. See <code>CGImageProperties.h</code> for details.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fetchEXIFMetadataWithPreflightBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFPreflight">CBLEXIFPreflight</a></span><span class="p">)</span><span class="nv">preflight</span>
+                      <span class="nf">metadataDeliveryBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFDelivery">CBLEXIFDelivery</a></span><span class="p">)</span><span class="nv">delivery</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchEXIFMetadata</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">EXIFPreflight</span><span class="p">,</span> <span class="n">metadataDeliveryBlock</span> <span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">EXIFDelivery</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>preflight</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A block that will be called when the metadata is about to be fetched. Return <code>YES</code> to allow the
+operation to continue, or <code>NO</code> to cancel.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>delivery</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block that will be called when the metadata has successfully been fetched, or an error occurred.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(im)fetchEXIFMetadataWithPreflightBlock:metadataDeliveryBlock:deliveryQueue:"></a>
+                      <a name="//apple_ref/objc/Method/-fetchEXIFMetadataWithPreflightBlock:metadataDeliveryBlock:deliveryQueue:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(im)fetchEXIFMetadataWithPreflightBlock:metadataDeliveryBlock:deliveryQueue:">-fetchEXIFMetadataWithPreflightBlock:<wbr>metadataDeliveryBlock:<wbr>deliveryQueue:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Fetch image metadata (EXIF, IPTC, etc) for the given file system item. Only works with known image types.</p>
+
+<p>The returned metadata is in the form of an ImageIO-compatible dictionary. See <code>CGImageProperties.h</code> for details.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fetchEXIFMetadataWithPreflightBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFPreflight">CBLEXIFPreflight</a></span><span class="p">)</span><span class="nv">preflight</span>
+                      <span class="nf">metadataDeliveryBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFDelivery">CBLEXIFDelivery</a></span><span class="p">)</span><span class="nv">delivery</span>
+                              <span class="nf">deliveryQueue</span><span class="p">:</span>
+                                  <span class="p">(</span><span class="n">nonnull</span> <span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">deliveryQueue</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchEXIFMetadata</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">EXIFPreflight</span><span class="p">,</span> <span class="n">metadataDeliveryBlock</span> <span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">EXIFDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>preflight</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A block that will be called when the metadata is about to be fetched. Return <code>YES</code> to allow the
+operation to continue, or <code>NO</code> to cancel.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>delivery</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block that will be called when the metadata has successfully been fetched, or an error occurred.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>deliveryQueue</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The queue on which the delivery block will be called.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(im)fetchPreviewWithPreflightBlock:previewDeliveryBlock:"></a>
+                      <a name="//apple_ref/objc/Method/-fetchPreviewWithPreflightBlock:previewDeliveryBlock:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(im)fetchPreviewWithPreflightBlock:previewDeliveryBlock:">-fetchPreviewWithPreflightBlock:<wbr>previewDeliveryBlock:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Fetch a preview of the given file system item.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+    <span class="nf">fetchPreviewWithPreflightBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImagePreflight">CBLPreviewImagePreflight</a></span><span class="p">)</span><span class="nv">preflight</span>
+              <span class="nf">previewDeliveryBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImageDelivery">CBLPreviewImageDelivery</a></span><span class="p">)</span><span class="nv">delivery</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchPreview</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImagePreflight</span><span class="p">,</span> <span class="n">previewDeliveryBlock</span> <span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImageDelivery</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>preflight</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A block that will be called when the preview is about to be fetched. Return <code>YES</code> to allow the
+operation to continue, or <code>NO</code> to cancel.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>delivery</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block that will be called when the preview has successfully been fetched, or an error occurred.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(im)fetchPreviewWithPreflightBlock:previewDeliveryBlock:deliveryQueue:"></a>
+                      <a name="//apple_ref/objc/Method/-fetchPreviewWithPreflightBlock:previewDeliveryBlock:deliveryQueue:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(im)fetchPreviewWithPreflightBlock:previewDeliveryBlock:deliveryQueue:">-fetchPreviewWithPreflightBlock:<wbr>previewDeliveryBlock:<wbr>deliveryQueue:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Fetch a preview of the given file system item.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fetchPreviewWithPreflightBlock</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImagePreflight">CBLPreviewImagePreflight</a></span><span class="p">)</span><span class="nv">preflight</span>
+                  <span class="nf">previewDeliveryBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImageDelivery">CBLPreviewImageDelivery</a></span><span class="p">)</span><span class="nv">delivery</span>
+                         <span class="nf">deliveryQueue</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">deliveryQueue</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchPreview</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImagePreflight</span><span class="p">,</span> <span class="n">previewDeliveryBlock</span> <span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImageDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>preflight</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A block that will be called when the preview is about to be fetched. Return <code>YES</code> to allow the
+operation to continue, or <code>NO</code> to cancel.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>delivery</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block that will be called when the preview has successfully been fetched, or an error occurred.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>deliveryQueue</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The queue on which the delivery block will be called.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(im)streamItemWithPreflightBlock:chunkDeliveryBlock:completeBlock:"></a>
+                      <a name="//apple_ref/objc/Method/-streamItemWithPreflightBlock:chunkDeliveryBlock:completeBlock:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(im)streamItemWithPreflightBlock:chunkDeliveryBlock:completeBlock:">-streamItemWithPreflightBlock:<wbr>chunkDeliveryBlock:<wbr>completeBlock:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Stream a file from the device.</p>
+
+<p>File streaming takes place in a series of block callbacks — one to allow you to set up any state
+required to receive the file data, then a series of delivery callbacks containing chunks of the file,
+then a completion callback to allow post-stream cleanup.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>The callback blocks will be executed on the main queue.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">streamItemWithPreflightBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamPreflight">CBLFileStreamPreflight</a></span><span class="p">)</span><span class="nv">preflight</span>
+                  <span class="nf">chunkDeliveryBlock</span><span class="p">:</span>
+                      <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamChunkDelivery">CBLFileStreamChunkDelivery</a></span><span class="p">)</span><span class="nv">chunkDelivery</span>
+                       <span class="nf">completeBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamCompletion">CBLFileStreamCompletion</a></span><span class="p">)</span><span class="nv">complete</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">streamItem</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">FileStreamPreflight</span><span class="p">,</span> <span class="n">chunkDeliveryBlock</span> <span class="nv">chunkDelivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">FileStreamChunkDelivery</span><span class="p">,</span> <span class="nv">complete</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">FileStreamCompletion</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>preflight</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Block to be called exactly once before the stream is started. The value returned
+here will be passed as the <code>context</code> parameter of the <code>chunkDelivery</code> and <code>complete</code> blocks.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>chunkDelivery</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>This block will be called zero or more times in succession to deliver the file&rsquo;s
+data. The <code>context</code> parameter of this block will contain the value returned in the <code>preflight</code> block.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>complete</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Block to be called exactly once after the last data chunk has been delivered (if any).
+If the stream failed or was cancelled, the <code>error</code> parameter will be non-nil and you should delete
+anything written to disk as the file won&rsquo;t be complete. The <code>context</code> parameter of this block will
+contain the value returned in the <code>preflight</code> block.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(im)streamItemWithPreflightBlock:preflightQueue:chunkDeliveryBlock:deliveryQueue:completeBlock:completeQueue:"></a>
+                      <a name="//apple_ref/objc/Method/-streamItemWithPreflightBlock:preflightQueue:chunkDeliveryBlock:deliveryQueue:completeBlock:completeQueue:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(im)streamItemWithPreflightBlock:preflightQueue:chunkDeliveryBlock:deliveryQueue:completeBlock:completeQueue:">-streamItemWithPreflightBlock:<wbr>preflightQueue:<wbr>chunkDeliveryBlock:<wbr>deliveryQueue:<wbr>completeBlock:<wbr>completeQueue:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Stream a file from the device.</p>
+
+<p>File streaming takes place in a series of block callbacks — one to allow you to set up any state
+required to receive the file data, then a series of delivery callbacks containing chunks of the file,
+then a completion callback to allow post-stream cleanup.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">streamItemWithPreflightBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamPreflight">CBLFileStreamPreflight</a></span><span class="p">)</span><span class="nv">preflight</span>
+                      <span class="nf">preflightQueue</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">preflightQueue</span>
+                  <span class="nf">chunkDeliveryBlock</span><span class="p">:</span>
+                      <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamChunkDelivery">CBLFileStreamChunkDelivery</a></span><span class="p">)</span><span class="nv">chunkDelivery</span>
+                       <span class="nf">deliveryQueue</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">deliveryQueue</span>
+                       <span class="nf">completeBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamCompletion">CBLFileStreamCompletion</a></span><span class="p">)</span><span class="nv">complete</span>
+                       <span class="nf">completeQueue</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">completeQueue</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">streamItem</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">FileStreamPreflight</span><span class="p">,</span> <span class="nv">preflightQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">,</span> <span class="n">chunkDeliveryBlock</span> <span class="nv">chunkDelivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">FileStreamChunkDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">,</span> <span class="nv">complete</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">FileStreamCompletion</span><span class="p">,</span> <span class="n">complete</span> <span class="nv">completeQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>preflight</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Block to be called exactly once before the stream is started. The value returned
+here will be passed as the <code>context</code> parameter of the <code>chunkDelivery</code> and <code>complete</code> blocks.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>preflightQueue</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The queue on which to execute the preflight block.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>chunkDelivery</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>This block will be called zero or more times in succession to deliver the file&rsquo;s
+data. The <code>context</code> parameter of this block will contain the value returned in the <code>preflight</code> block.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>deliveryQueue</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The queue on which to execute the delivery block.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>complete</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Block to be called exactly once after the last data chunk has been delivered (if any).
+If the stream failed or was cancelled, the <code>error</code> parameter will be non-nil and you should delete
+anything written to disk as the file won&rsquo;t be complete. The <code>context</code> parameter of this block will
+contain the value returned in the <code>preflight</code> block.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completeQueue</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The queue on which to execute the completion block.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Categories.html">Categories</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Categories/NSError%28CBL%29.html">NSError(CBL)</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraAEResult.html">CBLCameraAEResult</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraDescriptor.html">CBLCameraDescriptor</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraDiscovery.html">CBLCameraDiscovery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraQRDecoding.html">CBLCameraQRDecoding</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraWiFiDetails.html">CBLCameraWiFiDetails</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLExifHelpers.html">CBLExifHelpers</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLImageManipulationHelpers.html">CBLImageManipulationHelpers</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLImageMetadataWritingHelpers.html">CBLImageMetadataWritingHelpers</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLLicenseVerification.html">CBLLicenseVerification</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLNetworkConfigurationHelper.html">CBLNetworkConfigurationHelper</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLRAWImageDescription.html">CBLRAWImageDescription</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Constants.html">Constants</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyCanon">CBLCameraFamilyCanon</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyFuji">CBLCameraFamilyFuji</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyGeneric">CBLCameraFamilyGeneric</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyNikon">CBLCameraFamilyNikon</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyOlympus">CBLCameraFamilyOlympus</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyPanasonic">CBLCameraFamilyPanasonic</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilySony">CBLCameraFamilySony</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLConnectionFlagSyncCameraClockToSystemClock">CBLConnectionFlagSyncCameraClockToSystemClock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCoreVersions.h@CBLCoreBundleVersion">CBLCoreBundleVersion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCorePluginEntryPoint.h@CBLCorePluginDisplayNameKey">CBLCorePluginDisplayNameKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCorePluginEntryPoint.h@CBLCorePluginEntryPointClassNameKey">CBLCorePluginEntryPointClassNameKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCorePluginEntryPoint.h@CBLCorePluginInfoDictionaryKey">CBLCorePluginInfoDictionaryKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCoreVersions.h@CBLCoreVerboseVersion">CBLCoreVerboseVersion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLDisconnectionFlagPowerOffCamera">CBLDisconnectionFlagPowerOffCamera</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLErrorCodeDescriptionKey">CBLErrorCodeDescriptionKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLErrorDomain">CBLErrorDomain</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLLiveViewOptionFavorHighFrameRate">CBLLiveViewOptionFavorHighFrameRate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLLiveViewOptionSkipImageDecoding">CBLLiveViewOptionSkipImageDecoding</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@CBLNetworkConfigurationSimulatorWiFiInterfaceOverride">CBLNetworkConfigurationSimulatorWiFiInterfaceOverride</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCameraPropertyAPI.h@CBLPropertyCommonValueNone">CBLPropertyCommonValueNone</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLUnderlyingResponseCodeDescriptionKey">CBLUnderlyingResponseCodeDescriptionKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLUnderlyingResponseCodeKey">CBLUnderlyingResponseCodeKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLReachabilityConstants.h@CBLWiFiConnectivityDidChangeNotificationName">CBLWiFiConnectivityDidChangeNotificationName</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraAvailableCommandCategory.html">CBLCameraAvailableCommandCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraConnectionState.html">CBLCameraConnectionState</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraConnectionWarningCategory.html">CBLCameraConnectionWarningCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraConnectionWarningType.html">CBLCameraConnectionWarningType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraDiscoveryMode.html">CBLCameraDiscoveryMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewFrameOrientation.html">CBLCameraLiveViewFrameOrientation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewFramePixelFormat.html">CBLCameraLiveViewFramePixelFormat</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewTerminationReason.html">CBLCameraLiveViewTerminationReason</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewZoomLevel.html">CBLCameraLiveViewZoomLevel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLocation.html">CBLCameraLocation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraSupportedFunctionality.html">CBLCameraSupportedFunctionality</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraTransport.html">CBLCameraTransport</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLErrorCameraDomain.html">CBLErrorCameraDomain</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLErrorCode.html">CBLErrorCode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLExifRotation.html">CBLExifRotation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFileStreamInstruction.html">CBLFileStreamInstruction</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFileSystemModificationOperation.html">CBLFileSystemModificationOperation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFocusDriveAmount.html">CBLFocusDriveAmount</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFocusDriveDirection.html">CBLFocusDriveDirection</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLLicenseVerificationResult.html">CBLLicenseVerificationResult</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCategory.html">CBLPropertyCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyChangeType.html">CBLPropertyChangeType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueAFSystem.html">CBLPropertyCommonValueAFSystem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueAutoExposureMode.html">CBLPropertyCommonValueAutoExposureMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueBatteryLevel.html">CBLPropertyCommonValueBatteryLevel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueBoolean.html">CBLPropertyCommonValueBoolean</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueDriveMode.html">CBLPropertyCommonValueDriveMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueFocusMode.html">CBLPropertyCommonValueFocusMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueLightMeterStatus.html">CBLPropertyCommonValueLightMeterStatus</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueMirrorLockupStage.html">CBLPropertyCommonValueMirrorLockupStage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValuePowerSource.html">CBLPropertyCommonValuePowerSource</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueWhiteBalance.html">CBLPropertyCommonValueWhiteBalance</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyIdentifier.html">CBLPropertyIdentifier</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLStorageSlot.html">CBLStorageSlot</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraConnectionWarning.html">CBLCameraConnectionWarning</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraCore.html">CBLCameraCore</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiagnostics.html">CBLCameraDiagnostics</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiscoveryDelegate.html">CBLCameraDiscoveryDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiscoveryService.html">CBLCameraDiscoveryService</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiscoveryServiceDelegate.html">CBLCameraDiscoveryServiceDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraFileSystem.html">CBLCameraFileSystem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraFocusAndShutter.html">CBLCameraFocusAndShutter</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraLiveView.html">CBLCameraLiveView</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraLiveViewAFArea.html">CBLCameraLiveViewAFArea</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraLiveViewFrame.html">CBLCameraLiveViewFrame</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraManualDiscovery.html">CBLCameraManualDiscovery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraProperties.html">CBLCameraProperties</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraProperty.html">CBLCameraProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraPropertyObservation.html">CBLCameraPropertyObservation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraShotPreviewDelivery.html">CBLCameraShotPreviewDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCoreCameraDiscoveryProvider.html">CBLCoreCameraDiscoveryProvider</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCoreCameraDiscoveryProviderDelegate.html">CBLCoreCameraDiscoveryProviderDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCoreCameraManualDiscoveryProvider.html">CBLCoreCameraManualDiscoveryProvider</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCorePluginEntryPoint.html">CBLCorePluginEntryPoint</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCorePluginRegistration.html">CBLCorePluginRegistration</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLDeviceInfo.html">CBLDeviceInfo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLExposureProperty.html">CBLExposureProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLExposurePropertyValue.html">CBLExposurePropertyValue</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFileStorage.html">CBLFileStorage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFileSystemFolderItem.html">CBLFileSystemFolderItem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFileSystemItem.html">CBLFileSystemItem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFocusInfo.html">CBLFocusInfo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFocusPoint.html">CBLFocusPoint</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLPropertyValue.html">CBLPropertyValue</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Type%20Definitions.html">Type Definitions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionUserInterventionBlock">CBLCameraConnectionUserInterventionBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraManualDiscovery.h@T@CBLCameraCreationOperationCallback">CBLCameraCreationOperationCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraDiscovery.h@T@CBLCameraDiscoveryAvailableDevicesChangedCallback">CBLCameraDiscoveryAvailableDevicesChangedCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraDiscoveryService.h@T@CBLCameraDiscoveryMetadataResolveCallback">CBLCameraDiscoveryMetadataResolveCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraDiscoveryService.h@T@CBLCameraDiscoveryServiceResolveCallback">CBLCameraDiscoveryServiceResolveCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLCameraFamily">CBLCameraFamily</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewFrameDelivery">CBLCameraLiveViewFrameDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewTerminationHandler">CBLCameraLiveViewTerminationHandler</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraObserverToken">CBLCameraObserverToken</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLCameraPropertyObservationCallback">CBLCameraPropertyObservationCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraShotPreviewAvailableBlock">CBLCameraShotPreviewAvailableBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraShotPreviewDelivery.h@T@CBLCameraShotPreviewDeliveryCallback">CBLCameraShotPreviewDeliveryCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFDelivery">CBLEXIFDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFPreflight">CBLEXIFPreflight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileStorage.h@T@CBLFileStorageFilesModifiedObserver">CBLFileStorageFilesModifiedObserver</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileStorage.h@T@CBLFileStorageObserverToken">CBLFileStorageObserverToken</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamChunkDelivery">CBLFileStreamChunkDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamCompletion">CBLFileStreamCompletion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamPreflight">CBLFileStreamPreflight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImageDelivery">CBLPreviewImageDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImagePreflight">CBLPreviewImagePreflight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLPropertyCommonValue">CBLPropertyCommonValue</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Functions.html">Functions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Functions.html#/c:@F@CBLCoreLocalizedString">CBLCoreLocalizedString</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Functions.html#/c:CBLConstants.h@F@CBLFloatAlmostEqual">CBLFloatAlmostEqual</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2021-06-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>

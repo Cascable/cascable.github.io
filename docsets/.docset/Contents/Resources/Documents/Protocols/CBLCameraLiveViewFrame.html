@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CBLCameraLiveViewFrame Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Protocol/CBLCameraLiveViewFrame" class="dashAnchor"></a>
+    <a title="CBLCameraLiveViewFrame Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html"> Docs</a>
+          <span class="no-mobile"> (99% documented)</span>
+        </p>
+    
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html"> Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          CBLCameraLiveViewFrame Protocol Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>CBLCameraLiveViewFrame</h1>
+                <div class="declaration">
+                  <div class="language">
+                    <p class="aside-title">Objective-C</p>
+                    <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraLiveViewFrame</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+
+                  </div>
+                  <div class="language">
+                    <p class="aside-title">Swift</p>
+                    <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">LiveViewFrame</span> <span class="p">:</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                  </div>
+                </div>
+              <p>Represents a single frame of a streaming live view image, along with any associated metadata.</p>
+
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)dateProduced"></a>
+                      <a name="//apple_ref/objc/Property/dateProduced" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)dateProduced">dateProduced</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the date and time at which this frame was generated.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">dateProduced</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateProduced</span><span class="p">:</span> <span class="kt">Date</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)brightnessHistogramPlane"></a>
+                      <a name="//apple_ref/objc/Property/brightnessHistogramPlane" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)brightnessHistogramPlane">brightnessHistogramPlane</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns an array of numbers representing the brigtness plane of the image&rsquo;s histogram, or <code>nil</code> if not available.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span> <span class="o">*</span><span class="n">brightnessHistogramPlane</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">brightnessHistogramPlane</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)redHistogramPlane"></a>
+                      <a name="//apple_ref/objc/Property/redHistogramPlane" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)redHistogramPlane">redHistogramPlane</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns an array of numbers representing the red plane of the image&rsquo;s histogram, or <code>nil</code> if not available.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span> <span class="o">*</span><span class="n">redHistogramPlane</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">redHistogramPlane</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)greenHistogramPlane"></a>
+                      <a name="//apple_ref/objc/Property/greenHistogramPlane" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)greenHistogramPlane">greenHistogramPlane</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns an array of numbers representing the green plane of the image&rsquo;s histogram, or <code>nil</code> if not available.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span> <span class="o">*</span><span class="n">greenHistogramPlane</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">greenHistogramPlane</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)blueHistogramPlane"></a>
+                      <a name="//apple_ref/objc/Property/blueHistogramPlane" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)blueHistogramPlane">blueHistogramPlane</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns an array of numbers representing the blue plane of the image&rsquo;s histogram, or <code>nil</code> if not available.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span> <span class="o">*</span><span class="n">blueHistogramPlane</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">blueHistogramPlane</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)orientation"></a>
+                      <a name="//apple_ref/objc/Property/orientation" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)orientation">orientation</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the logical orientation of the frame.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Enums/CBLCameraLiveViewFrameOrientation.html">CBLCameraLiveViewFrameOrientation</a></span> <span class="n">orientation</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">orientation</span><span class="p">:</span> <span class="kt">LiveViewFrameOrientation</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)rollAngle"></a>
+                      <a name="//apple_ref/objc/Property/rollAngle" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)rollAngle">rollAngle</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the angle as detected by the camera&rsquo;s gyros, if available.
+0.0 is perfectly level in the &ldquo;normal&rdquo; landscape orientation. Range is 0-359.9°.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGFloat</span> <span class="n">rollAngle</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">rollAngle</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelData"></a>
+                      <a name="//apple_ref/objc/Property/rawPixelData" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelData">rawPixelData</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the raw image data for the frame. See the <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelFormat">rawPixelFormat</a></code> and <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelFormatDescription">rawPixelFormatDescription</a></code> properties
+for detailed information on the pixel format.</p>
+
+<p>It may be necessary to crop this image to avoid black bars. See <code>rawImageCropRect</code>.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSData</span> <span class="o">*</span><span class="n">rawPixelData</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">rawPixelData</span><span class="p">:</span> <span class="kt">Data</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelFormat"></a>
+                      <a name="//apple_ref/objc/Property/rawPixelFormat" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelFormat">rawPixelFormat</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the broad pixel format of the data in the <code>pixelData</code> property. If the value is a raw pixel buffer, see
+the <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelFormatDescription">rawPixelFormatDescription</a></code> for additional details.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Enums/CBLCameraLiveViewFramePixelFormat.html">CBLCameraLiveViewFramePixelFormat</a></span> <span class="n">rawPixelFormat</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">rawPixelFormat</span><span class="p">:</span> <span class="kt">LiveViewFramePixelFormat</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelFormatDescription"></a>
+                      <a name="//apple_ref/objc/Property/rawPixelFormatDescription" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelFormatDescription">rawPixelFormatDescription</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the detailed pixel format of the data in the <code>pixelData</code> property.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">CMFormatDescriptionRef</span> <span class="n">rawPixelFormatDescription</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">rawPixelFormatDescription</span><span class="p">:</span> <span class="kt">CMFormatDescription</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelSize"></a>
+                      <a name="//apple_ref/objc/Property/rawPixelSize" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelSize">rawPixelSize</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the size of the image contained in the <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelData">rawPixelData</a></code> property, in pixels.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGSize</span> <span class="n">rawPixelSize</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">rawPixelSize</span><span class="p">:</span> <span class="kt">CGSize</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelCropRect"></a>
+                      <a name="//apple_ref/objc/Property/rawPixelCropRect" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelCropRect">rawPixelCropRect</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the rectangle with which to crop the image contained in <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelData">rawPixelData</a></code> to avoid black bars.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGRect</span> <span class="n">rawPixelCropRect</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">rawPixelCropRect</span><span class="p">:</span> <span class="kt">CGRect</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)image"></a>
+                      <a name="//apple_ref/objc/Property/image" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)image">image</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns an NSImage or UIImage for this live view frame. Any required pixel format conversion and cropping will be
+applied for you. Due to this, the pixel size of this image may be different to the value of <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelSize">rawPixelSize</a></code>.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIImage</span> <span class="o">*</span><span class="n">image</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)aspect"></a>
+                      <a name="//apple_ref/objc/Property/aspect" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)aspect">aspect</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the aspect in which the live view coordinate system is mapped.
+ All geometric values returns by this class are relative to this property.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGSize</span> <span class="n">aspect</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">aspect</span><span class="p">:</span> <span class="kt">CGSize</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)afAreas"></a>
+                      <a name="//apple_ref/objc/Property/afAreas" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)afAreas">afAreas</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the areas defining the frame&rsquo;s focusing rectangles, or an empty array if no focusing rectangles are available.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/CBLCameraLiveViewAFArea.html">CBLCameraLiveViewAFArea</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">afAreas</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">afAreas</span><span class="p">:</span> <span class="p">[</span><span class="kt">LiveViewAFArea</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)zoomPreviewRect"></a>
+                      <a name="//apple_ref/objc/Property/zoomPreviewRect" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)zoomPreviewRect">zoomPreviewRect</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the rect defining the zoom preview rectangle (that is, a preview of the part of the image that will be seen if live view is zoomed in),
+ or <code>CGRectZero</code> if this isn&rsquo;t available.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGRect</span> <span class="n">zoomPreviewRect</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">zoomPreviewRect</span><span class="p">:</span> <span class="kt">CGRect</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)minimumCropSize"></a>
+                      <a name="//apple_ref/objc/Property/minimumCropSize" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)minimumCropSize">minimumCropSize</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the smallest crop size supported by the live view stream, or <code>CGRectZero</code> if not available.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGSize</span> <span class="n">minimumCropSize</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">minimumCropSize</span><span class="p">:</span> <span class="kt">CGSize</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)imageFrameInAspect"></a>
+                      <a name="//apple_ref/objc/Property/imageFrameInAspect" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)imageFrameInAspect">imageFrameInAspect</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Defines rect of this frame&rsquo;s image relative to the aspect. When zoomed out, this will typically be the a rectangle the same size as the frame&rsquo;s
+ aspect with a zero origin. When zoomed in, this defines a subrect inside that aspect that defines where the zoomed-in image is compared to the whole frame.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGRect</span> <span class="n">imageFrameInAspect</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">imageFrameInAspect</span><span class="p">:</span> <span class="kt">CGRect</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)imageZoomLevel"></a>
+                      <a name="//apple_ref/objc/Property/imageZoomLevel" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)imageZoomLevel">imageZoomLevel</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the zoom level the image of this frame represents.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Enums/CBLCameraLiveViewZoomLevel.html">CBLCameraLiveViewZoomLevel</a></span> <span class="n">imageZoomLevel</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">imageZoomLevel</span><span class="p">:</span> <span class="kt">LiveViewZoomLevel</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)zoomRectOffset"></a>
+                      <a name="//apple_ref/objc/Property/zoomRectOffset" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)zoomRectOffset">zoomRectOffset</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the offset of the zoom rect when in 10x zoom mode.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGPoint</span> <span class="n">zoomRectOffset</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">zoomRectOffset</span><span class="p">:</span> <span class="kt">CGPoint</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(im)translateSubRectOfAspect:toSubRectOfRect:"></a>
+                      <a name="//apple_ref/objc/Method/-translateSubRectOfAspect:toSubRectOfRect:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(im)translateSubRectOfAspect:toSubRectOfRect:">-translateSubRectOfAspect:<wbr>toSubRectOfRect:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Translates the given rect inside the receiver&rsquo;s aspect to a rect inside the target container. Useful for
+ translating live view rects into views, for example.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">CGRect</span><span class="p">)</span><span class="nf">translateSubRectOfAspect</span><span class="p">:(</span><span class="n">CGRect</span><span class="p">)</span><span class="nv">liveViewRect</span>
+                   <span class="nf">toSubRectOfRect</span><span class="p">:(</span><span class="n">CGRect</span><span class="p">)</span><span class="nv">targetContainer</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">translateSubRectOfAspect</span><span class="p">(</span><span class="n">_</span> <span class="nv">liveViewRect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">,</span> <span class="n">toSubRectOf</span> <span class="nv">targetContainer</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGRect</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>liveViewRect</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The rect inside the receiver&rsquo;s aspect.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>targetContainer</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The rect defining the bounds of the target container.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>The rect representing <code>liveViewRect</code> inside <code>targetContainer</code>.</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(im)translatePointInAspect:toPointInRect:"></a>
+                      <a name="//apple_ref/objc/Method/-translatePointInAspect:toPointInRect:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(im)translatePointInAspect:toPointInRect:">-translatePointInAspect:<wbr>toPointInRect:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Translates the given point inside the receiver&rsquo;s aspect to a point inside the target container. Useful for
+ translating live view points into views, for example.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nf">translatePointInAspect</span><span class="p">:(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nv">liveViewPoint</span>
+                    <span class="nf">toPointInRect</span><span class="p">:(</span><span class="n">CGRect</span><span class="p">)</span><span class="nv">targetContainer</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">translatePointInAspect</span><span class="p">(</span><span class="n">_</span> <span class="nv">liveViewPoint</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">,</span> <span class="n">toPointIn</span> <span class="nv">targetContainer</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>liveViewPoint</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The pont inside the receiver&rsquo;s aspect.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>targetContainer</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The rect defining the bounds of the target container.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>The point representing <code>liveViewPoint</code> inside <code>targetContainer</code>.</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(im)pointInAspectTranslatedFromPoint:inRect:"></a>
+                      <a name="//apple_ref/objc/Method/-pointInAspectTranslatedFromPoint:inRect:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(im)pointInAspectTranslatedFromPoint:inRect:">-pointInAspectTranslatedFromPoint:<wbr>inRect:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Translates the given point inside the given rect into a point inside the receiver&rsquo;s aspect. Useful for
+ translating a point in a view into the live view aspect, for example.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nf">pointInAspectTranslatedFromPoint</span><span class="p">:(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nv">point</span>
+                                     <span class="nf">inRect</span><span class="p">:(</span><span class="n">CGRect</span><span class="p">)</span><span class="nv">container</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">pointInAspectTranslated</span><span class="p">(</span><span class="n">from</span> <span class="nv">point</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">,</span> <span class="k">in</span> <span class="nv">container</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>point</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The pont to translate.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>container</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The rect defining the bounds of the container containing <code>point</code>.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>The point representing <code>point</code> inside the receiver&rsquo;s aspect.</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Categories.html">Categories</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Categories/NSError%28CBL%29.html">NSError(CBL)</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraAEResult.html">CBLCameraAEResult</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraDescriptor.html">CBLCameraDescriptor</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraDiscovery.html">CBLCameraDiscovery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraQRDecoding.html">CBLCameraQRDecoding</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraWiFiDetails.html">CBLCameraWiFiDetails</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLExifHelpers.html">CBLExifHelpers</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLImageManipulationHelpers.html">CBLImageManipulationHelpers</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLImageMetadataWritingHelpers.html">CBLImageMetadataWritingHelpers</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLLicenseVerification.html">CBLLicenseVerification</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLNetworkConfigurationHelper.html">CBLNetworkConfigurationHelper</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLRAWImageDescription.html">CBLRAWImageDescription</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Constants.html">Constants</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyCanon">CBLCameraFamilyCanon</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyFuji">CBLCameraFamilyFuji</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyGeneric">CBLCameraFamilyGeneric</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyNikon">CBLCameraFamilyNikon</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyOlympus">CBLCameraFamilyOlympus</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyPanasonic">CBLCameraFamilyPanasonic</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilySony">CBLCameraFamilySony</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLConnectionFlagSyncCameraClockToSystemClock">CBLConnectionFlagSyncCameraClockToSystemClock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCoreVersions.h@CBLCoreBundleVersion">CBLCoreBundleVersion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCorePluginEntryPoint.h@CBLCorePluginDisplayNameKey">CBLCorePluginDisplayNameKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCorePluginEntryPoint.h@CBLCorePluginEntryPointClassNameKey">CBLCorePluginEntryPointClassNameKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCorePluginEntryPoint.h@CBLCorePluginInfoDictionaryKey">CBLCorePluginInfoDictionaryKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCoreVersions.h@CBLCoreVerboseVersion">CBLCoreVerboseVersion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLDisconnectionFlagPowerOffCamera">CBLDisconnectionFlagPowerOffCamera</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLErrorCodeDescriptionKey">CBLErrorCodeDescriptionKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLErrorDomain">CBLErrorDomain</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLLiveViewOptionFavorHighFrameRate">CBLLiveViewOptionFavorHighFrameRate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLLiveViewOptionSkipImageDecoding">CBLLiveViewOptionSkipImageDecoding</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@CBLNetworkConfigurationSimulatorWiFiInterfaceOverride">CBLNetworkConfigurationSimulatorWiFiInterfaceOverride</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCameraPropertyAPI.h@CBLPropertyCommonValueNone">CBLPropertyCommonValueNone</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLUnderlyingResponseCodeDescriptionKey">CBLUnderlyingResponseCodeDescriptionKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLUnderlyingResponseCodeKey">CBLUnderlyingResponseCodeKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLReachabilityConstants.h@CBLWiFiConnectivityDidChangeNotificationName">CBLWiFiConnectivityDidChangeNotificationName</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraAvailableCommandCategory.html">CBLCameraAvailableCommandCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraConnectionState.html">CBLCameraConnectionState</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraConnectionWarningCategory.html">CBLCameraConnectionWarningCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraConnectionWarningType.html">CBLCameraConnectionWarningType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraDiscoveryMode.html">CBLCameraDiscoveryMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewFrameOrientation.html">CBLCameraLiveViewFrameOrientation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewFramePixelFormat.html">CBLCameraLiveViewFramePixelFormat</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewTerminationReason.html">CBLCameraLiveViewTerminationReason</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewZoomLevel.html">CBLCameraLiveViewZoomLevel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLocation.html">CBLCameraLocation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraSupportedFunctionality.html">CBLCameraSupportedFunctionality</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraTransport.html">CBLCameraTransport</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLErrorCameraDomain.html">CBLErrorCameraDomain</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLErrorCode.html">CBLErrorCode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLExifRotation.html">CBLExifRotation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFileStreamInstruction.html">CBLFileStreamInstruction</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFileSystemModificationOperation.html">CBLFileSystemModificationOperation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFocusDriveAmount.html">CBLFocusDriveAmount</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFocusDriveDirection.html">CBLFocusDriveDirection</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLLicenseVerificationResult.html">CBLLicenseVerificationResult</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCategory.html">CBLPropertyCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyChangeType.html">CBLPropertyChangeType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueAFSystem.html">CBLPropertyCommonValueAFSystem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueAutoExposureMode.html">CBLPropertyCommonValueAutoExposureMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueBatteryLevel.html">CBLPropertyCommonValueBatteryLevel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueBoolean.html">CBLPropertyCommonValueBoolean</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueDriveMode.html">CBLPropertyCommonValueDriveMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueFocusMode.html">CBLPropertyCommonValueFocusMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueLightMeterStatus.html">CBLPropertyCommonValueLightMeterStatus</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueMirrorLockupStage.html">CBLPropertyCommonValueMirrorLockupStage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValuePowerSource.html">CBLPropertyCommonValuePowerSource</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueWhiteBalance.html">CBLPropertyCommonValueWhiteBalance</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyIdentifier.html">CBLPropertyIdentifier</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLStorageSlot.html">CBLStorageSlot</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraConnectionWarning.html">CBLCameraConnectionWarning</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraCore.html">CBLCameraCore</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiagnostics.html">CBLCameraDiagnostics</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiscoveryDelegate.html">CBLCameraDiscoveryDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiscoveryService.html">CBLCameraDiscoveryService</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiscoveryServiceDelegate.html">CBLCameraDiscoveryServiceDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraFileSystem.html">CBLCameraFileSystem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraFocusAndShutter.html">CBLCameraFocusAndShutter</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraLiveView.html">CBLCameraLiveView</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraLiveViewAFArea.html">CBLCameraLiveViewAFArea</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraLiveViewFrame.html">CBLCameraLiveViewFrame</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraManualDiscovery.html">CBLCameraManualDiscovery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraProperties.html">CBLCameraProperties</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraProperty.html">CBLCameraProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraPropertyObservation.html">CBLCameraPropertyObservation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraShotPreviewDelivery.html">CBLCameraShotPreviewDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCoreCameraDiscoveryProvider.html">CBLCoreCameraDiscoveryProvider</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCoreCameraDiscoveryProviderDelegate.html">CBLCoreCameraDiscoveryProviderDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCoreCameraManualDiscoveryProvider.html">CBLCoreCameraManualDiscoveryProvider</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCorePluginEntryPoint.html">CBLCorePluginEntryPoint</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCorePluginRegistration.html">CBLCorePluginRegistration</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLDeviceInfo.html">CBLDeviceInfo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLExposureProperty.html">CBLExposureProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLExposurePropertyValue.html">CBLExposurePropertyValue</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFileStorage.html">CBLFileStorage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFileSystemFolderItem.html">CBLFileSystemFolderItem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFileSystemItem.html">CBLFileSystemItem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFocusInfo.html">CBLFocusInfo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFocusPoint.html">CBLFocusPoint</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLPropertyValue.html">CBLPropertyValue</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Type%20Definitions.html">Type Definitions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionUserInterventionBlock">CBLCameraConnectionUserInterventionBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraManualDiscovery.h@T@CBLCameraCreationOperationCallback">CBLCameraCreationOperationCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraDiscovery.h@T@CBLCameraDiscoveryAvailableDevicesChangedCallback">CBLCameraDiscoveryAvailableDevicesChangedCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraDiscoveryService.h@T@CBLCameraDiscoveryMetadataResolveCallback">CBLCameraDiscoveryMetadataResolveCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraDiscoveryService.h@T@CBLCameraDiscoveryServiceResolveCallback">CBLCameraDiscoveryServiceResolveCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLCameraFamily">CBLCameraFamily</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewFrameDelivery">CBLCameraLiveViewFrameDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewTerminationHandler">CBLCameraLiveViewTerminationHandler</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraObserverToken">CBLCameraObserverToken</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLCameraPropertyObservationCallback">CBLCameraPropertyObservationCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraShotPreviewAvailableBlock">CBLCameraShotPreviewAvailableBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraShotPreviewDelivery.h@T@CBLCameraShotPreviewDeliveryCallback">CBLCameraShotPreviewDeliveryCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFDelivery">CBLEXIFDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFPreflight">CBLEXIFPreflight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileStorage.h@T@CBLFileStorageFilesModifiedObserver">CBLFileStorageFilesModifiedObserver</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileStorage.h@T@CBLFileStorageObserverToken">CBLFileStorageObserverToken</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamChunkDelivery">CBLFileStreamChunkDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamCompletion">CBLFileStreamCompletion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamPreflight">CBLFileStreamPreflight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImageDelivery">CBLPreviewImageDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImagePreflight">CBLPreviewImagePreflight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLPropertyCommonValue">CBLPropertyCommonValue</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Functions.html">Functions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Functions.html#/c:@F@CBLCoreLocalizedString">CBLCoreLocalizedString</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Functions.html#/c:CBLConstants.h@F@CBLFloatAlmostEqual">CBLFloatAlmostEqual</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2021-06-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>

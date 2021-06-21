@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CBLCameraFocusAndShutter Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Protocol/CBLCameraFocusAndShutter" class="dashAnchor"></a>
+    <a title="CBLCameraFocusAndShutter Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html">CascableCore Docs</a>
+          <span class="no-mobile"> (100% documented)</span>
+        </p>
+    
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html">CascableCore Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          CBLCameraFocusAndShutter Protocol Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>CBLCameraFocusAndShutter</h1>
+                <div class="declaration">
+                  <div class="language">
+                    <p class="aside-title">Objective-C</p>
+                    <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraFocusAndShutter</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                  </div>
+                  <div class="language">
+                    <p class="aside-title">Swift</p>
+                    <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraFocusAndShutter</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                  </div>
+                </div>
+              <p>Camera focus and shutter methods.</p>
+
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Autofocus%20Setup"></a>
+                  <a name="//apple_ref/objc/Section/Autofocus Setup" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Autofocus%20Setup"></a>
+                    <h3 class="section-name"><p>Autofocus Setup</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(py)focusInfo"></a>
+                      <a name="//apple_ref/objc/Property/focusInfo" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(py)focusInfo">focusInfo</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the current autofocus info from the camera.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/CBLFocusInfo.html">CBLFocusInfo</a></span><span class="o">&gt;</span> <span class="n">focusInfo</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">focusInfo</span><span class="p">:</span> <span class="kt">FocusInfo</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(im)setActiveAutoFocusPoint:completionCallback:"></a>
+                      <a name="//apple_ref/objc/Method/-setActiveAutoFocusPoint:completionCallback:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(im)setActiveAutoFocusPoint:completionCallback:">-setActiveAutoFocusPoint:<wbr>completionCallback:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets the given AF point as the active point.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setActiveAutoFocusPoint</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/CBLFocusPoint.html">CBLFocusPoint</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">point</span>
+             <span class="nf">completionCallback</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setActiveAutoFocusPoint</span><span class="p">(</span><span class="n">_</span> <span class="nv">point</span><span class="p">:</span> <span class="kt">FocusPoint</span><span class="p">,</span> <span class="n">completionCallback</span> <span class="nv">block</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>point</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The AF point to set as active.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>block</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block to trigger when the active AF point has been set or an error occurs.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(py)supportsTouchAF"></a>
+                      <a name="//apple_ref/objc/Property/supportsTouchAF" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(py)supportsTouchAF">supportsTouchAF</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns <code>YES</code> if the camera currently supports freeform &ldquo;touch&rdquo; AF, otherwise <code>NO</code>.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">supportsTouchAF</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">supportsTouchAF</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(im)touchAFAtPoint:completionCallback:"></a>
+                      <a name="//apple_ref/objc/Method/-touchAFAtPoint:completionCallback:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(im)touchAFAtPoint:completionCallback:">-touchAFAtPoint:<wbr>completionCallback:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets the camera&rsquo;s touch AF position, if available.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">touchAFAtPoint</span><span class="p">:(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nv">center</span>
+    <span class="nf">completionCallback</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">touchAF</span><span class="p">(</span><span class="n">at</span> <span class="nv">center</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">,</span> <span class="n">completionCallback</span> <span class="nv">block</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>center</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The centre of the touch AF point, expressed in the current live view frame&rsquo;s aspect.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>block</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The callback to call when the operation is complete.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Engaging%20Autofocus%20and%20Shutter"></a>
+                  <a name="//apple_ref/objc/Section/Engaging Autofocus and Shutter" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Engaging%20Autofocus%20and%20Shutter"></a>
+                    <h3 class="section-name"><p>Engaging Autofocus and Shutter</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(py)autoFocusEngaged"></a>
+                      <a name="//apple_ref/objc/Property/autoFocusEngaged" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(py)autoFocusEngaged">autoFocusEngaged</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns <code>YES</code> if autofocus is currently engaged, otherwise <code>NO</code>.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">autoFocusEngaged</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">autoFocusEngaged</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(im)engageAutoFocus:"></a>
+                      <a name="//apple_ref/objc/Method/-engageAutoFocus:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(im)engageAutoFocus:">-engageAutoFocus:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Engages autofocus.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Autofocus will remain engaged until <code>disengageAutoFocus:</code> is called. While autofocus is engaged,
+functionality not directly to taking a shot will be unavailable. Live view (if on before this method is called)
+will continue to stream, and you can use the <code>engageShutter:</code>, <code>disengageShutter:</code>, and <code>disengageAutoFocus:</code>
+methods.
+
+</div>
+
+<p>The typical ordering for taking a photograph using these methods is as follows:</p>
+
+<ul>
+<li><code>engageAutoFocus:</code></li>
+<li><code>engageShutter:</code></li>
+<li><code>disengageShutter:</code></li>
+<li><p><code>disengageAutoFocus:</code></p></li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">engageAutoFocus</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">engageAutoFocus</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>block</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block to trigger when autofocus has been engaged or an error occurs.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(im)disengageAutoFocus:"></a>
+                      <a name="//apple_ref/objc/Method/-disengageAutoFocus:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(im)disengageAutoFocus:">-disengageAutoFocus:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Disengages autofocus.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">disengageAutoFocus</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">disengageAutoFocus</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>block</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block to trigger when autofocus has been disengaged or an error occurs.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(py)shutterEngaged"></a>
+                      <a name="//apple_ref/objc/Property/shutterEngaged" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(py)shutterEngaged">shutterEngaged</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns <code>YES</code> if the shutter is currently engaged, otherwise <code>NO</code>.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">shutterEngaged</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">shutterEngaged</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(im)engageShutter:"></a>
+                      <a name="//apple_ref/objc/Method/-engageShutter:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(im)engageShutter:">-engageShutter:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Engages the shutter.</p>
+
+<p>The shutter will remain &ldquo;engaged&rdquo; until <code>disengageShutter:</code> is called. However,
+ if the camera is set to take an exposure of a specific length (i.e., anything other than &ldquo;bulb&rdquo;
+ mode) the timing of these calls will have no effect on the exposure.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This may not engage autofocus if the camera is configured to use back-button autofocus.</p>
+
+</div><div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Even if you don&rsquo;t call <code>engageAutoFocus:</code> prior to this method, calling this method may cause <code><a href="../Protocols/CBLCameraFocusAndShutter.html#/c:objc(pl)CBLCameraFocusAndShutter(py)autoFocusEngaged">autoFocusEngaged</a></code>
+   to become <code>YES</code>. It is the client&rsquo;s responsibility to detect this and called <code>disengageAutoFocus:</code> if needed.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">engageShutter</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">engageShutter</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>block</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block to trigger when the shutter has been engaged or an error occurs.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(im)disengageShutter:"></a>
+                      <a name="//apple_ref/objc/Method/-disengageShutter:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(im)disengageShutter:">-disengageShutter:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Disengages the shutter.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">disengageShutter</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">disengageShutter</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>block</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block to trigger when the shutter has been disengaged or an error occurs.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(im)invokeOneShotShutterExplicitlyEngagingAutoFocus:completionCallback:"></a>
+                      <a name="//apple_ref/objc/Method/-invokeOneShotShutterExplicitlyEngagingAutoFocus:completionCallback:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(im)invokeOneShotShutterExplicitlyEngagingAutoFocus:completionCallback:">-invokeOneShotShutterExplicitlyEngagingAutoFocus:<wbr>completionCallback:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Takes a single photo.</p>
+
+<p>This method will (optionally) engage autofocus, engage the shutter, disengage the shutter and
+ disengage autofocus. Think of it as a &ldquo;Take a photo!&rdquo; button.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+    <span class="nf">invokeOneShotShutterExplicitlyEngagingAutoFocus</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">triggerAutoFocus</span>
+                                 <span class="nf">completionCallback</span><span class="p">:</span>
+                                     <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span>
+                                         <span class="n">block</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">invokeOneShotShutterExplicitlyEngagingAutoFocus</span><span class="p">(</span><span class="n">_</span> <span class="nv">triggerAutoFocus</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">completionCallback</span> <span class="nv">block</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>triggerAutoFocus</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Pass <code>YES</code> to explicitly engage autofocus during the process, otherwise <code>NO</code>.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>block</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block to trigger when the operation completes or an error occurs.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Shot%20Previews"></a>
+                  <a name="//apple_ref/objc/Section/Shot Previews" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Shot%20Previews"></a>
+                    <h3 class="section-name"><p>Shot Previews</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(im)addShotPreviewObserver:"></a>
+                      <a name="//apple_ref/objc/Method/-addShotPreviewObserver:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(im)addShotPreviewObserver:">-addShotPreviewObserver:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Adds an observer to be notified when a shot preview is available.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Only cameras that support the <code>CBLCameraSupportedFunctionalityShotPreview</code> functionality flag will trigger shot preview callbacks.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraObserverToken">CBLCameraObserverToken</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">addShotPreviewObserver</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraShotPreviewAvailableBlock">CBLCameraShotPreviewAvailableBlock</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addShotPreviewObserver</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ShotPreviewAvailableCallback</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>block</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block to be called when a shot preview is available. Will be called on the main thread.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(im)removeShotPreviewObserverWithToken:"></a>
+                      <a name="//apple_ref/objc/Method/-removeShotPreviewObserverWithToken:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(im)removeShotPreviewObserverWithToken:">-removeShotPreviewObserverWithToken:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Removes a previously registered shot preview observer.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeShotPreviewObserverWithToken</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraObserverToken">CBLCameraObserverToken</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">token</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeShotPreviewObserver</span><span class="p">(</span><span class="n">with</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>token</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The token for the observer block to be removed.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Direct%20Focus%20Manipulation"></a>
+                  <a name="//apple_ref/objc/Section/Direct Focus Manipulation" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Direct%20Focus%20Manipulation"></a>
+                    <h3 class="section-name"><p>Direct Focus Manipulation</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(im)driveFocusByAmount:inDirection:completionCallback:"></a>
+                      <a name="//apple_ref/objc/Method/-driveFocusByAmount:inDirection:completionCallback:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(im)driveFocusByAmount:inDirection:completionCallback:">-driveFocusByAmount:<wbr>inDirection:<wbr>completionCallback:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Drive the camera&rsquo;s focus a certain amount in the given direction. Requires that the camera has the <code>CBLCameraSupportedFunctionalityDirectFocusManipulation</code>
+functionality available.</p>
+
+<p>Direct focus manipulation with this method requires that the camera has live view enabled, and that autofocus is engaged. If the camera isn&rsquo;t in
+the correct state, an error of <code>CBLErrorCodeNotAvailable</code> will be returned. In some situations, you may receive an error of
+<code>CBLErrorCodeFocusDidNotMove</code> — this indicates that either the focus is already at the end of its travel in the specified direction, or that the focus
+didn&rsquo;t move for some other reason.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">driveFocusByAmount</span><span class="p">:(</span><span class="n"><a href="../Enums/CBLFocusDriveAmount.html">CBLFocusDriveAmount</a></span><span class="p">)</span><span class="nv">amount</span>
+               <span class="nf">inDirection</span><span class="p">:(</span><span class="n"><a href="../Enums/CBLFocusDriveDirection.html">CBLFocusDriveDirection</a></span><span class="p">)</span><span class="nv">direction</span>
+        <span class="nf">completionCallback</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">driveFocus</span><span class="p">(</span><span class="nv">amount</span><span class="p">:</span> <span class="kt">FocusDriveAmount</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt">FocusDriveDirection</span><span class="p">,</span> <span class="n">completionCallback</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>amount</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The amount to move the focus. The actual change in focus will depend on the camera and lens being used.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>direction</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The direction in which the focus should move.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>callback</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block to trigger when the operation completes or an error occurs.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Categories.html">Categories</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Categories/NSError%28CBL%29.html">NSError(CBL)</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraAEResult.html">CBLCameraAEResult</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraDescriptor.html">CBLCameraDescriptor</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraDiscovery.html">CBLCameraDiscovery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraQRDecoding.html">CBLCameraQRDecoding</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraWiFiDetails.html">CBLCameraWiFiDetails</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLExifHelpers.html">CBLExifHelpers</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLImageManipulationHelpers.html">CBLImageManipulationHelpers</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLImageMetadataWritingHelpers.html">CBLImageMetadataWritingHelpers</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLLicenseVerification.html">CBLLicenseVerification</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLNetworkConfigurationHelper.html">CBLNetworkConfigurationHelper</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLRAWImageDescription.html">CBLRAWImageDescription</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Constants.html">Constants</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyCanon">CBLCameraFamilyCanon</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyFuji">CBLCameraFamilyFuji</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyGeneric">CBLCameraFamilyGeneric</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyNikon">CBLCameraFamilyNikon</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyOlympus">CBLCameraFamilyOlympus</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyPanasonic">CBLCameraFamilyPanasonic</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilySony">CBLCameraFamilySony</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLConnectionFlagSyncCameraClockToSystemClock">CBLConnectionFlagSyncCameraClockToSystemClock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCoreVersions.h@CBLCoreBundleVersion">CBLCoreBundleVersion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCorePluginEntryPoint.h@CBLCorePluginDisplayNameKey">CBLCorePluginDisplayNameKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCorePluginEntryPoint.h@CBLCorePluginEntryPointClassNameKey">CBLCorePluginEntryPointClassNameKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCorePluginEntryPoint.h@CBLCorePluginInfoDictionaryKey">CBLCorePluginInfoDictionaryKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCoreVersions.h@CBLCoreVerboseVersion">CBLCoreVerboseVersion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLDisconnectionFlagPowerOffCamera">CBLDisconnectionFlagPowerOffCamera</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLErrorCodeDescriptionKey">CBLErrorCodeDescriptionKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLErrorDomain">CBLErrorDomain</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLLiveViewOptionFavorHighFrameRate">CBLLiveViewOptionFavorHighFrameRate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLLiveViewOptionSkipImageDecoding">CBLLiveViewOptionSkipImageDecoding</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@CBLNetworkConfigurationSimulatorWiFiInterfaceOverride">CBLNetworkConfigurationSimulatorWiFiInterfaceOverride</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCameraPropertyAPI.h@CBLPropertyCommonValueNone">CBLPropertyCommonValueNone</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLUnderlyingResponseCodeDescriptionKey">CBLUnderlyingResponseCodeDescriptionKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLUnderlyingResponseCodeKey">CBLUnderlyingResponseCodeKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLReachabilityConstants.h@CBLWiFiConnectivityDidChangeNotificationName">CBLWiFiConnectivityDidChangeNotificationName</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraAvailableCommandCategory.html">CBLCameraAvailableCommandCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraConnectionState.html">CBLCameraConnectionState</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraConnectionWarningCategory.html">CBLCameraConnectionWarningCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraConnectionWarningType.html">CBLCameraConnectionWarningType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraDiscoveryMode.html">CBLCameraDiscoveryMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewFrameOrientation.html">CBLCameraLiveViewFrameOrientation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewFramePixelFormat.html">CBLCameraLiveViewFramePixelFormat</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewTerminationReason.html">CBLCameraLiveViewTerminationReason</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewZoomLevel.html">CBLCameraLiveViewZoomLevel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLocation.html">CBLCameraLocation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraSupportedFunctionality.html">CBLCameraSupportedFunctionality</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraTransport.html">CBLCameraTransport</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLErrorCameraDomain.html">CBLErrorCameraDomain</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLErrorCode.html">CBLErrorCode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLExifRotation.html">CBLExifRotation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFileStreamInstruction.html">CBLFileStreamInstruction</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFileSystemModificationOperation.html">CBLFileSystemModificationOperation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFocusDriveAmount.html">CBLFocusDriveAmount</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFocusDriveDirection.html">CBLFocusDriveDirection</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLLicenseVerificationResult.html">CBLLicenseVerificationResult</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCategory.html">CBLPropertyCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyChangeType.html">CBLPropertyChangeType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueAFSystem.html">CBLPropertyCommonValueAFSystem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueAutoExposureMode.html">CBLPropertyCommonValueAutoExposureMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueBatteryLevel.html">CBLPropertyCommonValueBatteryLevel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueBoolean.html">CBLPropertyCommonValueBoolean</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueDriveMode.html">CBLPropertyCommonValueDriveMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueFocusMode.html">CBLPropertyCommonValueFocusMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueLightMeterStatus.html">CBLPropertyCommonValueLightMeterStatus</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueMirrorLockupStage.html">CBLPropertyCommonValueMirrorLockupStage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValuePowerSource.html">CBLPropertyCommonValuePowerSource</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueWhiteBalance.html">CBLPropertyCommonValueWhiteBalance</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyIdentifier.html">CBLPropertyIdentifier</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLStorageSlot.html">CBLStorageSlot</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraConnectionWarning.html">CBLCameraConnectionWarning</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraCore.html">CBLCameraCore</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiagnostics.html">CBLCameraDiagnostics</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiscoveryDelegate.html">CBLCameraDiscoveryDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiscoveryService.html">CBLCameraDiscoveryService</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiscoveryServiceDelegate.html">CBLCameraDiscoveryServiceDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraFileSystem.html">CBLCameraFileSystem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraFocusAndShutter.html">CBLCameraFocusAndShutter</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraLiveView.html">CBLCameraLiveView</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraLiveViewAFArea.html">CBLCameraLiveViewAFArea</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraLiveViewFrame.html">CBLCameraLiveViewFrame</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraManualDiscovery.html">CBLCameraManualDiscovery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraProperties.html">CBLCameraProperties</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraProperty.html">CBLCameraProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraPropertyObservation.html">CBLCameraPropertyObservation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraShotPreviewDelivery.html">CBLCameraShotPreviewDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCoreCameraDiscoveryProvider.html">CBLCoreCameraDiscoveryProvider</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCoreCameraDiscoveryProviderDelegate.html">CBLCoreCameraDiscoveryProviderDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCoreCameraManualDiscoveryProvider.html">CBLCoreCameraManualDiscoveryProvider</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCorePluginEntryPoint.html">CBLCorePluginEntryPoint</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCorePluginRegistration.html">CBLCorePluginRegistration</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLDeviceInfo.html">CBLDeviceInfo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLExposureProperty.html">CBLExposureProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLExposurePropertyValue.html">CBLExposurePropertyValue</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFileStorage.html">CBLFileStorage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFileSystemFolderItem.html">CBLFileSystemFolderItem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFileSystemItem.html">CBLFileSystemItem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFocusInfo.html">CBLFocusInfo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFocusPoint.html">CBLFocusPoint</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLPropertyValue.html">CBLPropertyValue</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Type%20Definitions.html">Type Definitions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionUserInterventionBlock">CBLCameraConnectionUserInterventionBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraManualDiscovery.h@T@CBLCameraCreationOperationCallback">CBLCameraCreationOperationCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraDiscovery.h@T@CBLCameraDiscoveryAvailableDevicesChangedCallback">CBLCameraDiscoveryAvailableDevicesChangedCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraDiscoveryService.h@T@CBLCameraDiscoveryMetadataResolveCallback">CBLCameraDiscoveryMetadataResolveCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraDiscoveryService.h@T@CBLCameraDiscoveryServiceResolveCallback">CBLCameraDiscoveryServiceResolveCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLCameraFamily">CBLCameraFamily</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewFrameDelivery">CBLCameraLiveViewFrameDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewTerminationHandler">CBLCameraLiveViewTerminationHandler</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraObserverToken">CBLCameraObserverToken</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLCameraPropertyObservationCallback">CBLCameraPropertyObservationCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraShotPreviewAvailableBlock">CBLCameraShotPreviewAvailableBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraShotPreviewDelivery.h@T@CBLCameraShotPreviewDeliveryCallback">CBLCameraShotPreviewDeliveryCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFDelivery">CBLEXIFDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFPreflight">CBLEXIFPreflight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileStorage.h@T@CBLFileStorageFilesModifiedObserver">CBLFileStorageFilesModifiedObserver</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileStorage.h@T@CBLFileStorageObserverToken">CBLFileStorageObserverToken</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamChunkDelivery">CBLFileStreamChunkDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamCompletion">CBLFileStreamCompletion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamPreflight">CBLFileStreamPreflight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImageDelivery">CBLPreviewImageDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImagePreflight">CBLPreviewImagePreflight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLPropertyCommonValue">CBLPropertyCommonValue</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Functions.html">Functions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Functions.html#/c:@F@CBLCoreLocalizedString">CBLCoreLocalizedString</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Functions.html#/c:CBLConstants.h@F@CBLFloatAlmostEqual">CBLFloatAlmostEqual</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2021-06-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>

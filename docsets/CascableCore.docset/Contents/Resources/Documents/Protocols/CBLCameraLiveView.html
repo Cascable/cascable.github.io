@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CBLCameraLiveView Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Protocol/CBLCameraLiveView" class="dashAnchor"></a>
+    <a title="CBLCameraLiveView Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html">CascableCore Docs</a>
+          <span class="no-mobile"> (100% documented)</span>
+        </p>
+    
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html">CascableCore Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          CBLCameraLiveView Protocol Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>CBLCameraLiveView</h1>
+                <div class="declaration">
+                  <div class="language">
+                    <p class="aside-title">Objective-C</p>
+                    <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraLiveView</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                  </div>
+                  <div class="language">
+                    <p class="aside-title">Swift</p>
+                    <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraLiveView</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                  </div>
+                </div>
+              <p>Camera live view methods.</p>
+
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveView(im)beginLiveViewStreamWithDelivery:deliveryQueue:terminationHandler:"></a>
+                      <a name="//apple_ref/objc/Method/-beginLiveViewStreamWithDelivery:deliveryQueue:terminationHandler:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveView(im)beginLiveViewStreamWithDelivery:deliveryQueue:terminationHandler:">-beginLiveViewStreamWithDelivery:<wbr>deliveryQueue:<wbr>terminationHandler:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Start streaming the live view image from the camera.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The frame delivery block has a completion handler, which MUST be called in order to receive the next frame. The completion handler
+can be called from any thread, and should be called when you&rsquo;re ready for the next frame. This allows frame delivery to correctly throttle
+without backing up frames if your image processing/display is slower than the delivery rate from the camera.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">beginLiveViewStreamWithDelivery</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewFrameDelivery">CBLCameraLiveViewFrameDelivery</a></span><span class="p">)</span><span class="nv">delivery</span>
+                          <span class="nf">deliveryQueue</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">deliveryQueue</span>
+                     <span class="nf">terminationHandler</span><span class="p">:</span>
+                         <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewTerminationHandler">CBLCameraLiveViewTerminationHandler</a></span><span class="p">)</span>
+                             <span class="n">terminationHandler</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">beginStream</span><span class="p">(</span><span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">LiveViewFrameDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?,</span> <span class="nv">terminationHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">LiveViewTerminationHandler</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>delivery</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The frame delivery block.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>deliveryQueue</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The queue on which to deliver frames. If you pass <code>nil</code>, the main queue will be used.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>terminationHandler</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The callback to call when the live view stream ends. Will be called on the main queue.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveView(im)beginLiveViewStreamWithDelivery:deliveryQueue:options:terminationHandler:"></a>
+                      <a name="//apple_ref/objc/Method/-beginLiveViewStreamWithDelivery:deliveryQueue:options:terminationHandler:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveView(im)beginLiveViewStreamWithDelivery:deliveryQueue:options:terminationHandler:">-beginLiveViewStreamWithDelivery:<wbr>deliveryQueue:<wbr>options:<wbr>terminationHandler:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Start streaming the live view image from the camera with the given options.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The frame delivery block has a completion handler, which MUST be called in order to receive the next frame. The completion handler
+can be called from any thread, and should be called when you&rsquo;re ready for the next frame. This allows frame delivery to correctly throttle
+without backing up frames if your image processing/display is slower than the delivery rate from the camera.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">beginLiveViewStreamWithDelivery</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewFrameDelivery">CBLCameraLiveViewFrameDelivery</a></span><span class="p">)</span><span class="nv">delivery</span>
+                          <span class="nf">deliveryQueue</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">deliveryQueue</span>
+                                <span class="nf">options</span><span class="p">:</span>
+                                    <span class="p">(</span><span class="n">nullable</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span>
+                                        <span class="n">options</span>
+                     <span class="n">terminationHandler</span><span class="o">:</span>
+                         <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewTerminationHandler">CBLCameraLiveViewTerminationHandler</a></span><span class="p">)</span>
+                             <span class="n">terminationHandler</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">beginStream</span><span class="p">(</span><span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">LiveViewFrameDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">terminationHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">LiveViewTerminationHandler</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>delivery</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The frame delivery block.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>deliveryQueue</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The queue on which to deliver frames. If you pass <code>nil</code>, the main queue will be used.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>options</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Custom options for the live view session. See <code>CBLLiveViewOption…</code> constants for details.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>terminationHandler</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The callback to call when the live view stream ends. Will be called on the main queue.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveView(im)applyLiveViewStreamOptions:"></a>
+                      <a name="//apple_ref/objc/Method/-applyLiveViewStreamOptions:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveView(im)applyLiveViewStreamOptions:">-applyLiveViewStreamOptions:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Apply new options to the running stream live view stream. Options not included in the passed dictionary will not be changed.</p>
+
+<p>Due to the threaded nature of live view streaming, a number of frames may be delivered between calling this method and
+the new options taking effect.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If no live view stream is running, this method has no effect.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">applyLiveViewStreamOptions</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">applyStreamOptions</span><span class="p">(</span><span class="n">_</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:])</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>options</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The options to apply to the running live view stream.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveView(im)endLiveViewStream"></a>
+                      <a name="//apple_ref/objc/Method/-endLiveViewStream" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveView(im)endLiveViewStream">-endLiveViewStream</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Ends the current live view stream, if one is running. Will cause the stream&rsquo;s termination handler to be called with <code>CBLCameraLiveViewTerminationReasonEndedNormally</code>.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">endLiveViewStream</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">endStream</span><span class="p">()</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveView(py)liveViewStreamActive"></a>
+                      <a name="//apple_ref/objc/Property/liveViewStreamActive" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveView(py)liveViewStreamActive">liveViewStreamActive</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns <code>YES</code> if the camera is currently streaming a live view image.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">liveViewStreamActive</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">liveViewStreamActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveView(im)setLiveViewZoomLevel:completionCallback:"></a>
+                      <a name="//apple_ref/objc/Method/-setLiveViewZoomLevel:completionCallback:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveView(im)setLiveViewZoomLevel:completionCallback:">-setLiveViewZoomLevel:<wbr>completionCallback:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Attempt to set the current live view zoom level.</p>
+
+<p>If the camera doesn&rsquo;t support the functionality <code>CBLCameraSupportedFunctionalityZoomableLiveView</code>, this operation will fail. To check the zoom level,
+see the zoomLevel property on <code>id &lt;CBLCameraLiveViewFrame&gt;</code>.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setLiveViewZoomLevel</span><span class="p">:(</span><span class="n"><a href="../Enums/CBLCameraLiveViewZoomLevel.html">CBLCameraLiveViewZoomLevel</a></span><span class="p">)</span><span class="nv">liveViewZoomLevel</span>
+          <span class="nf">completionCallback</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setLiveViewZoomLevel</span><span class="p">(</span><span class="n">_</span> <span class="nv">liveViewZoomLevel</span><span class="p">:</span> <span class="kt">LiveViewZoomLevel</span><span class="p">,</span> <span class="n">completionCallback</span> <span class="nv">block</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>liveViewZoomLevel</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The new zoom level to use.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>block</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The callback to call when the operation is complete.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveView(im)setLiveViewCrop:completionCallback:"></a>
+                      <a name="//apple_ref/objc/Method/-setLiveViewCrop:completionCallback:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveView(im)setLiveViewCrop:completionCallback:">-setLiveViewCrop:<wbr>completionCallback:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Attempt to zoom in to live view by cropping in on the camera&rsquo;s side.</p>
+
+<p>The given crop rectangle must match the aspect ratio of the live view frame&rsquo;s <code>aspect</code>, must be completely contained
+within it, and must be larger or equal in size to the live view frame&rsquo;s <code>minimumCropSize</code>. The rect may be adjusted
+by CascableCore to match the camera&rsquo;s requirements. To check the final cropped frame, see live view frame&rsquo;s
+<code>imageFrameInAspect</code> property once the operation completes.</p>
+
+<p>Note that it may take a few frames for crop geometry to update after this operation finishes, due to frame buffers and etc.</p>
+
+<p>If the camera doesn&rsquo;t support the functionality <code>CBLCameraSupportedFunctionalityCroppableLiveView</code>, this operation will fail.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setLiveViewCrop</span><span class="p">:(</span><span class="n">CGRect</span><span class="p">)</span><span class="nv">cropRect</span>
+     <span class="nf">completionCallback</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setLiveViewCrop</span><span class="p">(</span><span class="n">_</span> <span class="nv">cropRect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">,</span> <span class="n">completionCallback</span> <span class="nv">block</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>cropRect</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The rectangle at which to crop live view, relative to a live view frame&rsquo;s <code>aspect</code>.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>block</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The callback to call when the operation is complete.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveView(im)resetLiveViewCrop:"></a>
+                      <a name="//apple_ref/objc/Method/-resetLiveViewCrop:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveView(im)resetLiveViewCrop:">-resetLiveViewCrop:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Attempt to reset the live view crop to the uncropped state.</p>
+
+<p>If the camera doesn&rsquo;t support the functionality <code>CBLCameraSupportedFunctionalityCroppableLiveView</code>, this operation will fail.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">resetLiveViewCrop</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resetLiveViewCrop</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>block</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The callback to call when the operation is complete.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Categories.html">Categories</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Categories/NSError%28CBL%29.html">NSError(CBL)</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraAEResult.html">CBLCameraAEResult</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraDescriptor.html">CBLCameraDescriptor</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraDiscovery.html">CBLCameraDiscovery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraQRDecoding.html">CBLCameraQRDecoding</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLCameraWiFiDetails.html">CBLCameraWiFiDetails</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLExifHelpers.html">CBLExifHelpers</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLImageManipulationHelpers.html">CBLImageManipulationHelpers</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLImageMetadataWritingHelpers.html">CBLImageMetadataWritingHelpers</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLLicenseVerification.html">CBLLicenseVerification</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLNetworkConfigurationHelper.html">CBLNetworkConfigurationHelper</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/CBLRAWImageDescription.html">CBLRAWImageDescription</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Constants.html">Constants</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyCanon">CBLCameraFamilyCanon</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyFuji">CBLCameraFamilyFuji</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyGeneric">CBLCameraFamilyGeneric</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyNikon">CBLCameraFamilyNikon</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyOlympus">CBLCameraFamilyOlympus</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilyPanasonic">CBLCameraFamilyPanasonic</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLConstants.h@CBLCameraFamilySony">CBLCameraFamilySony</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLConnectionFlagSyncCameraClockToSystemClock">CBLConnectionFlagSyncCameraClockToSystemClock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCoreVersions.h@CBLCoreBundleVersion">CBLCoreBundleVersion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCorePluginEntryPoint.h@CBLCorePluginDisplayNameKey">CBLCorePluginDisplayNameKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCorePluginEntryPoint.h@CBLCorePluginEntryPointClassNameKey">CBLCorePluginEntryPointClassNameKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCorePluginEntryPoint.h@CBLCorePluginInfoDictionaryKey">CBLCorePluginInfoDictionaryKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCoreVersions.h@CBLCoreVerboseVersion">CBLCoreVerboseVersion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLDisconnectionFlagPowerOffCamera">CBLDisconnectionFlagPowerOffCamera</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLErrorCodeDescriptionKey">CBLErrorCodeDescriptionKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLErrorDomain">CBLErrorDomain</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLLiveViewOptionFavorHighFrameRate">CBLLiveViewOptionFavorHighFrameRate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCamera.h@CBLLiveViewOptionSkipImageDecoding">CBLLiveViewOptionSkipImageDecoding</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@CBLNetworkConfigurationSimulatorWiFiInterfaceOverride">CBLNetworkConfigurationSimulatorWiFiInterfaceOverride</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLCameraPropertyAPI.h@CBLPropertyCommonValueNone">CBLPropertyCommonValueNone</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLUnderlyingResponseCodeDescriptionKey">CBLUnderlyingResponseCodeDescriptionKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:NSError+CBLExtensions.h@CBLUnderlyingResponseCodeKey">CBLUnderlyingResponseCodeKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:CBLReachabilityConstants.h@CBLWiFiConnectivityDidChangeNotificationName">CBLWiFiConnectivityDidChangeNotificationName</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraAvailableCommandCategory.html">CBLCameraAvailableCommandCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraConnectionState.html">CBLCameraConnectionState</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraConnectionWarningCategory.html">CBLCameraConnectionWarningCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraConnectionWarningType.html">CBLCameraConnectionWarningType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraDiscoveryMode.html">CBLCameraDiscoveryMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewFrameOrientation.html">CBLCameraLiveViewFrameOrientation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewFramePixelFormat.html">CBLCameraLiveViewFramePixelFormat</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewTerminationReason.html">CBLCameraLiveViewTerminationReason</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLiveViewZoomLevel.html">CBLCameraLiveViewZoomLevel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraLocation.html">CBLCameraLocation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraSupportedFunctionality.html">CBLCameraSupportedFunctionality</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraTransport.html">CBLCameraTransport</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLErrorCameraDomain.html">CBLErrorCameraDomain</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLErrorCode.html">CBLErrorCode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLExifRotation.html">CBLExifRotation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFileStreamInstruction.html">CBLFileStreamInstruction</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFileSystemModificationOperation.html">CBLFileSystemModificationOperation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFocusDriveAmount.html">CBLFocusDriveAmount</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLFocusDriveDirection.html">CBLFocusDriveDirection</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLLicenseVerificationResult.html">CBLLicenseVerificationResult</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCategory.html">CBLPropertyCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyChangeType.html">CBLPropertyChangeType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueAFSystem.html">CBLPropertyCommonValueAFSystem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueAutoExposureMode.html">CBLPropertyCommonValueAutoExposureMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueBatteryLevel.html">CBLPropertyCommonValueBatteryLevel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueBoolean.html">CBLPropertyCommonValueBoolean</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueDriveMode.html">CBLPropertyCommonValueDriveMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueFocusMode.html">CBLPropertyCommonValueFocusMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueLightMeterStatus.html">CBLPropertyCommonValueLightMeterStatus</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueMirrorLockupStage.html">CBLPropertyCommonValueMirrorLockupStage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValuePowerSource.html">CBLPropertyCommonValuePowerSource</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueWhiteBalance.html">CBLPropertyCommonValueWhiteBalance</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyIdentifier.html">CBLPropertyIdentifier</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLStorageSlot.html">CBLStorageSlot</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraConnectionWarning.html">CBLCameraConnectionWarning</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraCore.html">CBLCameraCore</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiagnostics.html">CBLCameraDiagnostics</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiscoveryDelegate.html">CBLCameraDiscoveryDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiscoveryService.html">CBLCameraDiscoveryService</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraDiscoveryServiceDelegate.html">CBLCameraDiscoveryServiceDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraFileSystem.html">CBLCameraFileSystem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraFocusAndShutter.html">CBLCameraFocusAndShutter</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraLiveView.html">CBLCameraLiveView</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraLiveViewAFArea.html">CBLCameraLiveViewAFArea</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraLiveViewFrame.html">CBLCameraLiveViewFrame</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraManualDiscovery.html">CBLCameraManualDiscovery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraProperties.html">CBLCameraProperties</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraProperty.html">CBLCameraProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraPropertyObservation.html">CBLCameraPropertyObservation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraShotPreviewDelivery.html">CBLCameraShotPreviewDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCoreCameraDiscoveryProvider.html">CBLCoreCameraDiscoveryProvider</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCoreCameraDiscoveryProviderDelegate.html">CBLCoreCameraDiscoveryProviderDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCoreCameraManualDiscoveryProvider.html">CBLCoreCameraManualDiscoveryProvider</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCorePluginEntryPoint.html">CBLCorePluginEntryPoint</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCorePluginRegistration.html">CBLCorePluginRegistration</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLDeviceInfo.html">CBLDeviceInfo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLExposureProperty.html">CBLExposureProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLExposurePropertyValue.html">CBLExposurePropertyValue</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFileStorage.html">CBLFileStorage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFileSystemFolderItem.html">CBLFileSystemFolderItem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFileSystemItem.html">CBLFileSystemItem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFocusInfo.html">CBLFocusInfo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLFocusPoint.html">CBLFocusPoint</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLPropertyValue.html">CBLPropertyValue</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Type%20Definitions.html">Type Definitions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionUserInterventionBlock">CBLCameraConnectionUserInterventionBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraManualDiscovery.h@T@CBLCameraCreationOperationCallback">CBLCameraCreationOperationCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraDiscovery.h@T@CBLCameraDiscoveryAvailableDevicesChangedCallback">CBLCameraDiscoveryAvailableDevicesChangedCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraDiscoveryService.h@T@CBLCameraDiscoveryMetadataResolveCallback">CBLCameraDiscoveryMetadataResolveCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraDiscoveryService.h@T@CBLCameraDiscoveryServiceResolveCallback">CBLCameraDiscoveryServiceResolveCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLCameraFamily">CBLCameraFamily</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewFrameDelivery">CBLCameraLiveViewFrameDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewTerminationHandler">CBLCameraLiveViewTerminationHandler</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraObserverToken">CBLCameraObserverToken</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLCameraPropertyObservationCallback">CBLCameraPropertyObservationCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraShotPreviewAvailableBlock">CBLCameraShotPreviewAvailableBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraShotPreviewDelivery.h@T@CBLCameraShotPreviewDeliveryCallback">CBLCameraShotPreviewDeliveryCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFDelivery">CBLEXIFDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFPreflight">CBLEXIFPreflight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileStorage.h@T@CBLFileStorageFilesModifiedObserver">CBLFileStorageFilesModifiedObserver</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileStorage.h@T@CBLFileStorageObserverToken">CBLFileStorageObserverToken</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamChunkDelivery">CBLFileStreamChunkDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamCompletion">CBLFileStreamCompletion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamPreflight">CBLFileStreamPreflight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImageDelivery">CBLPreviewImageDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImagePreflight">CBLPreviewImagePreflight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLPropertyCommonValue">CBLPropertyCommonValue</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Functions.html">Functions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Functions.html#/c:@F@CBLCoreLocalizedString">CBLCoreLocalizedString</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Functions.html#/c:CBLConstants.h@F@CBLFloatAlmostEqual">CBLFloatAlmostEqual</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2021-06-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>

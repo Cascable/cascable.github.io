@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Protocols  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Section/Protocols" class="dashAnchor"></a>
+    <a title="Protocols  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="index.html"> Docs</a>
+          <span class="no-mobile"> (99% documented)</span>
+        </p>
+    
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="index.html"> Reference</a>
+            <img id="carat" src="img/carat.png" />
+          </span>
+          Protocols  Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>Protocols</h1>
+              <p>The following protocols are available globally.</p>
+
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraDiagnostics"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraDiagnostics" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraDiagnostics">CBLCameraDiagnostics</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Diagnostics methods for cameras.</p>
+
+                          <a href="Protocols/CBLCameraDiagnostics.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraDiagnostics</span> <span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a></span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraDiagnostics</span> <span class="p">:</span> <span class="kt">Camera</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraConnectionWarning"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraConnectionWarning" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraConnectionWarning">CBLCameraConnectionWarning</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>A non-fatal connection warning.</p>
+
+                          <a href="Protocols/CBLCameraConnectionWarning.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraConnectionWarning</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ConnectionWarning</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCamera"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCamera" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCamera">CBLCamera</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The catch-all protocol for a camera object in CascableCore. Functionality is broken down into sub-protocols:</p>
+
+<ul>
+<li><code><a href="Protocols/CBLCameraCore.html">CBLCameraCore</a></code> for core functionality, such as connection/disconnection, supported functionality, etc.</li>
+<li><code><a href="Protocols/CBLCameraLiveView.html">CBLCameraLiveView</a></code> for operations involving live view streaming.</li>
+<li><code><a href="Protocols/CBLCameraFocusAndShutter.html">CBLCameraFocusAndShutter</a></code> for operations involving shooting images.</li>
+<li><code><a href="Protocols/CBLCameraProperties.html">CBLCameraProperties</a></code> for operations involving getting and setting camera settings/properties.</li>
+<li><code><a href="Protocols/CBLCameraFileSystem.html">CBLCameraFileSystem</a></code> for operations involving accessing the camera&rsquo;s file system.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span>
+    <span class="nc">CBLCamera</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n"><a href="Protocols/CBLCameraCore.html">CBLCameraCore</a></span><span class="p">,</span> <span class="n"><a href="Protocols/CBLCameraLiveView.html">CBLCameraLiveView</a></span><span class="p">,</span> <span class="n"><a href="Protocols/CBLCameraProperties.html">CBLCameraProperties</a></span><span class="p">,</span>
+               <span class="n"><a href="Protocols/CBLCameraFileSystem.html">CBLCameraFileSystem</a></span><span class="p">,</span> <span class="n"><a href="Protocols/CBLCameraFocusAndShutter.html">CBLCameraFocusAndShutter</a></span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Camera</span> <span class="p">:</span> <span class="kt">CameraCore</span><span class="p">,</span> <span class="kt">CameraFileSystem</span><span class="p">,</span> <span class="kt">CameraFocusAndShutter</span><span class="p">,</span> <span class="kt">CameraLiveView</span><span class="p">,</span> <span class="kt">CameraProperties</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraCore"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraCore" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraCore">CBLCameraCore</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Camera connection, disconnection and status methods.</p>
+
+                          <a href="Protocols/CBLCameraCore.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraCore</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraCore</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Live%20View"></a>
+                  <a name="//apple_ref/objc/Section/Live View" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Live%20View"></a>
+                    <h3 class="section-name"><p>Live View</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveView"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraLiveView" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveView">CBLCameraLiveView</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Camera live view methods.</p>
+
+                          <a href="Protocols/CBLCameraLiveView.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraLiveView</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraLiveView</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraProperties"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraProperties" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraProperties">CBLCameraProperties</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Camera property methods.</p>
+
+                          <a href="Protocols/CBLCameraProperties.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraProperties</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraProperties</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFileSystem"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraFileSystem" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFileSystem">CBLCameraFileSystem</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Camera filesystem methods.</p>
+
+                          <a href="Protocols/CBLCameraFileSystem.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraFileSystem</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraFileSystem</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraFocusAndShutter" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter">CBLCameraFocusAndShutter</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Camera focus and shutter methods.</p>
+
+                          <a href="Protocols/CBLCameraFocusAndShutter.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraFocusAndShutter</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraFocusAndShutter</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraDiscoveryDelegate"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraDiscoveryDelegate" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraDiscoveryDelegate">CBLCameraDiscoveryDelegate</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Camera discovery delegate methods.</p>
+
+                          <a href="Protocols/CBLCameraDiscoveryDelegate.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraDiscoveryDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraDiscoveryDelegate</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraDiscoveryServiceDelegate"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraDiscoveryServiceDelegate" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraDiscoveryServiceDelegate">CBLCameraDiscoveryServiceDelegate</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The discovery service&rsquo;s delegate protocol. Typically, this should not be interfered with.</p>
+
+                          <a href="Protocols/CBLCameraDiscoveryServiceDelegate.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraDiscoveryServiceDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraDiscoveryServiceDelegate</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraDiscoveryService"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraDiscoveryService" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraDiscoveryService">CBLCameraDiscoveryService</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>A camera discovery service represents a camera that has been found on the network, but has not been connected to. A meta-camera, if you will.</p>
+
+                          <a href="Protocols/CBLCameraDiscoveryService.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraDiscoveryService</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraDiscoveryService</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewAFArea"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraLiveViewAFArea" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewAFArea">CBLCameraLiveViewAFArea</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Represents an autofocus area in a camera&rsquo;s focus aspect. Typically rendered as a rectangle on top of the live view image.</p>
+
+                          <a href="Protocols/CBLCameraLiveViewAFArea.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraLiveViewAFArea</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">LiveViewAFArea</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraLiveViewFrame" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame">CBLCameraLiveViewFrame</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Represents a single frame of a streaming live view image, along with any associated metadata.</p>
+
+                          <a href="Protocols/CBLCameraLiveViewFrame.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraLiveViewFrame</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">LiveViewFrame</span> <span class="p">:</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraManualDiscovery"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraManualDiscovery" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraManualDiscovery">CBLCameraManualDiscovery</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Use the <code>CBLCameraManualDiscovery</code> object when you need to connect to a camera in situations where using
+automatic discovery protocols is neither available or desired. Typically, this is paired with user interface
+asking the user for the IP address and manufacturer of their camera.</p>
+
+<p>Note that manual discovery is <em>entirely</em> separate from the automatic discovery provided by <code><a href="Classes/CBLCameraDiscovery.html">CBLCameraDiscovery</a></code>.</p>
+
+                          <a href="Protocols/CBLCameraManualDiscovery.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraManualDiscovery</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraManualDiscovery</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraPropertyObservation"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraPropertyObservation" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraPropertyObservation">CBLCameraPropertyObservation</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>An object for managing property value change notifications. When you add an observer to a property, store the returned
+token somewhere in order to keep the observation alive. To remove the observation, you can simply remove all strong
+references to its token, or explicitly call <code>invalidate</code> on it.</p>
+
+                          <a href="Protocols/CBLCameraPropertyObservation.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraPropertyObservation</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraPropertyObservation</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraProperty"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraProperty" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraProperty">CBLCameraProperty</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>An object representing the values for a property on the camera.</p>
+
+                          <a href="Protocols/CBLCameraProperty.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraProperty</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraProperty</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLExposureProperty"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLExposureProperty" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLExposureProperty">CBLExposureProperty</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>A property that exposes its values as universal exposure values.</p>
+
+                          <a href="Protocols/CBLExposureProperty.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLExposureProperty</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/CBLCameraProperty.html">CBLCameraProperty</a></span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ExposureProperty</span> <span class="p">:</span> <span class="kt">CameraProperty</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLPropertyValue"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLPropertyValue" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLPropertyValue">CBLPropertyValue</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>A property value. This could either be the current value of a property, or something in the list of values that can be set.</p>
+
+                          <a href="Protocols/CBLPropertyValue.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLPropertyValue</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">PropertyValue</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLExposurePropertyValue"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLExposurePropertyValue" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLExposurePropertyValue">CBLExposurePropertyValue</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>A property value that exposes its values as universal exposure values.</p>
+
+                          <a href="Protocols/CBLExposurePropertyValue.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLExposurePropertyValue</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/CBLPropertyValue.html">CBLPropertyValue</a></span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ExposurePropertyValue</span> <span class="p">:</span> <span class="kt">PropertyValue</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraShotPreviewDelivery"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraShotPreviewDelivery" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraShotPreviewDelivery">CBLCameraShotPreviewDelivery</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>When a new shot preview is available, the camera will provide an <code>id &lt;CBLCameraShotPreviewDelivery&gt;</code> object.</p>
+
+                          <a href="Protocols/CBLCameraShotPreviewDelivery.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraShotPreviewDelivery</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ShotPreviewDelivery</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Protocols%20Implemented%20By%20Plugin"></a>
+                  <a name="//apple_ref/objc/Section/Protocols Implemented By Plugin" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Protocols%20Implemented%20By%20Plugin"></a>
+                    <h3 class="section-name"><p>Protocols Implemented By Plugin</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCorePluginEntryPoint"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCorePluginEntryPoint" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCorePluginEntryPoint">CBLCorePluginEntryPoint</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>This protocol defines the protocol expected by CascableCore when loading your plugin via the information
+found in the plugin&rsquo;s Info.plist keys.</p>
+
+                          <a href="Protocols/CBLCorePluginEntryPoint.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCorePluginEntryPoint</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">PluginEntryPoint</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCoreCameraDiscoveryProvider"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCoreCameraDiscoveryProvider" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCoreCameraDiscoveryProvider">CBLCoreCameraDiscoveryProvider</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Implement the CBLCoreCameraDiscoveryProvider protocol in order to provide custom cameras and camera discovery
+to CascableCore. You can then register your camera provider with CascableCore in the plugin entrypoint.</p>
+
+                          <a href="Protocols/CBLCoreCameraDiscoveryProvider.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCoreCameraDiscoveryProvider</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraDiscoveryProvider</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCoreCameraManualDiscoveryProvider"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCoreCameraManualDiscoveryProvider" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCoreCameraManualDiscoveryProvider">CBLCoreCameraManualDiscoveryProvider</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Implement the CBLCoreCameraManualDiscoveryProvider protocol in order to provide direct connections to your
+cameras via CascableCore based on user input (i.e., &ldquo;connect to the camera at 192.168.1.46&rdquo;). You can then
+register your manual discovery provider with CascableCore in the plugin entrypoint.</p>
+
+                          <a href="Protocols/CBLCoreCameraManualDiscoveryProvider.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCoreCameraManualDiscoveryProvider</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraManualDiscoveryProvider</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Protocols%20Implemented%20By%20CascableCore"></a>
+                  <a name="//apple_ref/objc/Section/Protocols Implemented By CascableCore" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Protocols%20Implemented%20By%20CascableCore"></a>
+                    <h3 class="section-name"><p>Protocols Implemented By CascableCore</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCorePluginRegistration"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCorePluginRegistration" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCorePluginRegistration">CBLCorePluginRegistration</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Methods to register your plugin with CascableCore.</p>
+
+                          <a href="Protocols/CBLCorePluginRegistration.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCorePluginRegistration</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">PluginRegistration</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCoreCameraDiscoveryProviderDelegate"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCoreCameraDiscoveryProviderDelegate" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCoreCameraDiscoveryProviderDelegate">CBLCoreCameraDiscoveryProviderDelegate</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Methods to deliver camera discovery changes to CascableCore.</p>
+
+                          <a href="Protocols/CBLCoreCameraDiscoveryProviderDelegate.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCoreCameraDiscoveryProviderDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraDiscoveryProviderDelegate</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLDeviceInfo"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLDeviceInfo" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLDeviceInfo">CBLDeviceInfo</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Information about a connected camera.</p>
+
+                          <a href="Protocols/CBLDeviceInfo.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLDeviceInfo</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">DeviceInfo</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileStorage"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLFileStorage" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileStorage">CBLFileStorage</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Represents a file storage container in a camera, such as an SD card.</p>
+
+                          <a href="Protocols/CBLFileStorage.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLFileStorage</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">FileStorage</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemFolderItem"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLFileSystemFolderItem" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemFolderItem">CBLFileSystemFolderItem</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Represents a folder on a camera&rsquo;s storage device.</p>
+
+                          <a href="Protocols/CBLFileSystemFolderItem.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLFileSystemFolderItem</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n"><a href="Protocols/CBLFileSystemItem.html">CBLFileSystemItem</a></span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">FileSystemFolderItem</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLFileSystemItem" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem">CBLFileSystemItem</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>A filesystem item represents a file or folder on the camera&rsquo;s storage.</p>
+
+                          <a href="Protocols/CBLFileSystemItem.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLFileSystemItem</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">FileSystemItem</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFocusInfo"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLFocusInfo" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFocusInfo">CBLFocusInfo</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Represents an autofocus state of the camera.</p>
+
+                          <a href="Protocols/CBLFocusInfo.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLFocusInfo</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">FocusInfo</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFocusPoint"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLFocusPoint" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFocusPoint">CBLFocusPoint</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Represents an individual focus point.</p>
+
+                          <a href="Protocols/CBLFocusPoint.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLFocusPoint</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">FocusPoint</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="Categories.html">Categories</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Categories/NSError%28CBL%29.html">NSError(CBL)</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Classes/CBLCameraAEResult.html">CBLCameraAEResult</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/CBLCameraDescriptor.html">CBLCameraDescriptor</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/CBLCameraDiscovery.html">CBLCameraDiscovery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/CBLCameraQRDecoding.html">CBLCameraQRDecoding</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/CBLCameraWiFiDetails.html">CBLCameraWiFiDetails</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/CBLExifHelpers.html">CBLExifHelpers</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/CBLImageManipulationHelpers.html">CBLImageManipulationHelpers</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/CBLImageMetadataWritingHelpers.html">CBLImageMetadataWritingHelpers</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/CBLLicenseVerification.html">CBLLicenseVerification</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/CBLNetworkConfigurationHelper.html">CBLNetworkConfigurationHelper</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/CBLRAWImageDescription.html">CBLRAWImageDescription</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Constants.html">Constants</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLConstants.h@CBLCameraFamilyCanon">CBLCameraFamilyCanon</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLConstants.h@CBLCameraFamilyFuji">CBLCameraFamilyFuji</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLConstants.h@CBLCameraFamilyGeneric">CBLCameraFamilyGeneric</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLConstants.h@CBLCameraFamilyNikon">CBLCameraFamilyNikon</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLConstants.h@CBLCameraFamilyOlympus">CBLCameraFamilyOlympus</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLConstants.h@CBLCameraFamilyPanasonic">CBLCameraFamilyPanasonic</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLConstants.h@CBLCameraFamilySony">CBLCameraFamilySony</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLCamera.h@CBLConnectionFlagSyncCameraClockToSystemClock">CBLConnectionFlagSyncCameraClockToSystemClock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLCoreVersions.h@CBLCoreBundleVersion">CBLCoreBundleVersion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLCorePluginEntryPoint.h@CBLCorePluginDisplayNameKey">CBLCorePluginDisplayNameKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLCorePluginEntryPoint.h@CBLCorePluginEntryPointClassNameKey">CBLCorePluginEntryPointClassNameKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLCorePluginEntryPoint.h@CBLCorePluginInfoDictionaryKey">CBLCorePluginInfoDictionaryKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLCoreVersions.h@CBLCoreVerboseVersion">CBLCoreVerboseVersion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLCamera.h@CBLDisconnectionFlagPowerOffCamera">CBLDisconnectionFlagPowerOffCamera</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:NSError+CBLExtensions.h@CBLErrorCodeDescriptionKey">CBLErrorCodeDescriptionKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:NSError+CBLExtensions.h@CBLErrorDomain">CBLErrorDomain</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLCamera.h@CBLLiveViewOptionFavorHighFrameRate">CBLLiveViewOptionFavorHighFrameRate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLCamera.h@CBLLiveViewOptionSkipImageDecoding">CBLLiveViewOptionSkipImageDecoding</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:@CBLNetworkConfigurationSimulatorWiFiInterfaceOverride">CBLNetworkConfigurationSimulatorWiFiInterfaceOverride</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLCameraPropertyAPI.h@CBLPropertyCommonValueNone">CBLPropertyCommonValueNone</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:NSError+CBLExtensions.h@CBLUnderlyingResponseCodeDescriptionKey">CBLUnderlyingResponseCodeDescriptionKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:NSError+CBLExtensions.h@CBLUnderlyingResponseCodeKey">CBLUnderlyingResponseCodeKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:CBLReachabilityConstants.h@CBLWiFiConnectivityDidChangeNotificationName">CBLWiFiConnectivityDidChangeNotificationName</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Enums/CBLCameraAvailableCommandCategory.html">CBLCameraAvailableCommandCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLCameraConnectionState.html">CBLCameraConnectionState</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLCameraConnectionWarningCategory.html">CBLCameraConnectionWarningCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLCameraConnectionWarningType.html">CBLCameraConnectionWarningType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLCameraDiscoveryMode.html">CBLCameraDiscoveryMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLCameraLiveViewFrameOrientation.html">CBLCameraLiveViewFrameOrientation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLCameraLiveViewFramePixelFormat.html">CBLCameraLiveViewFramePixelFormat</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLCameraLiveViewTerminationReason.html">CBLCameraLiveViewTerminationReason</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLCameraLiveViewZoomLevel.html">CBLCameraLiveViewZoomLevel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLCameraLocation.html">CBLCameraLocation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLCameraSupportedFunctionality.html">CBLCameraSupportedFunctionality</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLCameraTransport.html">CBLCameraTransport</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLErrorCameraDomain.html">CBLErrorCameraDomain</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLErrorCode.html">CBLErrorCode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLExifRotation.html">CBLExifRotation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLFileStreamInstruction.html">CBLFileStreamInstruction</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLFileSystemModificationOperation.html">CBLFileSystemModificationOperation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLFocusDriveAmount.html">CBLFocusDriveAmount</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLFocusDriveDirection.html">CBLFocusDriveDirection</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLLicenseVerificationResult.html">CBLLicenseVerificationResult</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLPropertyCategory.html">CBLPropertyCategory</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLPropertyChangeType.html">CBLPropertyChangeType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLPropertyCommonValueAFSystem.html">CBLPropertyCommonValueAFSystem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLPropertyCommonValueAutoExposureMode.html">CBLPropertyCommonValueAutoExposureMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLPropertyCommonValueBatteryLevel.html">CBLPropertyCommonValueBatteryLevel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLPropertyCommonValueBoolean.html">CBLPropertyCommonValueBoolean</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLPropertyCommonValueDriveMode.html">CBLPropertyCommonValueDriveMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLPropertyCommonValueFocusMode.html">CBLPropertyCommonValueFocusMode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLPropertyCommonValueLightMeterStatus.html">CBLPropertyCommonValueLightMeterStatus</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLPropertyCommonValueMirrorLockupStage.html">CBLPropertyCommonValueMirrorLockupStage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLPropertyCommonValuePowerSource.html">CBLPropertyCommonValuePowerSource</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLPropertyCommonValueWhiteBalance.html">CBLPropertyCommonValueWhiteBalance</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLPropertyIdentifier.html">CBLPropertyIdentifier</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLStorageSlot.html">CBLStorageSlot</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraConnectionWarning.html">CBLCameraConnectionWarning</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraCore.html">CBLCameraCore</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraDiagnostics.html">CBLCameraDiagnostics</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraDiscoveryDelegate.html">CBLCameraDiscoveryDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraDiscoveryService.html">CBLCameraDiscoveryService</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraDiscoveryServiceDelegate.html">CBLCameraDiscoveryServiceDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraFileSystem.html">CBLCameraFileSystem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraFocusAndShutter.html">CBLCameraFocusAndShutter</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraLiveView.html">CBLCameraLiveView</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraLiveViewAFArea.html">CBLCameraLiveViewAFArea</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraLiveViewFrame.html">CBLCameraLiveViewFrame</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraManualDiscovery.html">CBLCameraManualDiscovery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraProperties.html">CBLCameraProperties</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraProperty.html">CBLCameraProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraPropertyObservation.html">CBLCameraPropertyObservation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraShotPreviewDelivery.html">CBLCameraShotPreviewDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCoreCameraDiscoveryProvider.html">CBLCoreCameraDiscoveryProvider</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCoreCameraDiscoveryProviderDelegate.html">CBLCoreCameraDiscoveryProviderDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCoreCameraManualDiscoveryProvider.html">CBLCoreCameraManualDiscoveryProvider</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCorePluginEntryPoint.html">CBLCorePluginEntryPoint</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCorePluginRegistration.html">CBLCorePluginRegistration</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLDeviceInfo.html">CBLDeviceInfo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLExposureProperty.html">CBLExposureProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLExposurePropertyValue.html">CBLExposurePropertyValue</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLFileStorage.html">CBLFileStorage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLFileSystemFolderItem.html">CBLFileSystemFolderItem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLFileSystemItem.html">CBLFileSystemItem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLFocusInfo.html">CBLFocusInfo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLFocusPoint.html">CBLFocusPoint</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLPropertyValue.html">CBLPropertyValue</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Type%20Definitions.html">Type Definitions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionUserInterventionBlock">CBLCameraConnectionUserInterventionBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCameraManualDiscovery.h@T@CBLCameraCreationOperationCallback">CBLCameraCreationOperationCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCameraDiscovery.h@T@CBLCameraDiscoveryAvailableDevicesChangedCallback">CBLCameraDiscoveryAvailableDevicesChangedCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCameraDiscoveryService.h@T@CBLCameraDiscoveryMetadataResolveCallback">CBLCameraDiscoveryMetadataResolveCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCameraDiscoveryService.h@T@CBLCameraDiscoveryServiceResolveCallback">CBLCameraDiscoveryServiceResolveCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLConstants.h@T@CBLCameraFamily">CBLCameraFamily</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewFrameDelivery">CBLCameraLiveViewFrameDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewTerminationHandler">CBLCameraLiveViewTerminationHandler</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraObserverToken">CBLCameraObserverToken</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLCameraPropertyObservationCallback">CBLCameraPropertyObservationCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraShotPreviewAvailableBlock">CBLCameraShotPreviewAvailableBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCameraShotPreviewDelivery.h@T@CBLCameraShotPreviewDeliveryCallback">CBLCameraShotPreviewDeliveryCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFDelivery">CBLEXIFDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFPreflight">CBLEXIFPreflight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLFileStorage.h@T@CBLFileStorageFilesModifiedObserver">CBLFileStorageFilesModifiedObserver</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLFileStorage.h@T@CBLFileStorageObserverToken">CBLFileStorageObserverToken</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamChunkDelivery">CBLFileStreamChunkDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamCompletion">CBLFileStreamCompletion</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLFileStreamPreflight">CBLFileStreamPreflight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImageDelivery">CBLPreviewImageDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLPreviewImagePreflight">CBLPreviewImagePreflight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLPropertyCommonValue">CBLPropertyCommonValue</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Functions.html">Functions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Functions.html#/c:@F@CBLCoreLocalizedString">CBLCoreLocalizedString</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Functions.html#/c:CBLConstants.h@F@CBLFloatAlmostEqual">CBLFloatAlmostEqual</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2021-06-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>

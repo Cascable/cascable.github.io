@@ -1,0 +1,19 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/cascable/Projects/Cascable/cascable-core/Build Scripts/Distribution/CascableCore.xcframework/ios-arm64/CascableCore.framework/Headers/CascableCore/CBLCoreVersions.h",
+      "line": 1,
+      "symbol": "CBLCoreVerboseVersion",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cascable/Projects/Cascable/cascable-core/Build Scripts/Distribution/CascableCore.xcframework/ios-arm64/CascableCore.framework/Headers/CascableCore/CBLCoreVersions.h",
+      "line": 2,
+      "symbol": "CBLCoreBundleVersion",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/cascable/Projects/Cascable/cascable-core/Build Scripts"
+}
