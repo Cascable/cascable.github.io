@@ -364,7 +364,7 @@
                         <div class="pointer"></div>
                         <div class="abstract">
                           <p>The operation failed because the camera isn&rsquo;t in a command category that supports the requested operation.
-     For example, you&rsquo;re trying to take a photo while the camera doesn&rsquo;t currently allow remote shooting commands.</p>
+     For example, you&rsquo;re trying to take a photo while the camera doesn&rsquo;t currently allow stills shooting commands.</p>
 
                         </div>
                         <div class="declaration">
@@ -673,6 +673,200 @@
                       </section>
                     </div>
                   </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@E@CBLErrorCode@CBLErrorCodeVideoRecordingInProgress"></a>
+                      <a name="//apple_ref/objc/Case/CBLErrorCodeVideoRecordingInProgress" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@E@CBLErrorCode@CBLErrorCodeVideoRecordingInProgress">CBLErrorCodeVideoRecordingInProgress</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The operation failed because the camera is currently recording video.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="n">CBLErrorCodeVideoRecordingInProgress</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">videoRecordingInProgress</span> <span class="o">=</span> <span class="mi">1019</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@E@CBLErrorCode@CBLErrorCodeRequiresPhysicalInteraction"></a>
+                      <a name="//apple_ref/objc/Case/CBLErrorCodeRequiresPhysicalInteraction" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@E@CBLErrorCode@CBLErrorCodeRequiresPhysicalInteraction">CBLErrorCodeRequiresPhysicalInteraction</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The operation failed because the camera can only perform the given action by having the user flip a switch
+        or push a button on the camera directly.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="n">CBLErrorCodeRequiresPhysicalInteraction</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">requiresPhysicalInteraction</span> <span class="o">=</span> <span class="mi">1020</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@E@CBLErrorCode@CBLErrorCodeDisallowedOnCurrentTransport"></a>
+                      <a name="//apple_ref/objc/Case/CBLErrorCodeDisallowedOnCurrentTransport" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@E@CBLErrorCode@CBLErrorCodeDisallowedOnCurrentTransport">CBLErrorCodeDisallowedOnCurrentTransport</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The operation failed because the camera doesn&rsquo;t allow the operation over the current transport. For example,
+     older Canon cameras don&rsquo;t allow video recording over WiFi.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="n">CBLErrorCodeDisallowedOnCurrentTransport</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">disallowedOnCurrentTransport</span> <span class="o">=</span> <span class="mi">1021</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@E@CBLErrorCode@CBLErrorCodeRequiresLiveView"></a>
+                      <a name="//apple_ref/objc/Case/CBLErrorCodeRequiresLiveView" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@E@CBLErrorCode@CBLErrorCodeRequiresLiveView">CBLErrorCodeRequiresLiveView</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The operation failed because it requires live view to be running. Start live view and try again.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="n">CBLErrorCodeRequiresLiveView</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">requiresLiveView</span> <span class="o">=</span> <span class="mi">1022</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@E@CBLErrorCode@CBLErrorCodeCardError"></a>
+                      <a name="//apple_ref/objc/Case/CBLErrorCodeCardError" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@E@CBLErrorCode@CBLErrorCodeCardError">CBLErrorCodeCardError</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The operation failed because of a card error. Either the storage card is missing, damaged, or unformatted.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="n">CBLErrorCodeCardError</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cardError</span> <span class="o">=</span> <span class="mi">1023</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@E@CBLErrorCode@CBLErrorCodeStorageFull"></a>
+                      <a name="//apple_ref/objc/Case/CBLErrorCodeStorageFull" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@E@CBLErrorCode@CBLErrorCodeStorageFull">CBLErrorCodeStorageFull</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The operation failed because the camera&rsquo;s storage is full.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="n">CBLErrorCodeStorageFull</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">storageFull</span> <span class="o">=</span> <span class="mi">1024</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </section>
@@ -907,6 +1101,9 @@
                 <li class="nav-group-task">
                   <a href="../Enums/CBLStorageSlot.html">CBLStorageSlot</a>
                 </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLVideoTimerType.html">CBLVideoTimerType</a>
+                </li>
               </ul>
             </li>
             <li class="nav-group-name">
@@ -964,6 +1161,9 @@
                   <a href="../Protocols/CBLCameraShotPreviewDelivery.html">CBLCameraShotPreviewDelivery</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraVideoRecording.html">CBLCameraVideoRecording</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLCoreCameraDiscoveryProvider.html">CBLCoreCameraDiscoveryProvider</a>
                 </li>
                 <li class="nav-group-task">
@@ -1004,6 +1204,9 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Protocols/CBLPropertyValue.html">CBLPropertyValue</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLVideoTimerValue.html">CBLVideoTimerValue</a>
                 </li>
               </ul>
             </li>
@@ -1100,7 +1303,7 @@
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2021-12-10)</p>
+          <p>&copy; 2022 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2022-01-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>

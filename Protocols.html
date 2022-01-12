@@ -133,6 +133,7 @@
 <li><code><a href="Protocols/CBLCameraFocusAndShutter.html">CBLCameraFocusAndShutter</a></code> for operations involving shooting images.</li>
 <li><code><a href="Protocols/CBLCameraProperties.html">CBLCameraProperties</a></code> for operations involving getting and setting camera settings/properties.</li>
 <li><code><a href="Protocols/CBLCameraFileSystem.html">CBLCameraFileSystem</a></code> for operations involving accessing the camera&rsquo;s file system.</li>
+<li><code><a href="Protocols/CBLCameraVideoRecording.html">CBLCameraVideoRecording</a></code> for operations involving video recording.</li>
 </ul>
 
                         </div>
@@ -140,14 +141,14 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@protocol</span>
-    <span class="nc">CBLCamera</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n"><a href="Protocols/CBLCameraCore.html">CBLCameraCore</a></span><span class="p">,</span> <span class="n"><a href="Protocols/CBLCameraLiveView.html">CBLCameraLiveView</a></span><span class="p">,</span> <span class="n"><a href="Protocols/CBLCameraProperties.html">CBLCameraProperties</a></span><span class="p">,</span>
-               <span class="n"><a href="Protocols/CBLCameraFileSystem.html">CBLCameraFileSystem</a></span><span class="p">,</span> <span class="n"><a href="Protocols/CBLCameraFocusAndShutter.html">CBLCameraFocusAndShutter</a></span><span class="o">&gt;</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCamera</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n"><a href="Protocols/CBLCameraCore.html">CBLCameraCore</a></span><span class="p">,</span> <span class="n"><a href="Protocols/CBLCameraLiveView.html">CBLCameraLiveView</a></span><span class="p">,</span>
+                     <span class="n"><a href="Protocols/CBLCameraProperties.html">CBLCameraProperties</a></span><span class="p">,</span> <span class="n"><a href="Protocols/CBLCameraFileSystem.html">CBLCameraFileSystem</a></span><span class="p">,</span>
+                     <span class="n"><a href="Protocols/CBLCameraFocusAndShutter.html">CBLCameraFocusAndShutter</a></span><span class="p">,</span> <span class="n"><a href="Protocols/CBLCameraVideoRecording.html">CBLCameraVideoRecording</a></span><span class="o">&gt;</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Camera</span> <span class="p">:</span> <span class="kt">CameraCore</span><span class="p">,</span> <span class="kt">CameraFileSystem</span><span class="p">,</span> <span class="kt">CameraFocusAndShutter</span><span class="p">,</span> <span class="kt">CameraLiveView</span><span class="p">,</span> <span class="kt">CameraProperties</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Camera</span> <span class="p">:</span> <span class="kt">CameraCore</span><span class="p">,</span> <span class="kt">CameraFileSystem</span><span class="p">,</span> <span class="kt">CameraFocusAndShutter</span><span class="p">,</span> <span class="kt">CameraLiveView</span><span class="p">,</span> <span class="kt">CameraProperties</span><span class="p">,</span> <span class="kt">CameraVideoRecording</span></code></pre>
 
                           </div>
                         </div>
@@ -326,6 +327,72 @@
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraFocusAndShutter</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLVideoTimerValue"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLVideoTimerValue" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLVideoTimerValue">CBLVideoTimerValue</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>A video timer value. Only valid during video recording.</p>
+
+                          <a href="Protocols/CBLVideoTimerValue.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLVideoTimerValue</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="p">,</span> <span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">VideoTimerValue</span> <span class="p">:</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraVideoRecording"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraVideoRecording" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraVideoRecording">CBLCameraVideoRecording</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Video recording methods.</p>
+
+                          <a href="Protocols/CBLCameraVideoRecording.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraVideoRecording</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraVideoRecording</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
 
                           </div>
                         </div>
@@ -1361,6 +1428,9 @@ register your manual discovery provider with CascableCore in the plugin entrypoi
                 <li class="nav-group-task">
                   <a href="Enums/CBLStorageSlot.html">CBLStorageSlot</a>
                 </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLVideoTimerType.html">CBLVideoTimerType</a>
+                </li>
               </ul>
             </li>
             <li class="nav-group-name">
@@ -1418,6 +1488,9 @@ register your manual discovery provider with CascableCore in the plugin entrypoi
                   <a href="Protocols/CBLCameraShotPreviewDelivery.html">CBLCameraShotPreviewDelivery</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraVideoRecording.html">CBLCameraVideoRecording</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Protocols/CBLCoreCameraDiscoveryProvider.html">CBLCoreCameraDiscoveryProvider</a>
                 </li>
                 <li class="nav-group-task">
@@ -1458,6 +1531,9 @@ register your manual discovery provider with CascableCore in the plugin entrypoi
                 </li>
                 <li class="nav-group-task">
                   <a href="Protocols/CBLPropertyValue.html">CBLPropertyValue</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLVideoTimerValue.html">CBLVideoTimerValue</a>
                 </li>
               </ul>
             </li>
@@ -1554,7 +1630,7 @@ register your manual discovery provider with CascableCore in the plugin entrypoi
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2021-12-10)</p>
+          <p>&copy; 2022 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2022-01-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>
