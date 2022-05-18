@@ -48,7 +48,7 @@
                   </div>
                   <div class="language">
                     <p class="aside-title">Swift</p>
-                    <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">PropertyIdentifier</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                    <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">PropertyIdentifier</span> <span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
 
                   </div>
                 </div>
@@ -893,6 +893,38 @@
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/c:@E@CBLPropertyIdentifier@CBLPropertyIdentifierImageDestination"></a>
+                      <a name="//apple_ref/objc/Case/CBLPropertyIdentifierImageDestination" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@E@CBLPropertyIdentifier@CBLPropertyIdentifierImageDestination">CBLPropertyIdentifierImageDestination</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The target destination for images when connected to a host like CascableCore. Common values will be of type <code><a href="../Enums/CBLPropertyCommonValueImageDestination.html">CBLPropertyCommonValueImageDestination</a></code>.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="n">CBLPropertyIdentifierImageDestination</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">imageDestination</span> <span class="o">=</span> <span class="mi">26</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/c:@E@CBLPropertyIdentifier@CBLPropertyIdentifierMax"></a>
                       <a name="//apple_ref/objc/Case/CBLPropertyIdentifierMax" class="dashAnchor"></a>
                       <a class="token" href="#/c:@E@CBLPropertyIdentifier@CBLPropertyIdentifierMax">CBLPropertyIdentifierMax</a>
@@ -903,7 +935,7 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Whether the camera is ready to take a shot. Common values will be of type <code><a href="../Enums/CBLPropertyCommonValueBoolean.html">CBLPropertyCommonValueBoolean</a></code>.</p>
+                          <p>The target destination for images when connected to a host like CascableCore. Common values will be of type <code><a href="../Enums/CBLPropertyCommonValueImageDestination.html">CBLPropertyCommonValueImageDestination</a></code>.</p>
 
                         </div>
                         <div class="declaration">
@@ -915,7 +947,7 @@
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">max</span> <span class="o">=</span> <span class="mi">26</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">max</span> <span class="o">=</span> <span class="mi">27</span></code></pre>
 
                           </div>
                         </div>
@@ -935,7 +967,7 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Whether the camera is ready to take a shot. Common values will be of type <code><a href="../Enums/CBLPropertyCommonValueBoolean.html">CBLPropertyCommonValueBoolean</a></code>.</p>
+                          <p>The target destination for images when connected to a host like CascableCore. Common values will be of type <code><a href="../Enums/CBLPropertyCommonValueImageDestination.html">CBLPropertyCommonValueImageDestination</a></code>.</p>
 
                         </div>
                         <div class="declaration">
@@ -1102,6 +1134,12 @@
                   <a href="../Enums/CBLCameraDiscoveryMode.html">CBLCameraDiscoveryMode</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraInitiatedTransferRepresentation.html">CBLCameraInitiatedTransferRepresentation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraInitiatedTransferState.html">CBLCameraInitiatedTransferState</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/CBLCameraLiveViewFrameOrientation.html">CBLCameraLiveViewFrameOrientation</a>
                 </li>
                 <li class="nav-group-task">
@@ -1171,6 +1209,9 @@
                   <a href="../Enums/CBLPropertyCommonValueFocusMode.html">CBLPropertyCommonValueFocusMode</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueImageDestination.html">CBLPropertyCommonValueImageDestination</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/CBLPropertyCommonValueLightMeterStatus.html">CBLPropertyCommonValueLightMeterStatus</a>
                 </li>
                 <li class="nav-group-task">
@@ -1184,6 +1225,9 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLPropertyIdentifier.html">CBLPropertyIdentifier</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyValueSetType.html">CBLPropertyValueSetType</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLStorageSlot.html">CBLStorageSlot</a>
@@ -1224,6 +1268,12 @@
                   <a href="../Protocols/CBLCameraFocusAndShutter.html">CBLCameraFocusAndShutter</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraInitiatedTransferRequest.html">CBLCameraInitiatedTransferRequest</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraInitiatedTransferResult.html">CBLCameraInitiatedTransferResult</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraLiveView.html">CBLCameraLiveView</a>
                 </li>
                 <li class="nav-group-task">
@@ -1243,9 +1293,6 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraPropertyObservation.html">CBLCameraPropertyObservation</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Protocols/CBLCameraShotPreviewDelivery.html">CBLCameraShotPreviewDelivery</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraVideoRecording.html">CBLCameraVideoRecording</a>
@@ -1322,6 +1369,12 @@
                   <a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLCameraFamily">CBLCameraFamily</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraInitiatedTransfer.h@T@CBLCameraInitiatedTransferCompletionHandler">CBLCameraInitiatedTransferCompletionHandler</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraInitiatedTransferRequestHandler">CBLCameraInitiatedTransferRequestHandler</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewFrameDelivery">CBLCameraLiveViewFrameDelivery</a>
                 </li>
                 <li class="nav-group-task">
@@ -1332,12 +1385,6 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLCameraPropertyObservationCallback">CBLCameraPropertyObservationCallback</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraShotPreviewAvailableBlock">CBLCameraShotPreviewAvailableBlock</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCameraShotPreviewDelivery.h@T@CBLCameraShotPreviewDeliveryCallback">CBLCameraShotPreviewDeliveryCallback</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFDelivery">CBLEXIFDelivery</a>
@@ -1390,7 +1437,7 @@
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2022-01-12)</p>
+          <p>&copy; 2022 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2022-05-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>

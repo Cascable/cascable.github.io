@@ -501,6 +501,91 @@
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferRequest"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraInitiatedTransferRequest" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferRequest">CBLCameraInitiatedTransferRequest</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>A camera-initiated transfer is a request from a camera to transfer an image file (or at least, a representation of
+one such as a preview) to the connected host. This typically happens soon after a shot is taken, and can allow the
+previewing and transferring of images even if the camera currently doesn&rsquo;t allow access to its storage.</p>
+
+<p>Camera-initiated transfers can be time-sensitive as the camera moves on to newer images or flushes buffers — they
+should be dealt with expediently.</p>
+
+<p>In some cases, the camera-initiated transfer to the host may be the <em>only</em> destination for an image. Commonly
+referred to as &ldquo;tethered shooting&rdquo; (or at least a variant of it), the camera might not attempt (or not be able to)
+save the image to its own storage. If this is the case, not correctly handling a camera-initiated transfer will
+case data loss. Check the <code>-isOnlyDestinationForImage</code> property — if that returns <code>YES</code>, not transferring and
+saving the original representation of the image will cause it to be lost.</p>
+
+                          <a href="Protocols/CBLCameraInitiatedTransferRequest.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraInitiatedTransferRequest</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraInitiatedTransferRequest</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferResult"></a>
+                      <a name="//apple_ref/objc/Protocol/CBLCameraInitiatedTransferResult" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferResult">CBLCameraInitiatedTransferResult</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The result of a camera-initiated transfer.</p>
+
+<p>Result objects are stored entirely locally, and as such are not under the time pressure that the intial camera-
+initiated transfer object is. However, they can be fairly resource heavy (especially when the transfer is of a
+RAW image) so it&rsquo;s recommended that they are dealt with reasonably quickly.</p>
+
+<p>How this object manages its resources is an implementation detail, and any buffers of cache files it creates will
+be cleaned up when the object is deallocated. To take ownership of the transfer result, use the appropriate methods
+to extract representations into RAM or to disk.</p>
+
+                          <a href="Protocols/CBLCameraInitiatedTransferResult.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraInitiatedTransferResult</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraInitiatedTransferResult</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/c:objc(pl)CBLCameraLiveViewAFArea"></a>
                       <a name="//apple_ref/objc/Protocol/CBLCameraLiveViewAFArea" class="dashAnchor"></a>
                       <a class="token" href="#/c:objc(pl)CBLCameraLiveViewAFArea">CBLCameraLiveViewAFArea</a>
@@ -762,39 +847,6 @@ references to its token, or explicitly call <code>invalidate</code> on it.</p>
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ExposurePropertyValue</span> <span class="p">:</span> <span class="kt">PropertyValue</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:objc(pl)CBLCameraShotPreviewDelivery"></a>
-                      <a name="//apple_ref/objc/Protocol/CBLCameraShotPreviewDelivery" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraShotPreviewDelivery">CBLCameraShotPreviewDelivery</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>When a new shot preview is available, the camera will provide an <code>id &lt;CBLCameraShotPreviewDelivery&gt;</code> object.</p>
-
-                          <a href="Protocols/CBLCameraShotPreviewDelivery.html" class="slightly-smaller">See more</a>
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraShotPreviewDelivery</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
-
-                          </div>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ShotPreviewDelivery</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
 
                           </div>
                         </div>
@@ -1342,6 +1394,12 @@ register your manual discovery provider with CascableCore in the plugin entrypoi
                   <a href="Enums/CBLCameraDiscoveryMode.html">CBLCameraDiscoveryMode</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Enums/CBLCameraInitiatedTransferRepresentation.html">CBLCameraInitiatedTransferRepresentation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLCameraInitiatedTransferState.html">CBLCameraInitiatedTransferState</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Enums/CBLCameraLiveViewFrameOrientation.html">CBLCameraLiveViewFrameOrientation</a>
                 </li>
                 <li class="nav-group-task">
@@ -1411,6 +1469,9 @@ register your manual discovery provider with CascableCore in the plugin entrypoi
                   <a href="Enums/CBLPropertyCommonValueFocusMode.html">CBLPropertyCommonValueFocusMode</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Enums/CBLPropertyCommonValueImageDestination.html">CBLPropertyCommonValueImageDestination</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Enums/CBLPropertyCommonValueLightMeterStatus.html">CBLPropertyCommonValueLightMeterStatus</a>
                 </li>
                 <li class="nav-group-task">
@@ -1424,6 +1485,9 @@ register your manual discovery provider with CascableCore in the plugin entrypoi
                 </li>
                 <li class="nav-group-task">
                   <a href="Enums/CBLPropertyIdentifier.html">CBLPropertyIdentifier</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/CBLPropertyValueSetType.html">CBLPropertyValueSetType</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Enums/CBLStorageSlot.html">CBLStorageSlot</a>
@@ -1464,6 +1528,12 @@ register your manual discovery provider with CascableCore in the plugin entrypoi
                   <a href="Protocols/CBLCameraFocusAndShutter.html">CBLCameraFocusAndShutter</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraInitiatedTransferRequest.html">CBLCameraInitiatedTransferRequest</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraInitiatedTransferResult.html">CBLCameraInitiatedTransferResult</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Protocols/CBLCameraLiveView.html">CBLCameraLiveView</a>
                 </li>
                 <li class="nav-group-task">
@@ -1483,9 +1553,6 @@ register your manual discovery provider with CascableCore in the plugin entrypoi
                 </li>
                 <li class="nav-group-task">
                   <a href="Protocols/CBLCameraPropertyObservation.html">CBLCameraPropertyObservation</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="Protocols/CBLCameraShotPreviewDelivery.html">CBLCameraShotPreviewDelivery</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Protocols/CBLCameraVideoRecording.html">CBLCameraVideoRecording</a>
@@ -1562,6 +1629,12 @@ register your manual discovery provider with CascableCore in the plugin entrypoi
                   <a href="Type%20Definitions.html#/c:CBLConstants.h@T@CBLCameraFamily">CBLCameraFamily</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCameraInitiatedTransfer.h@T@CBLCameraInitiatedTransferCompletionHandler">CBLCameraInitiatedTransferCompletionHandler</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraInitiatedTransferRequestHandler">CBLCameraInitiatedTransferRequestHandler</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewFrameDelivery">CBLCameraLiveViewFrameDelivery</a>
                 </li>
                 <li class="nav-group-task">
@@ -1572,12 +1645,6 @@ register your manual discovery provider with CascableCore in the plugin entrypoi
                 </li>
                 <li class="nav-group-task">
                   <a href="Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLCameraPropertyObservationCallback">CBLCameraPropertyObservationCallback</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraShotPreviewAvailableBlock">CBLCameraShotPreviewAvailableBlock</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="Type%20Definitions.html#/c:CBLCameraShotPreviewDelivery.h@T@CBLCameraShotPreviewDeliveryCallback">CBLCameraShotPreviewDeliveryCallback</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFDelivery">CBLEXIFDelivery</a>
@@ -1630,7 +1697,7 @@ register your manual discovery provider with CascableCore in the plugin entrypoi
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2022-01-12)</p>
+          <p>&copy; 2022 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2022-05-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>

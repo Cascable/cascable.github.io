@@ -184,6 +184,38 @@
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/c:objc(pl)CBLCameraProperty(py)valueSetType"></a>
+                      <a name="//apple_ref/objc/Property/valueSetType" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraProperty(py)valueSetType">valueSetType</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the property&rsquo;s set type. Observable with key-value observing.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Enums/CBLPropertyValueSetType.html">CBLPropertyValueSetType</a></span> <span class="n">valueSetType</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">valueSetType</span><span class="p">:</span> <span class="kt">PropertyValueSetType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/c:objc(pl)CBLCameraProperty(py)currentValue"></a>
                       <a name="//apple_ref/objc/Property/currentValue" class="dashAnchor"></a>
                       <a class="token" href="#/c:objc(pl)CBLCameraProperty(py)currentValue">currentValue</a>
@@ -207,70 +239,6 @@
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">currentValue</span><span class="p">:</span> <span class="kt">PropertyValue</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:objc(pl)CBLCameraProperty(py)pendingValue"></a>
-                      <a name="//apple_ref/objc/Property/pendingValue" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraProperty(py)pendingValue">pendingValue</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Returns the value currently in the process of being set, if any. Observable with key-value observing.</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/CBLPropertyValue.html">CBLPropertyValue</a></span><span class="o">&gt;</span> <span class="n">pendingValue</span><span class="p">;</span></code></pre>
-
-                          </div>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">pendingValue</span><span class="p">:</span> <span class="kt">PropertyValue</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:objc(pl)CBLCameraProperty(py)validSettableValues"></a>
-                      <a name="//apple_ref/objc/Property/validSettableValues" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraProperty(py)validSettableValues">validSettableValues</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>The values that are considered valid for this property. Observable with key-value observing.</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/CBLPropertyValue.html">CBLPropertyValue</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">validSettableValues</span><span class="p">;</span></code></pre>
-
-                          </div>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">validSettableValues</span><span class="p">:</span> <span class="p">[</span><span class="kt">PropertyValue</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -390,6 +358,85 @@ when the object is deallocated. Make sure you store this token somewhere to keep
                       </section>
                     </div>
                   </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Property%20Setting%3A%20CBLPropertyValueSetTypeEnumeration"></a>
+                  <a name="//apple_ref/objc/Section/Property Setting: CBLPropertyValueSetTypeEnumeration" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Property%20Setting%3A%20CBLPropertyValueSetTypeEnumeration"></a>
+                    <h3 class="section-name"><p>Property Setting: CBLPropertyValueSetTypeEnumeration</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraProperty(py)pendingValue"></a>
+                      <a name="//apple_ref/objc/Property/pendingValue" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraProperty(py)pendingValue">pendingValue</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the value currently in the process of being set, if any. Observable with key-value observing. Only valid
+if the property&rsquo;s <code><a href="../Protocols/CBLCameraProperty.html#/c:objc(pl)CBLCameraProperty(py)valueSetType">valueSetType</a></code> is <code>CBLPropertyValueSetTypeEnumeration</code>.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/CBLPropertyValue.html">CBLPropertyValue</a></span><span class="o">&gt;</span> <span class="n">pendingValue</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">pendingValue</span><span class="p">:</span> <span class="kt">PropertyValue</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraProperty(py)validSettableValues"></a>
+                      <a name="//apple_ref/objc/Property/validSettableValues" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraProperty(py)validSettableValues">validSettableValues</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The values that are considered valid for this property. Observable with key-value observing. Only valid if the
+property&rsquo;s <code><a href="../Protocols/CBLCameraProperty.html#/c:objc(pl)CBLCameraProperty(py)valueSetType">valueSetType</a></code> is <code>CBLPropertyValueSetTypeEnumeration</code>.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/CBLPropertyValue.html">CBLPropertyValue</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">validSettableValues</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">validSettableValues</span><span class="p">:</span> <span class="p">[</span><span class="kt">PropertyValue</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
                   <li class="item">
                     <div>
                       <code>
@@ -459,7 +506,8 @@ when the object is deallocated. Make sure you store this token somewhere to keep
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Attempt to set a new value for the property. The value must be in the <code><a href="../Protocols/CBLCameraProperty.html#/c:objc(pl)CBLCameraProperty(py)validSettableValues">validSettableValues</a></code> property.</p>
+                          <p>Attempt to set a new value for the property. The value must be in the <code><a href="../Protocols/CBLCameraProperty.html#/c:objc(pl)CBLCameraProperty(py)validSettableValues">validSettableValues</a></code> property. As such,
+this method is only useable if the property&rsquo;s <code><a href="../Protocols/CBLCameraProperty.html#/c:objc(pl)CBLCameraProperty(py)valueSetType">valueSetType</a></code> contains <code>CBLPropertyValueSetTypeEnumeration</code>.</p>
 
                         </div>
                         <div class="declaration">
@@ -536,7 +584,8 @@ when the object is deallocated. Make sure you store this token somewhere to keep
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Attempt to set a new value for the property. The value must be in the <code><a href="../Protocols/CBLCameraProperty.html#/c:objc(pl)CBLCameraProperty(py)validSettableValues">validSettableValues</a></code> property.</p>
+                          <p>Attempt to set a new value for the property. The value must be in the <code><a href="../Protocols/CBLCameraProperty.html#/c:objc(pl)CBLCameraProperty(py)validSettableValues">validSettableValues</a></code> property. As such,
+this method is only useable if the property&rsquo;s <code><a href="../Protocols/CBLCameraProperty.html#/c:objc(pl)CBLCameraProperty(py)valueSetType">valueSetType</a></code> contains <code>CBLPropertyValueSetTypeEnumeration</code>.</p>
 
                         </div>
                         <div class="declaration">
@@ -578,6 +627,287 @@ when the object is deallocated. Make sure you store this token somewhere to keep
                                 <td>
                                   <div>
                                     <p>The completion handler to call on the main queue when the operation succeeds or fails.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Property%20Setting%3A%20CBLPropertyValueSetTypeStepping"></a>
+                  <a name="//apple_ref/objc/Section/Property Setting: CBLPropertyValueSetTypeStepping" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Property%20Setting%3A%20CBLPropertyValueSetTypeStepping"></a>
+                    <h3 class="section-name"><p>Property Setting: CBLPropertyValueSetTypeStepping</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraProperty(im)incrementValue:"></a>
+                      <a name="//apple_ref/objc/Method/-incrementValue:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraProperty(im)incrementValue:">-incrementValue:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Increment the property&rsquo;s value by one step. Only useable if the property&rsquo;s <code><a href="../Protocols/CBLCameraProperty.html#/c:objc(pl)CBLCameraProperty(py)valueSetType">valueSetType</a></code> contains
+<code>CBLPropertyValueSetTypeStepping</code>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If you&rsquo;re constructing a UI in a left-to-right locale (such as English) like this, this method should
+be called when the user taps on the right arrow: <code>[&lt;] f/2.8 [&gt;]</code>, or the down arrow: <code>[↑] f/2.8 [↓]</code>. In other
+words, this method is moving the value towards the end of a list of values.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">incrementValue</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">completionHandler</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">incrementValue</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completionHandler</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The completion handler to call on the main queue when the operation succeeds or fails.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraProperty(im)incrementValueWithCompletionQueue:completionHandler:"></a>
+                      <a name="//apple_ref/objc/Method/-incrementValueWithCompletionQueue:completionHandler:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraProperty(im)incrementValueWithCompletionQueue:completionHandler:">-incrementValueWithCompletionQueue:<wbr>completionHandler:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Increment the property&rsquo;s value by one step. Only useable if the property&rsquo;s <code><a href="../Protocols/CBLCameraProperty.html#/c:objc(pl)CBLCameraProperty(py)valueSetType">valueSetType</a></code> contains
+<code>CBLPropertyValueSetTypeStepping</code>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If you&rsquo;re constructing a UI in a left-to-right locale (such as English) like this, this method should
+be called when the user taps on the right arrow: <code>[&lt;] f/2.8 [&gt;]</code>, or the down arrow: <code>[↑] f/2.8 [↓]</code>. In other
+words, this method is moving the value towards the end of a list of values.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+    <span class="nf">incrementValueWithCompletionQueue</span><span class="p">:(</span><span class="n">dispatch_queue_t</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">completionQueue</span>
+                    <span class="nf">completionHandler</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span> <span class="n">_Nonnull</span><span class="p">)</span>
+                                          <span class="n">completionHandler</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">incrementValue</span><span class="p">(</span><span class="nv">completionQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completionQueue</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The queue on which to call the completion handler.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completionHandler</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The completion handler to call when the operation succeeds or fails.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraProperty(im)decrementValue:"></a>
+                      <a name="//apple_ref/objc/Method/-decrementValue:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraProperty(im)decrementValue:">-decrementValue:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Decrement the property&rsquo;s value by one step. Only useable if the property&rsquo;s <code><a href="../Protocols/CBLCameraProperty.html#/c:objc(pl)CBLCameraProperty(py)valueSetType">valueSetType</a></code> contains
+<code>CBLPropertyValueSetTypeStepping</code>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If you&rsquo;re constructing a UI in a left-to-right locale (such as English) like this, this method should
+be called when the user taps on the left arrow: <code>[&lt;] f/2.8 [&gt;]</code>, or the up arrow: <code>[↑] f/2.8 [↓]</code>. In other
+words, this method is moving the value towards the beginning of a list of values.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">decrementValue</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">completionHandler</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decrementValue</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completionHandler</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The completion handler to call on the main queue when the operation succeeds or fails.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraProperty(im)decrementValueWithCompletionQueue:completionHandler:"></a>
+                      <a name="//apple_ref/objc/Method/-decrementValueWithCompletionQueue:completionHandler:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraProperty(im)decrementValueWithCompletionQueue:completionHandler:">-decrementValueWithCompletionQueue:<wbr>completionHandler:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Decrement the property&rsquo;s value by one step. Only useable if the property&rsquo;s <code><a href="../Protocols/CBLCameraProperty.html#/c:objc(pl)CBLCameraProperty(py)valueSetType">valueSetType</a></code> contains
+<code>CBLPropertyValueSetTypeStepping</code>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If you&rsquo;re constructing a UI in a left-to-right locale (such as English) like this, this method should
+be called when the user taps on the left arrow: <code>[&lt;] f/2.8 [&gt;]</code>, or the up arrow: <code>[↑] f/2.8 [↓]</code>. In other
+words, this method is moving the value towards the beginning of a list of values.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+    <span class="nf">decrementValueWithCompletionQueue</span><span class="p">:(</span><span class="n">dispatch_queue_t</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">completionQueue</span>
+                    <span class="nf">completionHandler</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span> <span class="n">_Nonnull</span><span class="p">)</span>
+                                          <span class="n">completionHandler</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">decrementValue</span><span class="p">(</span><span class="nv">completionQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completionQueue</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The queue on which to call the completion handler.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completionHandler</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The completion handler to call when the operation succeeds or fails.</p>
                                   </div>
                                 </td>
                               </tr>
@@ -735,6 +1065,12 @@ when the object is deallocated. Make sure you store this token somewhere to keep
                   <a href="../Enums/CBLCameraDiscoveryMode.html">CBLCameraDiscoveryMode</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraInitiatedTransferRepresentation.html">CBLCameraInitiatedTransferRepresentation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraInitiatedTransferState.html">CBLCameraInitiatedTransferState</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/CBLCameraLiveViewFrameOrientation.html">CBLCameraLiveViewFrameOrientation</a>
                 </li>
                 <li class="nav-group-task">
@@ -804,6 +1140,9 @@ when the object is deallocated. Make sure you store this token somewhere to keep
                   <a href="../Enums/CBLPropertyCommonValueFocusMode.html">CBLPropertyCommonValueFocusMode</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueImageDestination.html">CBLPropertyCommonValueImageDestination</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/CBLPropertyCommonValueLightMeterStatus.html">CBLPropertyCommonValueLightMeterStatus</a>
                 </li>
                 <li class="nav-group-task">
@@ -817,6 +1156,9 @@ when the object is deallocated. Make sure you store this token somewhere to keep
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLPropertyIdentifier.html">CBLPropertyIdentifier</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyValueSetType.html">CBLPropertyValueSetType</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLStorageSlot.html">CBLStorageSlot</a>
@@ -857,6 +1199,12 @@ when the object is deallocated. Make sure you store this token somewhere to keep
                   <a href="../Protocols/CBLCameraFocusAndShutter.html">CBLCameraFocusAndShutter</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraInitiatedTransferRequest.html">CBLCameraInitiatedTransferRequest</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraInitiatedTransferResult.html">CBLCameraInitiatedTransferResult</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraLiveView.html">CBLCameraLiveView</a>
                 </li>
                 <li class="nav-group-task">
@@ -876,9 +1224,6 @@ when the object is deallocated. Make sure you store this token somewhere to keep
                 </li>
                 <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraPropertyObservation.html">CBLCameraPropertyObservation</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Protocols/CBLCameraShotPreviewDelivery.html">CBLCameraShotPreviewDelivery</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraVideoRecording.html">CBLCameraVideoRecording</a>
@@ -955,6 +1300,12 @@ when the object is deallocated. Make sure you store this token somewhere to keep
                   <a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLCameraFamily">CBLCameraFamily</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraInitiatedTransfer.h@T@CBLCameraInitiatedTransferCompletionHandler">CBLCameraInitiatedTransferCompletionHandler</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraInitiatedTransferRequestHandler">CBLCameraInitiatedTransferRequestHandler</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewFrameDelivery">CBLCameraLiveViewFrameDelivery</a>
                 </li>
                 <li class="nav-group-task">
@@ -965,12 +1316,6 @@ when the object is deallocated. Make sure you store this token somewhere to keep
                 </li>
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLCameraPropertyObservationCallback">CBLCameraPropertyObservationCallback</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraShotPreviewAvailableBlock">CBLCameraShotPreviewAvailableBlock</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCameraShotPreviewDelivery.h@T@CBLCameraShotPreviewDeliveryCallback">CBLCameraShotPreviewDeliveryCallback</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFDelivery">CBLEXIFDelivery</a>
@@ -1023,7 +1368,7 @@ when the object is deallocated. Make sure you store this token somewhere to keep
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2022-01-12)</p>
+          <p>&copy; 2022 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2022-05-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>

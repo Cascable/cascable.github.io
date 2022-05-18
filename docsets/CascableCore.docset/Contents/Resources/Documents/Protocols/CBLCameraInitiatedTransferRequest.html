@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CBLCameraShotPreviewDelivery Protocol Reference</title>
+    <title>CBLCameraInitiatedTransferRequest Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -11,8 +11,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/objc/Protocol/CBLCameraShotPreviewDelivery" class="dashAnchor"></a>
-    <a title="CBLCameraShotPreviewDelivery Protocol Reference"></a>
+    <a name="//apple_ref/objc/Protocol/CBLCameraInitiatedTransferRequest" class="dashAnchor"></a>
+    <a title="CBLCameraInitiatedTransferRequest Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p>
@@ -30,7 +30,7 @@
             <a href="../index.html">CascableCore Reference</a>
             <img id="carat" src="../img/carat.png" />
           </span>
-          CBLCameraShotPreviewDelivery Protocol Reference
+          CBLCameraInitiatedTransferRequest Protocol Reference
         </p>
       </div>
     </div>
@@ -39,20 +39,31 @@
         <article class="main-content">
           <section>
             <section class="section">
-              <h1>CBLCameraShotPreviewDelivery</h1>
+              <h1>CBLCameraInitiatedTransferRequest</h1>
                 <div class="declaration">
                   <div class="language">
                     <p class="aside-title">Objective-C</p>
-                    <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraShotPreviewDelivery</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                    <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLCameraInitiatedTransferRequest</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                   </div>
                   <div class="language">
                     <p class="aside-title">Swift</p>
-                    <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ShotPreviewDelivery</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+                    <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">CameraInitiatedTransferRequest</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
 
                   </div>
                 </div>
-              <p>When a new shot preview is available, the camera will provide an <code>id &lt;CBLCameraShotPreviewDelivery&gt;</code> object.</p>
+              <p>A camera-initiated transfer is a request from a camera to transfer an image file (or at least, a representation of
+one such as a preview) to the connected host. This typically happens soon after a shot is taken, and can allow the
+previewing and transferring of images even if the camera currently doesn&rsquo;t allow access to its storage.</p>
+
+<p>Camera-initiated transfers can be time-sensitive as the camera moves on to newer images or flushes buffers — they
+should be dealt with expediently.</p>
+
+<p>In some cases, the camera-initiated transfer to the host may be the <em>only</em> destination for an image. Commonly
+referred to as &ldquo;tethered shooting&rdquo; (or at least a variant of it), the camera might not attempt (or not be able to)
+save the image to its own storage. If this is the case, not correctly handling a camera-initiated transfer will
+case data loss. Check the <code>-isOnlyDestinationForImage</code> property — if that returns <code>YES</code>, not transferring and
+saving the original representation of the image will cause it to be lost.</p>
 
             </section>
             <section class="section task-group-section">
@@ -61,9 +72,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(pl)CBLCameraShotPreviewDelivery(py)isValid"></a>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferRequest(py)isValid"></a>
                       <a name="//apple_ref/objc/Property/isValid" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraShotPreviewDelivery(py)isValid">isValid</a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferRequest(py)isValid">isValid</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -71,14 +82,15 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Returns <code>YES</code> if the preview is still valid, otherwise <code>NO</code>. Previews will time out after some amount of time.</p>
+                          <p>Returns <code>YES</code> if the transfer request is still valid, otherwise <code>NO</code>. Transfers will time out after some amount
+of time.</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isValid</span><span class="p">;</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isValid</span><span class="p">;</span></code></pre>
 
                           </div>
                           <div class="language">
@@ -93,9 +105,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(pl)CBLCameraShotPreviewDelivery(py)fileNameHint"></a>
-                      <a name="//apple_ref/objc/Property/fileNameHint" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraShotPreviewDelivery(py)fileNameHint">fileNameHint</a>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferRequest(py)isOnlyDestinationForImage"></a>
+                      <a name="//apple_ref/objc/Property/isOnlyDestinationForImage" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferRequest(py)isOnlyDestinationForImage">isOnlyDestinationForImage</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -103,14 +115,82 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Returns the source image&rsquo;s file name, if available. Not guaranteed to exactly match. This property may only become valid after <code>fetchShotPreview:</code> successfully completes.</p>
+                          <p>Returns <code>YES</code> if not executing this camera-initiated transfer may cause data loss. For example, a camera
+set to only save images to the connected host would set this to <code>YES</code>.</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">fileNameHint</span><span class="p">;</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isOnlyDestinationForImage</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isOnlyDestinationForImage</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferRequest(py)executionRequiredToClearBuffer"></a>
+                      <a name="//apple_ref/objc/Property/executionRequiredToClearBuffer" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferRequest(py)executionRequiredToClearBuffer">executionRequiredToClearBuffer</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns <code>YES</code> if not executing this camera-initiated transfer will &ldquo;clog up&rdquo; the camera&rsquo;s transfer buffer. This
+can return <code>YES</code> independently of the <code><a href="../Protocols/CBLCameraInitiatedTransferRequest.html#/c:objc(pl)CBLCameraInitiatedTransferRequest(py)isOnlyDestinationForImage">isOnlyDestinationForImage</a></code> property. Not executing transfers that have this
+property set will stop delivery of further transfers.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">executionRequiredToClearBuffer</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">executionRequiredToClearBuffer</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferRequest(py)fileNameHint"></a>
+                      <a name="//apple_ref/objc/Property/fileNameHint" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferRequest(py)fileNameHint">fileNameHint</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the source image&rsquo;s file name, if available. Not guaranteed to exactly match the name on the camera&rsquo;s storage.
+This value may not be available until the transfer completes (or at all) — see <code><a href="../Protocols/CBLCameraInitiatedTransferResult.html">CBLCameraInitiatedTransferResult</a></code>.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">fileNameHint</span><span class="p">;</span></code></pre>
 
                           </div>
                           <div class="language">
@@ -125,9 +205,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(pl)CBLCameraShotPreviewDelivery(py)requestInProgress"></a>
-                      <a name="//apple_ref/objc/Property/requestInProgress" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraShotPreviewDelivery(py)requestInProgress">requestInProgress</a>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferRequest(py)availableRepresentations"></a>
+                      <a name="//apple_ref/objc/Property/availableRepresentations" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferRequest(py)availableRepresentations">availableRepresentations</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -135,19 +215,21 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Returns <code>YES</code> if the preview is currently being loaded.</p>
+                          <p>Returns an option set of the representations available for this transfer.</p>
+
+<p>Common combinations are preview-only, or preview and original.</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">requestInProgress</span><span class="p">;</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Enums/CBLCameraInitiatedTransferRepresentation.html">CBLCameraInitiatedTransferRepresentation</a></span> <span class="n">availableRepresentations</span><span class="p">;</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">requestInProgress</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">availableRepresentations</span><span class="p">:</span> <span class="kt">CameraInitiatedTransferRepresentation</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -157,9 +239,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(pl)CBLCameraShotPreviewDelivery(py)requestProgress"></a>
-                      <a name="//apple_ref/objc/Property/requestProgress" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraShotPreviewDelivery(py)requestProgress">requestProgress</a>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferRequest(im)canProvideRepresentation:"></a>
+                      <a name="//apple_ref/objc/Method/-canProvideRepresentation:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferRequest(im)canProvideRepresentation:">-canProvideRepresentation:<wbr></a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -167,19 +249,20 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Returns the progress of the request. May be indeterminate, and state will change during the fetch operation.</p>
+                          <p>Returns <code>YES</code> if the receiver can provide the given representation, otherwise <code>NO</code>.</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSProgress</span> <span class="o">*</span><span class="n">requestProgress</span><span class="p">;</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">canProvideRepresentation</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Enums/CBLCameraInitiatedTransferRepresentation.html">CBLCameraInitiatedTransferRepresentation</a></span><span class="p">)</span><span class="nv">representation</span><span class="p">;</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">requestProgress</span><span class="p">:</span> <span class="kt">Progress</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">canProvide</span><span class="p">(</span><span class="n">_</span> <span class="nv">representation</span><span class="p">:</span> <span class="kt">CameraInitiatedTransferRepresentation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                           </div>
                         </div>
@@ -189,9 +272,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(pl)CBLCameraShotPreviewDelivery(py)originalBackingImageUrl"></a>
-                      <a name="//apple_ref/objc/Property/originalBackingImageUrl" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraShotPreviewDelivery(py)originalBackingImageUrl">originalBackingImageUrl</a>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferRequest(py)transferState"></a>
+                      <a name="//apple_ref/objc/Property/transferState" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferRequest(py)transferState">transferState</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -199,28 +282,19 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>If the receiver is a preview of an image that&rsquo;s currently residing in local storage, the location of that image
-is provided here.</p>
-
-<p>The value of this property is often <code>nil</code>, but CascableCore may choose to store image data on disk in cases where
-the source data is very large. The image data will be deleted from disk when this object is deallocated.</p>
-
-<p>This property may only become valid after <code>fetchShotPreview:</code> successfully completes.</p>
-
-<p><strong>Note:</strong> The image file is owned by shot preview object. If you wish to use it yourself, copy the file to a
-          location owned by your app.</p>
+                          <p>Returns the state of the transfer. A camera-initiated transfer can only be performed once.</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">originalBackingImageUrl</span><span class="p">;</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Enums/CBLCameraInitiatedTransferState.html">CBLCameraInitiatedTransferState</a></span> <span class="n">transferState</span><span class="p">;</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">originalBackingImageUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">transferState</span><span class="p">:</span> <span class="kt">CameraInitiatedTransferState</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -230,9 +304,9 @@ the source data is very large. The image data will be deleted from disk when thi
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(pl)CBLCameraShotPreviewDelivery(im)fetchShotPreview:"></a>
-                      <a name="//apple_ref/objc/Method/-fetchShotPreview:" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraShotPreviewDelivery(im)fetchShotPreview:">-fetchShotPreview:<wbr></a>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferRequest(py)transferProgress"></a>
+                      <a name="//apple_ref/objc/Property/transferProgress" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferRequest(py)transferProgress">transferProgress</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -240,19 +314,69 @@ the source data is very large. The image data will be deleted from disk when thi
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Fetch the preview from the camera if it&rsquo;s still valid.</p>
+                          <p>Returns the progress of the transfer, if available. While this property is marked <code>nonnull</code> for binding purposes,
+the values in the returned progress object are only meaningful when the transfer is in progress.</p>
+
+<p>Not all cameras provide progress information — in these cases, the progress will remain indeterminate.</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fetchShotPreview</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCameraShotPreviewDelivery.h@T@CBLCameraShotPreviewDeliveryCallback">CBLCameraShotPreviewDeliveryCallback</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSProgress</span> <span class="o">*</span><span class="n">transferProgress</span><span class="p">;</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchShotPreview</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ShotPreviewDeliveryCallback</span><span class="p">)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">transferProgress</span><span class="p">:</span> <span class="kt">Progress</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferRequest(im)executeTransferForRepresentations:completionHandler:"></a>
+                      <a name="//apple_ref/objc/Method/-executeTransferForRepresentations:completionHandler:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferRequest(im)executeTransferForRepresentations:completionHandler:">-executeTransferForRepresentations:<wbr>completionHandler:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Execute the camera-initiated transfer if it&rsquo;s still valid.</p>
+
+<p>If possible, CascableCore will optimise the transfer to reduce the amount of data transferred (and therefore time
+needed). For example, if a camera-initiated transfer request has both the preview and original representations
+available, CascableCore may perform a partial transfer if only the preview representation is requested. This is
+particularly useful if, for example, you want to show previews of RAW images.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>A camera-initiated transfer can only be performed once.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+    <span class="nf">executeTransferForRepresentations</span><span class="p">:</span>
+        <span class="p">(</span><span class="n"><a href="../Enums/CBLCameraInitiatedTransferRepresentation.html">CBLCameraInitiatedTransferRepresentation</a></span><span class="p">)</span><span class="nv">representations</span>
+                    <span class="nf">completionHandler</span><span class="p">:</span>
+                        <span class="p">(</span><span class="n"><a href="../Type%20Definitions.html#/c:CBLCameraInitiatedTransfer.h@T@CBLCameraInitiatedTransferCompletionHandler">CBLCameraInitiatedTransferCompletionHandler</a></span> <span class="n">_Nonnull</span><span class="p">)</span>
+                            <span class="n">completionHandler</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">executeTransfer</span><span class="p">(</span><span class="k">for</span> <span class="nv">representations</span><span class="p">:</span> <span class="kt">CameraInitiatedTransferRepresentation</span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">CameraInitiatedTransferResult</span></code></pre>
 
                           </div>
                         </div>
@@ -263,12 +387,117 @@ the source data is very large. The image data will be deleted from disk when thi
                               <tr>
                                 <td>
                                   <code>
-                                  <em>callback</em>
+                                  <em>representations</em>
                                   </code>
                                 </td>
                                 <td>
                                   <div>
-                                    <p>The callback block to be executed with the results of the fetch. This will be called on the main thread.</p>
+                                    <p>The representations to transfer from the camera. Must be present in the
+                   <code><a href="../Protocols/CBLCameraInitiatedTransferRequest.html#/c:objc(pl)CBLCameraInitiatedTransferRequest(py)availableRepresentations">availableRepresentations</a></code> property.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completionHandler</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The completion handler, to be called on the main queue, when the transfer succeeds or fails.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferRequest(im)executeTransferForRepresentations:completionQueue:completionHandler:"></a>
+                      <a name="//apple_ref/objc/Method/-executeTransferForRepresentations:completionQueue:completionHandler:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferRequest(im)executeTransferForRepresentations:completionQueue:completionHandler:">-executeTransferForRepresentations:<wbr>completionQueue:<wbr>completionHandler:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Execute the camera-initiated transfer if it&rsquo;s still valid.</p>
+
+<p>If possible, CascableCore will optimise the transfer to reduce the amount of data transferred (and therefore time
+needed). For example, if a camera-initiated transfer request has both the preview and original representations
+available, CascableCore may perform a partial transfer if only the preview representation is requested. This is
+particularly useful if, for example, you want to show previews of RAW images.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>A camera-initiated transfer can only be performed once.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+    <span class="nf">executeTransferForRepresentations</span><span class="p">:</span>
+        <span class="p">(</span><span class="n"><a href="../Enums/CBLCameraInitiatedTransferRepresentation.html">CBLCameraInitiatedTransferRepresentation</a></span><span class="p">)</span><span class="nv">representations</span>
+                      <span class="nf">completionQueue</span><span class="p">:(</span><span class="n">dispatch_queue_t</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">completionQueue</span>
+                    <span class="nf">completionHandler</span><span class="p">:</span>
+                        <span class="p">(</span><span class="n"><a href="../Type%20Definitions.html#/c:CBLCameraInitiatedTransfer.h@T@CBLCameraInitiatedTransferCompletionHandler">CBLCameraInitiatedTransferCompletionHandler</a></span> <span class="n">_Nonnull</span><span class="p">)</span>
+                            <span class="n">completionHandler</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">executeTransfer</span><span class="p">(</span><span class="k">for</span> <span class="nv">representations</span><span class="p">:</span> <span class="kt">CameraInitiatedTransferRepresentation</span><span class="p">,</span> <span class="nv">completionQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">CameraInitiatedTransferResult</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>representations</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The representations to transfer from the camera. Must be present in the
+                   <code><a href="../Protocols/CBLCameraInitiatedTransferRequest.html#/c:objc(pl)CBLCameraInitiatedTransferRequest(py)availableRepresentations">availableRepresentations</a></code> property.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completionQueue</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The queue on which to deliver the completion handler.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completionHandler</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The completion handler to be calle when the transfer succeeds or fails.</p>
                                   </div>
                                 </td>
                               </tr>
@@ -426,6 +655,12 @@ the source data is very large. The image data will be deleted from disk when thi
                   <a href="../Enums/CBLCameraDiscoveryMode.html">CBLCameraDiscoveryMode</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraInitiatedTransferRepresentation.html">CBLCameraInitiatedTransferRepresentation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraInitiatedTransferState.html">CBLCameraInitiatedTransferState</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/CBLCameraLiveViewFrameOrientation.html">CBLCameraLiveViewFrameOrientation</a>
                 </li>
                 <li class="nav-group-task">
@@ -495,6 +730,9 @@ the source data is very large. The image data will be deleted from disk when thi
                   <a href="../Enums/CBLPropertyCommonValueFocusMode.html">CBLPropertyCommonValueFocusMode</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueImageDestination.html">CBLPropertyCommonValueImageDestination</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/CBLPropertyCommonValueLightMeterStatus.html">CBLPropertyCommonValueLightMeterStatus</a>
                 </li>
                 <li class="nav-group-task">
@@ -508,6 +746,9 @@ the source data is very large. The image data will be deleted from disk when thi
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLPropertyIdentifier.html">CBLPropertyIdentifier</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyValueSetType.html">CBLPropertyValueSetType</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLStorageSlot.html">CBLStorageSlot</a>
@@ -548,6 +789,12 @@ the source data is very large. The image data will be deleted from disk when thi
                   <a href="../Protocols/CBLCameraFocusAndShutter.html">CBLCameraFocusAndShutter</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraInitiatedTransferRequest.html">CBLCameraInitiatedTransferRequest</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraInitiatedTransferResult.html">CBLCameraInitiatedTransferResult</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraLiveView.html">CBLCameraLiveView</a>
                 </li>
                 <li class="nav-group-task">
@@ -567,9 +814,6 @@ the source data is very large. The image data will be deleted from disk when thi
                 </li>
                 <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraPropertyObservation.html">CBLCameraPropertyObservation</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Protocols/CBLCameraShotPreviewDelivery.html">CBLCameraShotPreviewDelivery</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraVideoRecording.html">CBLCameraVideoRecording</a>
@@ -646,6 +890,12 @@ the source data is very large. The image data will be deleted from disk when thi
                   <a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLCameraFamily">CBLCameraFamily</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraInitiatedTransfer.h@T@CBLCameraInitiatedTransferCompletionHandler">CBLCameraInitiatedTransferCompletionHandler</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraInitiatedTransferRequestHandler">CBLCameraInitiatedTransferRequestHandler</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewFrameDelivery">CBLCameraLiveViewFrameDelivery</a>
                 </li>
                 <li class="nav-group-task">
@@ -656,12 +906,6 @@ the source data is very large. The image data will be deleted from disk when thi
                 </li>
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLCameraPropertyObservationCallback">CBLCameraPropertyObservationCallback</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraShotPreviewAvailableBlock">CBLCameraShotPreviewAvailableBlock</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCameraShotPreviewDelivery.h@T@CBLCameraShotPreviewDeliveryCallback">CBLCameraShotPreviewDeliveryCallback</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFDelivery">CBLEXIFDelivery</a>
@@ -714,7 +958,7 @@ the source data is very large. The image data will be deleted from disk when thi
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2022-01-12)</p>
+          <p>&copy; 2022 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2022-05-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>

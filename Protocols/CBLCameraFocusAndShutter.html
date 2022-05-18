@@ -645,11 +645,11 @@ methods.
               </div>
               <div class="task-group">
                 <div class="task-name-container">
-                  <a name="/Shot%20Previews"></a>
-                  <a name="//apple_ref/objc/Section/Shot Previews" class="dashAnchor"></a>
+                  <a name="/Camera-Initiated%20Transfer"></a>
+                  <a name="//apple_ref/objc/Section/Camera-Initiated Transfer" class="dashAnchor"></a>
                   <div class="section-name-container">
-                    <a class="section-name-link" href="#/Shot%20Previews"></a>
-                    <h3 class="section-name"><p>Shot Previews</p>
+                    <a class="section-name-link" href="#/Camera-Initiated%20Transfer"></a>
+                    <h3 class="section-name"><p>Camera-Initiated Transfer</p>
 </h3>
                   </div>
                 </div>
@@ -657,9 +657,9 @@ methods.
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(im)addShotPreviewObserver:"></a>
-                      <a name="//apple_ref/objc/Method/-addShotPreviewObserver:" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(im)addShotPreviewObserver:">-addShotPreviewObserver:<wbr></a>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(im)addCameraInitiatedTransferHandler:"></a>
+                      <a name="//apple_ref/objc/Method/-addCameraInitiatedTransferHandler:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(im)addCameraInitiatedTransferHandler:">-addCameraInitiatedTransferHandler:<wbr></a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -667,10 +667,11 @@ methods.
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Adds an observer to be notified when a shot preview is available.</p>
+                          <p>Adds an observer to be notified when a camera-initiated transfer request is received.</p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    <p>Only cameras that support the <code>CBLCameraSupportedFunctionalityShotPreview</code> functionality flag will trigger shot preview callbacks.</p>
+    <p>Only cameras that support the <code>CBLCameraSupportedFunctionalityCameraInitiatedTransfer</code> functionality flag
+   will trigger these callbacks.</p>
 
 </div>
 
@@ -679,13 +680,13 @@ methods.
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraObserverToken">CBLCameraObserverToken</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">addShotPreviewObserver</span><span class="p">:</span>
-    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraShotPreviewAvailableBlock">CBLCameraShotPreviewAvailableBlock</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraObserverToken">CBLCameraObserverToken</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">addCameraInitiatedTransferHandler</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraInitiatedTransferRequestHandler">CBLCameraInitiatedTransferRequestHandler</a></span><span class="p">)</span><span class="nv">handler</span><span class="p">;</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addShotPreviewObserver</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ShotPreviewAvailableCallback</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addCameraInitiatedTransferHandler</span><span class="p">(</span><span class="n">_</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">CameraInitiatedTransferRequestHandler</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                           </div>
                         </div>
@@ -696,12 +697,13 @@ methods.
                               <tr>
                                 <td>
                                   <code>
-                                  <em>block</em>
+                                  <em>handler</em>
                                   </code>
                                 </td>
                                 <td>
                                   <div>
-                                    <p>The block to be called when a shot preview is available. Will be called on the main thread.</p>
+                                    <p>The handler to be called when a camera-initiated transfer request is received.
+            Will be called on the main thread.</p>
                                   </div>
                                 </td>
                               </tr>
@@ -714,9 +716,9 @@ methods.
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(im)removeShotPreviewObserverWithToken:"></a>
-                      <a name="//apple_ref/objc/Method/-removeShotPreviewObserverWithToken:" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(im)removeShotPreviewObserverWithToken:">-removeShotPreviewObserverWithToken:<wbr></a>
+                      <a name="/c:objc(pl)CBLCameraFocusAndShutter(im)removeCameraInitiatedTransferHandlerWithToken:"></a>
+                      <a name="//apple_ref/objc/Method/-removeCameraInitiatedTransferHandlerWithToken:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraFocusAndShutter(im)removeCameraInitiatedTransferHandlerWithToken:">-removeCameraInitiatedTransferHandlerWithToken:<wbr></a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -724,20 +726,20 @@ methods.
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Removes a previously registered shot preview observer.</p>
+                          <p>Removes a previously registered camera-initiated transfer handler.</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeShotPreviewObserverWithToken</span><span class="p">:</span>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeCameraInitiatedTransferHandlerWithToken</span><span class="p">:</span>
     <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraObserverToken">CBLCameraObserverToken</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">token</span><span class="p">;</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeShotPreviewObserver</span><span class="p">(</span><span class="n">with</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeCameraInitiatedTransferHandler</span><span class="p">(</span><span class="n">with</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -753,7 +755,7 @@ methods.
                                 </td>
                                 <td>
                                   <div>
-                                    <p>The token for the observer block to be removed.</p>
+                                    <p>The token for the hander to be removed.</p>
                                   </div>
                                 </td>
                               </tr>
@@ -1007,6 +1009,12 @@ didn&rsquo;t move for some other reason.</p>
                   <a href="../Enums/CBLCameraDiscoveryMode.html">CBLCameraDiscoveryMode</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraInitiatedTransferRepresentation.html">CBLCameraInitiatedTransferRepresentation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraInitiatedTransferState.html">CBLCameraInitiatedTransferState</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/CBLCameraLiveViewFrameOrientation.html">CBLCameraLiveViewFrameOrientation</a>
                 </li>
                 <li class="nav-group-task">
@@ -1076,6 +1084,9 @@ didn&rsquo;t move for some other reason.</p>
                   <a href="../Enums/CBLPropertyCommonValueFocusMode.html">CBLPropertyCommonValueFocusMode</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyCommonValueImageDestination.html">CBLPropertyCommonValueImageDestination</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/CBLPropertyCommonValueLightMeterStatus.html">CBLPropertyCommonValueLightMeterStatus</a>
                 </li>
                 <li class="nav-group-task">
@@ -1089,6 +1100,9 @@ didn&rsquo;t move for some other reason.</p>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLPropertyIdentifier.html">CBLPropertyIdentifier</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/CBLPropertyValueSetType.html">CBLPropertyValueSetType</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLStorageSlot.html">CBLStorageSlot</a>
@@ -1129,6 +1143,12 @@ didn&rsquo;t move for some other reason.</p>
                   <a href="../Protocols/CBLCameraFocusAndShutter.html">CBLCameraFocusAndShutter</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraInitiatedTransferRequest.html">CBLCameraInitiatedTransferRequest</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraInitiatedTransferResult.html">CBLCameraInitiatedTransferResult</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraLiveView.html">CBLCameraLiveView</a>
                 </li>
                 <li class="nav-group-task">
@@ -1148,9 +1168,6 @@ didn&rsquo;t move for some other reason.</p>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraPropertyObservation.html">CBLCameraPropertyObservation</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Protocols/CBLCameraShotPreviewDelivery.html">CBLCameraShotPreviewDelivery</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraVideoRecording.html">CBLCameraVideoRecording</a>
@@ -1227,6 +1244,12 @@ didn&rsquo;t move for some other reason.</p>
                   <a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLCameraFamily">CBLCameraFamily</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCameraInitiatedTransfer.h@T@CBLCameraInitiatedTransferCompletionHandler">CBLCameraInitiatedTransferCompletionHandler</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraInitiatedTransferRequestHandler">CBLCameraInitiatedTransferRequestHandler</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraLiveViewFrameDelivery">CBLCameraLiveViewFrameDelivery</a>
                 </li>
                 <li class="nav-group-task">
@@ -1237,12 +1260,6 @@ didn&rsquo;t move for some other reason.</p>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLCameraPropertyObservationCallback">CBLCameraPropertyObservationCallback</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraShotPreviewAvailableBlock">CBLCameraShotPreviewAvailableBlock</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCameraShotPreviewDelivery.h@T@CBLCameraShotPreviewDeliveryCallback">CBLCameraShotPreviewDeliveryCallback</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLEXIFDelivery">CBLEXIFDelivery</a>
@@ -1295,7 +1312,7 @@ didn&rsquo;t move for some other reason.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2022-01-12)</p>
+          <p>&copy; 2022 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external">Cascable AB</a>. All rights reserved. (Last updated: 2022-05-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>
