@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CBLCameraLocation Enumeration Reference</title>
+    <title>CBLVideoFormatPropertyValue Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -11,8 +11,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/objc/Enum/CBLCameraLocation" class="dashAnchor"></a>
-    <a title="CBLCameraLocation Enumeration Reference"></a>
+    <a name="//apple_ref/objc/Protocol/CBLVideoFormatPropertyValue" class="dashAnchor"></a>
+    <a title="CBLVideoFormatPropertyValue Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p>
@@ -30,7 +30,7 @@
             <a href="../index.html">CascableCore Reference</a>
             <img id="carat" src="../img/carat.png" alt=""/>
           </span>
-          CBLCameraLocation Enumeration Reference
+          CBLVideoFormatPropertyValue Protocol Reference
         </p>
       </div>
     </div>
@@ -39,20 +39,20 @@
         <article class="main-content">
           <section>
             <section class="section">
-              <h1>CBLCameraLocation</h1>
+              <h1>CBLVideoFormatPropertyValue</h1>
                 <div class="declaration">
                   <div class="language">
                     <p class="aside-title">Objective-C</p>
-                    <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">CBLCameraLocation</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                    <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">CBLVideoFormatPropertyValue</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/CBLPropertyValue.html">CBLPropertyValue</a></span><span class="o">&gt;</span></code></pre>
 
                   </div>
                   <div class="language">
                     <p class="aside-title">Swift</p>
-                    <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">CameraLocation</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
+                    <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">VideoFormatPropertyValue</span> <span class="p">:</span> <span class="kt">PropertyValue</span></code></pre>
 
                   </div>
                 </div>
-              <p>Camera location identifiers for performing manual camera lookups.</p>
+              <p>A property value that represents a video format description.</p>
 
             </section>
             <section class="section task-group-section">
@@ -61,9 +61,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:@E@CBLCameraLocation@CBLCameraLocationSpecifiedIPAddress"></a>
-                      <a name="//apple_ref/objc/Case/CBLCameraLocationSpecifiedIPAddress" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@E@CBLCameraLocation@CBLCameraLocationSpecifiedIPAddress">CBLCameraLocationSpecifiedIPAddress</a>
+                      <a name="/c:objc(pl)CBLVideoFormatPropertyValue(py)frameRate"></a>
+                      <a name="//apple_ref/objc/Property/frameRate" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLVideoFormatPropertyValue(py)frameRate">frameRate</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -71,19 +71,19 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>The camera is located at a known IP address.</p>
+                          <p>Returns the video format&rsquo;s frame rate, if available. If not available, returns <code>NSNotFound</code>.</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="n">CBLCameraLocationSpecifiedIPAddress</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">frameRate</span><span class="p">;</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">specifiedIPAddress</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">frameRate</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -93,9 +93,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:@E@CBLCameraLocation@CBLCameraLocationGateway"></a>
-                      <a name="//apple_ref/objc/Case/CBLCameraLocationGateway" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@E@CBLCameraLocation@CBLCameraLocationGateway">CBLCameraLocationGateway</a>
+                      <a name="/c:objc(pl)CBLVideoFormatPropertyValue(py)frameSize"></a>
+                      <a name="//apple_ref/objc/Property/frameSize" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLVideoFormatPropertyValue(py)frameSize">frameSize</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -103,19 +103,19 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>The camera is located at the gateway of a network interface.</p>
+                          <p>Returns the video format&rsquo;s frame size, in pixels, if available. If not available, returns <code>CGSizeZero</code>.</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="n">CBLCameraLocationGateway</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGSize</span> <span class="n">frameSize</span><span class="p">;</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">gateway</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">frameSize</span><span class="p">:</span> <span class="kt">CGSize</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
