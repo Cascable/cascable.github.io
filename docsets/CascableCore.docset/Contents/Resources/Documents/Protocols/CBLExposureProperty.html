@@ -213,6 +213,11 @@ attempt to derive the value for this property automatically.</p>
     <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n">CBLUniversalExposurePropertyValue</span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">exposureValue</span><span class="p">;</span></code></pre>
 
                           </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">validValue</span><span class="p">(</span><span class="n">matchingExposureValue</span> <span class="nv">exposureValue</span><span class="p">:</span> <span class="kt">CBLUniversalExposurePropertyValue</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ExposurePropertyValue</span><span class="p">?</span></code></pre>
+
+                          </div>
                         </div>
                         <div>
                           <h4>Parameters</h4>
@@ -373,6 +378,9 @@ attempt to derive the value for this property automatically.</p>
               <a href="../Enums.html">Enumerations</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraAuthenticationType.html">CBLCameraAuthenticationType</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/CBLCameraAvailableCommandCategory.html">CBLCameraAvailableCommandCategory</a>
                 </li>
                 <li class="nav-group-task">
@@ -401,9 +409,6 @@ attempt to derive the value for this property automatically.</p>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLCameraLiveViewTerminationReason.html">CBLCameraLiveViewTerminationReason</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Enums/CBLCameraLiveViewZoomLevel.html">CBLCameraLiveViewZoomLevel</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLCameraLocation.html">CBLCameraLocation</a>
@@ -501,6 +506,9 @@ attempt to derive the value for this property automatically.</p>
                   <a href="../Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraAuthenticationContext.html">CBLCameraAuthenticationContext</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraConnectionWarning.html">CBLCameraConnectionWarning</a>
                 </li>
                 <li class="nav-group-task">
@@ -594,6 +602,12 @@ attempt to derive the value for this property automatically.</p>
                   <a href="../Protocols/CBLFocusPoint.html">CBLFocusPoint</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLLiveViewZoomLevelProperty.html">CBLLiveViewZoomLevelProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLLiveViewZoomLevelPropertyValue.html">CBLLiveViewZoomLevelPropertyValue</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLPropertyValue.html">CBLPropertyValue</a>
                 </li>
                 <li class="nav-group-task">
@@ -611,10 +625,13 @@ attempt to derive the value for this property automatically.</p>
               <a href="../Type%20Definitions.html">Type Definitions</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationRequestBlock">CBLCameraAuthenticationRequestBlock</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionUserInterventionBlock">CBLCameraConnectionUserInterventionBlock</a>
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationResolvedBlock">CBLCameraAuthenticationResolvedBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCameraManualDiscovery.h@T@CBLCameraCreationOperationCallback">CBLCameraCreationOperationCallback</a>
@@ -700,7 +717,7 @@ attempt to derive the value for this property automatically.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2023-08-18)</p>
+          <p>&copy; 2023 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2023-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>

@@ -646,9 +646,9 @@ applied for you. Due to this, the pixel size of this image may be different to t
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)imageZoomLevel"></a>
-                      <a name="//apple_ref/objc/Property/imageZoomLevel" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)imageZoomLevel">imageZoomLevel</a>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)isZoomedIn"></a>
+                      <a name="//apple_ref/objc/Property/isZoomedIn" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)isZoomedIn">isZoomedIn</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -656,51 +656,19 @@ applied for you. Due to this, the pixel size of this image may be different to t
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Returns the zoom level the image of this frame represents.</p>
+                          <p>Returns <code>YES</code> if the live view frame is &ldquo;zoomed in&rdquo; (that is, the <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)imageFrameInAspect">imageFrameInAspect</a></code> property is smaller than <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)aspect">aspect</a></code>.</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Enums/CBLCameraLiveViewZoomLevel.html">CBLCameraLiveViewZoomLevel</a></span> <span class="n">imageZoomLevel</span><span class="p">;</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isZoomedIn</span><span class="p">;</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">imageZoomLevel</span><span class="p">:</span> <span class="kt">LiveViewZoomLevel</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)zoomRectOffset"></a>
-                      <a name="//apple_ref/objc/Property/zoomRectOffset" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)zoomRectOffset">zoomRectOffset</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Returns the offset of the zoom rect when in 10x zoom mode.</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGPoint</span> <span class="n">zoomRectOffset</span><span class="p">;</span></code></pre>
-
-                          </div>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">zoomRectOffset</span><span class="p">:</span> <span class="kt">CGPoint</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isZoomedIn</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -1047,6 +1015,9 @@ applied for you. Due to this, the pixel size of this image may be different to t
               <a href="../Enums.html">Enumerations</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraAuthenticationType.html">CBLCameraAuthenticationType</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/CBLCameraAvailableCommandCategory.html">CBLCameraAvailableCommandCategory</a>
                 </li>
                 <li class="nav-group-task">
@@ -1075,9 +1046,6 @@ applied for you. Due to this, the pixel size of this image may be different to t
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLCameraLiveViewTerminationReason.html">CBLCameraLiveViewTerminationReason</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Enums/CBLCameraLiveViewZoomLevel.html">CBLCameraLiveViewZoomLevel</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLCameraLocation.html">CBLCameraLocation</a>
@@ -1175,6 +1143,9 @@ applied for you. Due to this, the pixel size of this image may be different to t
                   <a href="../Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraAuthenticationContext.html">CBLCameraAuthenticationContext</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraConnectionWarning.html">CBLCameraConnectionWarning</a>
                 </li>
                 <li class="nav-group-task">
@@ -1268,6 +1239,12 @@ applied for you. Due to this, the pixel size of this image may be different to t
                   <a href="../Protocols/CBLFocusPoint.html">CBLFocusPoint</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLLiveViewZoomLevelProperty.html">CBLLiveViewZoomLevelProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLLiveViewZoomLevelPropertyValue.html">CBLLiveViewZoomLevelPropertyValue</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLPropertyValue.html">CBLPropertyValue</a>
                 </li>
                 <li class="nav-group-task">
@@ -1285,10 +1262,13 @@ applied for you. Due to this, the pixel size of this image may be different to t
               <a href="../Type%20Definitions.html">Type Definitions</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationRequestBlock">CBLCameraAuthenticationRequestBlock</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionUserInterventionBlock">CBLCameraConnectionUserInterventionBlock</a>
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationResolvedBlock">CBLCameraAuthenticationResolvedBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCameraManualDiscovery.h@T@CBLCameraCreationOperationCallback">CBLCameraCreationOperationCallback</a>
@@ -1374,7 +1354,7 @@ applied for you. Due to this, the pixel size of this image may be different to t
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2023-08-18)</p>
+          <p>&copy; 2023 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2023-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>

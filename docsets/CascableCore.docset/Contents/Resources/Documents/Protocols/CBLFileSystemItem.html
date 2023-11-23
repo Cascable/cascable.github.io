@@ -623,7 +623,7 @@ operation to continue, or <code>NO</code> to cancel.</p>
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchThumbnail</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImagePreflight</span><span class="p">,</span> <span class="n">thumbnailDeliveryBlock</span> <span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImageDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchThumbnail</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImagePreflight</span><span class="p">,</span> <span class="n">thumbnailDeliveryBlock</span> <span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImageDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -771,7 +771,7 @@ operation to continue, or <code>NO</code> to cancel.</p>
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchEXIFMetadata</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">EXIFPreflight</span><span class="p">,</span> <span class="n">metadataDeliveryBlock</span> <span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">EXIFDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchEXIFMetadata</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">EXIFPreflight</span><span class="p">,</span> <span class="n">metadataDeliveryBlock</span> <span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">EXIFDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -916,7 +916,7 @@ operation to continue, or <code>NO</code> to cancel.</p>
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchPreview</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImagePreflight</span><span class="p">,</span> <span class="n">previewDeliveryBlock</span> <span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImageDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchPreview</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImagePreflight</span><span class="p">,</span> <span class="n">previewDeliveryBlock</span> <span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">PreviewImageDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -1103,7 +1103,7 @@ then a completion callback to allow post-stream cleanup.</p>
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">streamItem</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">FileStreamPreflight</span><span class="p">,</span> <span class="nv">preflightQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">,</span> <span class="n">chunkDeliveryBlock</span> <span class="nv">chunkDelivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">FileStreamChunkDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">,</span> <span class="nv">complete</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">FileStreamCompletion</span><span class="p">,</span> <span class="n">complete</span> <span class="nv">completeQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Progress</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">streamItem</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">FileStreamPreflight</span><span class="p">,</span> <span class="nv">preflightQueue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">,</span> <span class="n">chunkDeliveryBlock</span> <span class="nv">chunkDelivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">FileStreamChunkDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">,</span> <span class="nv">complete</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">FileStreamCompletion</span><span class="p">,</span> <span class="n">complete</span> <span class="nv">completeQueue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Progress</span></code></pre>
 
                           </div>
                         </div>
@@ -1330,6 +1330,9 @@ contain the value returned in the <code>preflight</code> block.</p>
               <a href="../Enums.html">Enumerations</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraAuthenticationType.html">CBLCameraAuthenticationType</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/CBLCameraAvailableCommandCategory.html">CBLCameraAvailableCommandCategory</a>
                 </li>
                 <li class="nav-group-task">
@@ -1358,9 +1361,6 @@ contain the value returned in the <code>preflight</code> block.</p>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLCameraLiveViewTerminationReason.html">CBLCameraLiveViewTerminationReason</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Enums/CBLCameraLiveViewZoomLevel.html">CBLCameraLiveViewZoomLevel</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLCameraLocation.html">CBLCameraLocation</a>
@@ -1458,6 +1458,9 @@ contain the value returned in the <code>preflight</code> block.</p>
                   <a href="../Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraAuthenticationContext.html">CBLCameraAuthenticationContext</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraConnectionWarning.html">CBLCameraConnectionWarning</a>
                 </li>
                 <li class="nav-group-task">
@@ -1551,6 +1554,12 @@ contain the value returned in the <code>preflight</code> block.</p>
                   <a href="../Protocols/CBLFocusPoint.html">CBLFocusPoint</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLLiveViewZoomLevelProperty.html">CBLLiveViewZoomLevelProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLLiveViewZoomLevelPropertyValue.html">CBLLiveViewZoomLevelPropertyValue</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLPropertyValue.html">CBLPropertyValue</a>
                 </li>
                 <li class="nav-group-task">
@@ -1568,10 +1577,13 @@ contain the value returned in the <code>preflight</code> block.</p>
               <a href="../Type%20Definitions.html">Type Definitions</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationRequestBlock">CBLCameraAuthenticationRequestBlock</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionUserInterventionBlock">CBLCameraConnectionUserInterventionBlock</a>
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationResolvedBlock">CBLCameraAuthenticationResolvedBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCameraManualDiscovery.h@T@CBLCameraCreationOperationCallback">CBLCameraCreationOperationCallback</a>
@@ -1657,7 +1669,7 @@ contain the value returned in the <code>preflight</code> block.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2023-08-18)</p>
+          <p>&copy; 2023 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2023-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>

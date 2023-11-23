@@ -95,7 +95,7 @@ without backing up frames if your image processing/display is slower than the de
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">beginStream</span><span class="p">(</span><span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">LiveViewFrameDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?,</span> <span class="nv">terminationHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">LiveViewTerminationHandler</span><span class="p">)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">beginStream</span><span class="p">(</span><span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">LiveViewFrameDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">?,</span> <span class="nv">terminationHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">LiveViewTerminationHandler</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -185,7 +185,7 @@ without backing up frames if your image processing/display is slower than the de
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">beginStream</span><span class="p">(</span><span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">LiveViewFrameDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">terminationHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">LiveViewTerminationHandler</span><span class="p">)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">beginStream</span><span class="p">(</span><span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">LiveViewFrameDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">?,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">terminationHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">LiveViewTerminationHandler</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -374,73 +374,6 @@ the new options taking effect.</p>
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(pl)CBLCameraLiveView(im)setLiveViewZoomLevel:completionCallback:"></a>
-                      <a name="//apple_ref/objc/Method/-setLiveViewZoomLevel:completionCallback:" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraLiveView(im)setLiveViewZoomLevel:completionCallback:">-setLiveViewZoomLevel:<wbr>completionCallback:<wbr></a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Attempt to set the current live view zoom level.</p>
-
-<p>If the camera doesn&rsquo;t support the functionality <code>CBLCameraSupportedFunctionalityZoomableLiveView</code>, this operation will fail. To check the zoom level,
-see the zoomLevel property on <code>id &lt;CBLCameraLiveViewFrame&gt;</code>.</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setLiveViewZoomLevel</span><span class="p">:(</span><span class="n"><a href="../Enums/CBLCameraLiveViewZoomLevel.html">CBLCameraLiveViewZoomLevel</a></span><span class="p">)</span><span class="nv">liveViewZoomLevel</span>
-          <span class="nf">completionCallback</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
-
-                          </div>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setLiveViewZoomLevel</span><span class="p">(</span><span class="n">_</span> <span class="nv">liveViewZoomLevel</span><span class="p">:</span> <span class="kt">LiveViewZoomLevel</span><span class="p">,</span> <span class="n">completionCallback</span> <span class="nv">block</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
-
-                          </div>
-                        </div>
-                        <div>
-                          <h4>Parameters</h4>
-                          <table class="graybox">
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <code>
-                                  <em>liveViewZoomLevel</em>
-                                  </code>
-                                </td>
-                                <td>
-                                  <div>
-                                    <p>The new zoom level to use.</p>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <code>
-                                  <em>block</em>
-                                  </code>
-                                </td>
-                                <td>
-                                  <div>
-                                    <p>The callback to call when the operation is complete.</p>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
                       <a name="/c:objc(pl)CBLCameraLiveView(im)setLiveViewCrop:completionCallback:"></a>
                       <a name="//apple_ref/objc/Method/-setLiveViewCrop:completionCallback:" class="dashAnchor"></a>
                       <a class="token" href="#/c:objc(pl)CBLCameraLiveView(im)setLiveViewCrop:completionCallback:">-setLiveViewCrop:<wbr>completionCallback:<wbr></a>
@@ -560,6 +493,49 @@ by CascableCore to match the camera&rsquo;s requirements. To check the final cro
                               </tr>
                             </tbody>
                           </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveView(im)setLiveViewZoomCenterPoint:completionCallback:"></a>
+                      <a name="//apple_ref/objc/Method/-setLiveViewZoomCenterPoint:completionCallback:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveView(im)setLiveViewZoomCenterPoint:completionCallback:">-setLiveViewZoomCenterPoint:<wbr>completionCallback:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Attempt to set the live view zoom&rsquo;s center point to the given point without changing the zoom level.</p>
+
+<p>The given point must be within the live view frame&rsquo;s <code>aspect</code>. The point may be adjusted by CascableCore to match
+the camera&rsquo;s requirements. To check the final position, see live view frame&rsquo;s <code>imageFrameInAspect</code> property once
+the operation completes.</p>
+
+<p>Note that it may take a few frames for zoom geometry to update after this operation finishes, due to frame buffers and etc.</p>
+
+<p>If the camera doesn&rsquo;t support the <code>CBLCameraSupportedFunctionalityCroppableLiveView</code> or
+<code>CBLCameraSupportedFunctionalityPannableLiveView</code> functionalities, this operation will fail.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setLiveViewZoomCenterPoint</span><span class="p">:(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nv">centerPoint</span>
+                <span class="nf">completionCallback</span><span class="p">:</span>
+                    <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setLiveViewZoomCenterPoint</span><span class="p">(</span><span class="n">_</span> <span class="nv">centerPoint</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">,</span> <span class="n">completionCallback</span> <span class="nv">block</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                          </div>
                         </div>
                       </section>
                     </div>
@@ -697,6 +673,9 @@ by CascableCore to match the camera&rsquo;s requirements. To check the final cro
               <a href="../Enums.html">Enumerations</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraAuthenticationType.html">CBLCameraAuthenticationType</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/CBLCameraAvailableCommandCategory.html">CBLCameraAvailableCommandCategory</a>
                 </li>
                 <li class="nav-group-task">
@@ -725,9 +704,6 @@ by CascableCore to match the camera&rsquo;s requirements. To check the final cro
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLCameraLiveViewTerminationReason.html">CBLCameraLiveViewTerminationReason</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Enums/CBLCameraLiveViewZoomLevel.html">CBLCameraLiveViewZoomLevel</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLCameraLocation.html">CBLCameraLocation</a>
@@ -825,6 +801,9 @@ by CascableCore to match the camera&rsquo;s requirements. To check the final cro
                   <a href="../Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraAuthenticationContext.html">CBLCameraAuthenticationContext</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraConnectionWarning.html">CBLCameraConnectionWarning</a>
                 </li>
                 <li class="nav-group-task">
@@ -918,6 +897,12 @@ by CascableCore to match the camera&rsquo;s requirements. To check the final cro
                   <a href="../Protocols/CBLFocusPoint.html">CBLFocusPoint</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLLiveViewZoomLevelProperty.html">CBLLiveViewZoomLevelProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLLiveViewZoomLevelPropertyValue.html">CBLLiveViewZoomLevelPropertyValue</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLPropertyValue.html">CBLPropertyValue</a>
                 </li>
                 <li class="nav-group-task">
@@ -935,10 +920,13 @@ by CascableCore to match the camera&rsquo;s requirements. To check the final cro
               <a href="../Type%20Definitions.html">Type Definitions</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationRequestBlock">CBLCameraAuthenticationRequestBlock</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionUserInterventionBlock">CBLCameraConnectionUserInterventionBlock</a>
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationResolvedBlock">CBLCameraAuthenticationResolvedBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCameraManualDiscovery.h@T@CBLCameraCreationOperationCallback">CBLCameraCreationOperationCallback</a>
@@ -1024,7 +1012,7 @@ by CascableCore to match the camera&rsquo;s requirements. To check the final cro
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2023-08-18)</p>
+          <p>&copy; 2023 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2023-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>

@@ -49,6 +49,90 @@
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/c:CBLCamera.h@T@CBLCameraAuthenticationRequestBlock"></a>
+                      <a name="//apple_ref/objc/Type/CBLCameraAuthenticationRequestBlock" class="dashAnchor"></a>
+                      <a class="token" href="#/c:CBLCamera.h@T@CBLCameraAuthenticationRequestBlock">CBLCameraAuthenticationRequestBlock</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The block callback signature when the camera requests authentication.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">CBLCameraAuthenticationRequestBlock</span><span class="p">)(</span>
+    <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/CBLCameraAuthenticationContext.html">CBLCameraAuthenticationContext</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">CameraAuthenticationRequestBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">CameraAuthenticationContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>context</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The authentication context object for inspecting the request and delivering a response.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:CBLCamera.h@T@CBLCameraAuthenticationResolvedBlock"></a>
+                      <a name="//apple_ref/objc/Type/CBLCameraAuthenticationResolvedBlock" class="dashAnchor"></a>
+                      <a class="token" href="#/c:CBLCamera.h@T@CBLCameraAuthenticationResolvedBlock">CBLCameraAuthenticationResolvedBlock</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The block callback signature when a camera&rsquo;s authentication request has been resolved and authentication UI can be hidden.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">CBLCameraAuthenticationResolvedBlock</span><span class="p">)(</span><span class="kt">void</span><span class="p">)</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">CameraAuthenticationResolvedBlock</span> <span class="o">=</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock"></a>
                       <a name="//apple_ref/objc/Type/CBLCameraConnectionCompleteBlock" class="dashAnchor"></a>
                       <a class="token" href="#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
@@ -101,79 +185,6 @@
                                 <td>
                                   <div>
                                     <p>Any non-fatal connection warnings.</p>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:CBLCamera.h@T@CBLCameraConnectionUserInterventionBlock"></a>
-                      <a name="//apple_ref/objc/Type/CBLCameraConnectionUserInterventionBlock" class="dashAnchor"></a>
-                      <a class="token" href="#/c:CBLCamera.h@T@CBLCameraConnectionUserInterventionBlock">CBLCameraConnectionUserInterventionBlock</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>The block callback signature when the connection process needs user intervention (i.e., the user needs to perform an
-action on the camera itself). For details on how this works, see CascableCore&rsquo;s user guides and examples.</p>
-
-<p>If invoked, this block will usually be called twice — once when the connection attempt is paused due to user
-intervention being required (for example, if the user needs to confirm pairing on the camera), and again when
-the intervention is complete and the connection process is continuing.</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">CBLCameraConnectionUserInterventionBlock</span><span class="p">)(</span>
-    <span class="n">BOOL</span><span class="p">,</span> <span class="n">dispatch_block_t</span> <span class="n">_Nullable</span><span class="p">)</span></code></pre>
-
-                          </div>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">ConnectionUserInterventionCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                          </div>
-                        </div>
-                        <div>
-                          <h4>Parameters</h4>
-                          <table class="graybox">
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <code>
-                                  <em>shouldDisplayUserInterventionDialog</em>
-                                  </code>
-                                </td>
-                                <td>
-                                  <div>
-                                    <p>If <code>YES</code>, display a dialog to the user informing them they need to
-                                       look at the camera and follow its instructions. If <code>NO</code>, close your
-                                       previously-shown dialog.</p>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <code>
-                                  <em>cancelConnectionBlock</em>
-                                  </code>
-                                </td>
-                                <td>
-                                  <div>
-                                    <p>If non-nil (typically when <code>shouldDisplayUserInterventionDialog</code> is <code>YES</code>), this block
-                         can be called to cancel the connection attempt. If non-nil, you can show a &ldquo;Cancel&rdquo;
-                         button in your dialog and call this block if the user taps it.</p>
                                   </div>
                                 </td>
                               </tr>
@@ -409,6 +420,11 @@ for details.</p>
     <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span></code></pre>
 
                           </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">CameraDiscoveryAvailableDevicesChangedCallback</span> <span class="o">=</span> <span class="p">([</span><span class="kt"><a href="Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                          </div>
                         </div>
                       </section>
                     </div>
@@ -597,6 +613,11 @@ either the result of the transfer, or an error describing the failure.</p>
                             <p class="aside-title">Objective-C</p>
                             <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">CBLCameraCreationOperationCallback</span><span class="p">)(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">,</span>
                                                    <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">CameraCreationOperationCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                           </div>
                         </div>
@@ -837,6 +858,11 @@ either the result of the transfer, or an error describing the failure.</p>
     <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/CBLFileStorage.html">CBLFileStorage</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/CBLFileSystemFolderItem.html">CBLFileSystemFolderItem</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">,</span>
     <span class="n"><a href="Enums/CBLFileSystemModificationOperation.html">CBLFileSystemModificationOperation</a></span><span class="p">,</span>
     <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/CBLFileSystemItem.html">CBLFileSystemItem</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">FileStorageFilesModifiedObserver</span> <span class="o">=</span> <span class="p">(</span><span class="kt">FileStorage</span><span class="p">,</span> <span class="kt">FileSystemFolderItem</span><span class="p">?,</span> <span class="kt">FileSystemModificationOperation</span><span class="p">,</span> <span class="p">[</span><span class="kt"><a href="Protocols/CBLFileSystemItem.html">CBLFileSystemItem</a></span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                           </div>
                         </div>
@@ -1549,6 +1575,9 @@ the desired instruction.</p>
               <a href="Enums.html">Enumerations</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
+                  <a href="Enums/CBLCameraAuthenticationType.html">CBLCameraAuthenticationType</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Enums/CBLCameraAvailableCommandCategory.html">CBLCameraAvailableCommandCategory</a>
                 </li>
                 <li class="nav-group-task">
@@ -1577,9 +1606,6 @@ the desired instruction.</p>
                 </li>
                 <li class="nav-group-task">
                   <a href="Enums/CBLCameraLiveViewTerminationReason.html">CBLCameraLiveViewTerminationReason</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="Enums/CBLCameraLiveViewZoomLevel.html">CBLCameraLiveViewZoomLevel</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Enums/CBLCameraLocation.html">CBLCameraLocation</a>
@@ -1677,6 +1703,9 @@ the desired instruction.</p>
                   <a href="Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Protocols/CBLCameraAuthenticationContext.html">CBLCameraAuthenticationContext</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Protocols/CBLCameraConnectionWarning.html">CBLCameraConnectionWarning</a>
                 </li>
                 <li class="nav-group-task">
@@ -1770,6 +1799,12 @@ the desired instruction.</p>
                   <a href="Protocols/CBLFocusPoint.html">CBLFocusPoint</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Protocols/CBLLiveViewZoomLevelProperty.html">CBLLiveViewZoomLevelProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/CBLLiveViewZoomLevelPropertyValue.html">CBLLiveViewZoomLevelPropertyValue</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Protocols/CBLPropertyValue.html">CBLPropertyValue</a>
                 </li>
                 <li class="nav-group-task">
@@ -1787,10 +1822,13 @@ the desired instruction.</p>
               <a href="Type%20Definitions.html">Type Definitions</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
-                  <a href="Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
+                  <a href="Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationRequestBlock">CBLCameraAuthenticationRequestBlock</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionUserInterventionBlock">CBLCameraConnectionUserInterventionBlock</a>
+                  <a href="Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationResolvedBlock">CBLCameraAuthenticationResolvedBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Type%20Definitions.html#/c:CBLCameraManualDiscovery.h@T@CBLCameraCreationOperationCallback">CBLCameraCreationOperationCallback</a>
@@ -1876,7 +1914,7 @@ the desired instruction.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2023-08-18)</p>
+          <p>&copy; 2023 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2023-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>

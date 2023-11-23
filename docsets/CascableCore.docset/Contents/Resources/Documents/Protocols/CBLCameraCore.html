@@ -387,9 +387,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(pl)CBLCameraCore(im)connectWithFlags:completionCallback:userInterventionCallback:"></a>
-                      <a name="//apple_ref/objc/Method/-connectWithFlags:completionCallback:userInterventionCallback:" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraCore(im)connectWithFlags:completionCallback:userInterventionCallback:">-connectWithFlags:<wbr>completionCallback:<wbr>userInterventionCallback:<wbr></a>
+                      <a name="/c:objc(pl)CBLCameraCore(im)connectWithFlags:authenticationRequestCallback:authenticationResolvedCallback:completionCallback:"></a>
+                      <a name="//apple_ref/objc/Method/-connectWithFlags:authenticationRequestCallback:authenticationResolvedCallback:completionCallback:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraCore(im)connectWithFlags:authenticationRequestCallback:authenticationResolvedCallback:completionCallback:">-connectWithFlags:<wbr>authenticationRequestCallback:<wbr>authenticationResolvedCallback:<wbr>completionCallback:<wbr></a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -409,12 +409,21 @@ some advanced functionality may not be available yet. If there are warnings, the
 contained in the <code>warnings</code> parameter of the callback block. These warnings should be
 presented to the user <em>if</em> they fall in a category your application uses.</p>
 
-<p>In some circumstances, the connection process is stalled by the camera asking the
-user to perform some steps on the device&rsquo;s screen. If this happens, the callback block
-<code>userInterventionCallback</code> will be called with the parameter <code>YES</code> to indicate that the
-caller should present UI to the user telling them to look at the camera, then again with
-<code>NO</code> to indicate to the caller that this is no longer needed.</p>
+<p>In some circumstances, the connection process is stalled by the camera requiring authentication. If this happens,
+the <code>authenticationRequestCallback</code> will be called with information on the request. You should display UI to the
+user on how to satisy the request, which will vary depending on the type of authentication request (see the
+documentation for <code>id &lt;CBLCameraAuthenticationContext&gt;</code> for more details.</p>
+
+<p>Once the authentication request has been satisfied, the <code>authenticationResolvedCallback</code> will be called, signalling
+that the request has been satisifed and you can close your UI.</p>
 <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If you get a <code>authenticationRequestCallback</code>, you will always get a <code>authenticationResolvedCallback</code> before
+  camera connection completes. <strong>Importantly</strong>, you may get more than one sequence of authentication
+  requests/resolves during a connection - for example, if the camera rejects the given username and password, it
+  may grant another try before failing.</p>
+
+</div><div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>The callback blocks will be called on the main queue.</p>
 
@@ -426,14 +435,18 @@ caller should present UI to the user telling them to look at the camera, then ag
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
                             <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">connectWithFlags</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">flags</span>
-          <span class="nf">completionCallback</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a></span><span class="p">)</span><span class="nv">callback</span>
-    <span class="nf">userInterventionCallback</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionUserInterventionBlock">CBLCameraConnectionUserInterventionBlock</a></span><span class="p">)</span>
-                                 <span class="n">userInterventionCallback</span><span class="p">;</span></code></pre>
+     <span class="nf">authenticationRequestCallback</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationRequestBlock">CBLCameraAuthenticationRequestBlock</a></span><span class="p">)</span>
+                                       <span class="n">authenticationRequestCallback</span>
+    <span class="n">authenticationResolvedCallback</span><span class="o">:</span>
+        <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationResolvedBlock">CBLCameraAuthenticationResolvedBlock</a></span><span class="p">)</span>
+            <span class="n">authenticationResolvedCallback</span>
+                <span class="n">completionCallback</span><span class="o">:</span>
+                    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a></span><span class="p">)</span><span class="n">callback</span><span class="p">;</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">connect</span><span class="p">(</span><span class="nv">flags</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="n">completionCallback</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ConnectionCompleteCallback</span><span class="p">,</span> <span class="nv">userInterventionCallback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ConnectionUserInterventionCallback</span><span class="p">)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">connect</span><span class="p">(</span><span class="nv">flags</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="nv">authenticationRequestCallback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">CameraAuthenticationRequestBlock</span><span class="p">,</span> <span class="nv">authenticationResolvedCallback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">CameraAuthenticationResolvedBlock</span><span class="p">,</span> <span class="n">completionCallback</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ConnectionCompleteCallback</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -456,24 +469,36 @@ caller should present UI to the user telling them to look at the camera, then ag
                               <tr>
                                 <td>
                                   <code>
-                                  <em>callback</em>
+                                  <em>authenticationRequestCallback</em>
                                   </code>
                                 </td>
                                 <td>
                                   <div>
-                                    <p>The callback to be called when the connection succeeds or fails.</p>
+                                    <p>The callback to be invoked when a camera needs user authentication.</p>
                                   </div>
                                 </td>
                               </tr>
                               <tr>
                                 <td>
                                   <code>
-                                  <em>userInterventionCallback</em>
+                                  <em>authenticationResolvedCallback</em>
                                   </code>
                                 </td>
                                 <td>
                                   <div>
-                                    <p>The callback to be invoked</p>
+                                    <p>The callback to be invoked when a camera&rsquo;s authentication request has been resolved.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>callback</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The callback to be called when the connection succeeds or fails.</p>
                                   </div>
                                 </td>
                               </tr>
@@ -486,9 +511,9 @@ caller should present UI to the user telling them to look at the camera, then ag
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(pl)CBLCameraCore(im)connectWithCompletionCallback:userInterventionCallback:"></a>
-                      <a name="//apple_ref/objc/Method/-connectWithCompletionCallback:userInterventionCallback:" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(pl)CBLCameraCore(im)connectWithCompletionCallback:userInterventionCallback:">-connectWithCompletionCallback:<wbr>userInterventionCallback:<wbr></a>
+                      <a name="/c:objc(pl)CBLCameraCore(im)connectWithAuthenticationRequestCallback:authenticationResolvedCallback:completionCallback:"></a>
+                      <a name="//apple_ref/objc/Method/-connectWithAuthenticationRequestCallback:authenticationResolvedCallback:completionCallback:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraCore(im)connectWithAuthenticationRequestCallback:authenticationResolvedCallback:completionCallback:">-connectWithAuthenticationRequestCallback:<wbr>authenticationResolvedCallback:<wbr>completionCallback:<wbr></a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -498,25 +523,31 @@ caller should present UI to the user telling them to look at the camera, then ag
                         <div class="abstract">
                           <p>Attempt to connect to the device with the given client name.</p>
 
-<p>Equivalent to calling <code><a href="../Protocols/CBLCameraCore.html#/c:objc(pl)CBLCameraCore(im)connectWithFlags:completionCallback:userInterventionCallback:">-connectWithFlags:completionCallback:userInterventionCallback:</a></code> with a <code>nil</code> <code>flags</code> parameter.</p>
+<p>Equivalent to calling <code><a href="../Protocols/CBLCameraCore.html#/c:objc(pl)CBLCameraCore(im)connectWithFlags:authenticationRequestCallback:authenticationResolvedCallback:completionCallback:">-connectWithFlags:authenticationRequestCallback:authenticationResolvedCallback:completionCallback:</a></code> 
+with a <code>nil</code> <code>flags</code> parameter.</p>
 
-<p>See the documentation for <code><a href="../Protocols/CBLCameraCore.html#/c:objc(pl)CBLCameraCore(im)connectWithFlags:completionCallback:userInterventionCallback:">-connectWithFlags:completionCallback:userInterventionCallback:</a></code> for details.</p>
+<p>See the documentation for <code><a href="../Protocols/CBLCameraCore.html#/c:objc(pl)CBLCameraCore(im)connectWithFlags:authenticationRequestCallback:authenticationResolvedCallback:completionCallback:">-connectWithFlags:authenticationRequestCallback:authenticationResolvedCallback:completionCallback:</a></code> 
+for details.</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">connectWithCompletionCallback</span><span class="p">:</span>
-            <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a></span><span class="p">)</span><span class="nv">callback</span>
-             <span class="nf">userInterventionCallback</span><span class="p">:</span>
-                 <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionUserInterventionBlock">CBLCameraConnectionUserInterventionBlock</a></span><span class="p">)</span>
-                     <span class="n">userInterventionCallback</span><span class="p">;</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">connectWithAuthenticationRequestCallback</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationRequestBlock">CBLCameraAuthenticationRequestBlock</a></span><span class="p">)</span>
+                <span class="n">authenticationRequestCallback</span>
+                  <span class="n">authenticationResolvedCallback</span><span class="o">:</span>
+                      <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationResolvedBlock">CBLCameraAuthenticationResolvedBlock</a></span><span class="p">)</span>
+                          <span class="n">authenticationResolvedCallback</span>
+                              <span class="n">completionCallback</span><span class="o">:</span>
+                                  <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a></span><span class="p">)</span>
+                                      <span class="n">callback</span><span class="p">;</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">connect</span><span class="p">(</span><span class="n">completionCallback</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ConnectionCompleteCallback</span><span class="p">,</span> <span class="nv">userInterventionCallback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ConnectionUserInterventionCallback</span><span class="p">)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">connect</span><span class="p">(</span><span class="nv">authenticationRequestCallback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">CameraAuthenticationRequestBlock</span><span class="p">,</span> <span class="nv">authenticationResolvedCallback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">CameraAuthenticationResolvedBlock</span><span class="p">,</span> <span class="n">completionCallback</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ConnectionCompleteCallback</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -527,24 +558,36 @@ caller should present UI to the user telling them to look at the camera, then ag
                               <tr>
                                 <td>
                                   <code>
-                                  <em>callback</em>
+                                  <em>authenticationRequestCallback</em>
                                   </code>
                                 </td>
                                 <td>
                                   <div>
-                                    <p>The callback to be called when the connection succeeds or fails.</p>
+                                    <p>The callback to be invoked when a camera needs user authentication.</p>
                                   </div>
                                 </td>
                               </tr>
                               <tr>
                                 <td>
                                   <code>
-                                  <em>userInterventionCallback</em>
+                                  <em>authenticationResolvedCallback</em>
                                   </code>
                                 </td>
                                 <td>
                                   <div>
-                                    <p>The callback to be invoked</p>
+                                    <p>The callback to be invoked when a camera&rsquo;s authentication request has been resolved.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>callback</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The callback to be called when the connection succeeds or fails.</p>
                                   </div>
                                 </td>
                               </tr>
@@ -584,7 +627,7 @@ terminated. If the <code>error</code> parameter of the callback is <code>nil</co
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">disconnect</span><span class="p">(</span><span class="n">withFlags</span> <span class="nv">flags</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="n">completionCallback</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?,</span> <span class="n">callbackQueue</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">disconnect</span><span class="p">(</span><span class="n">withFlags</span> <span class="nv">flags</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="n">completionCallback</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?,</span> <span class="n">callbackQueue</span> <span class="nv">queue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">?)</span></code></pre>
 
                           </div>
                         </div>
@@ -665,7 +708,7 @@ terminated. If the <code>error</code> parameter of the callback is <code>nil</co
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">disconnect</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?,</span> <span class="n">callbackQueue</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">disconnect</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt">ErrorableOperationCallback</span><span class="p">?,</span> <span class="n">callbackQueue</span> <span class="nv">queue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">?)</span></code></pre>
 
                           </div>
                         </div>
@@ -1144,6 +1187,9 @@ terminated. If the <code>error</code> parameter of the callback is <code>nil</co
               <a href="../Enums.html">Enumerations</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
+                  <a href="../Enums/CBLCameraAuthenticationType.html">CBLCameraAuthenticationType</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/CBLCameraAvailableCommandCategory.html">CBLCameraAvailableCommandCategory</a>
                 </li>
                 <li class="nav-group-task">
@@ -1172,9 +1218,6 @@ terminated. If the <code>error</code> parameter of the callback is <code>nil</co
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLCameraLiveViewTerminationReason.html">CBLCameraLiveViewTerminationReason</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Enums/CBLCameraLiveViewZoomLevel.html">CBLCameraLiveViewZoomLevel</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Enums/CBLCameraLocation.html">CBLCameraLocation</a>
@@ -1272,6 +1315,9 @@ terminated. If the <code>error</code> parameter of the callback is <code>nil</co
                   <a href="../Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLCameraAuthenticationContext.html">CBLCameraAuthenticationContext</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLCameraConnectionWarning.html">CBLCameraConnectionWarning</a>
                 </li>
                 <li class="nav-group-task">
@@ -1365,6 +1411,12 @@ terminated. If the <code>error</code> parameter of the callback is <code>nil</co
                   <a href="../Protocols/CBLFocusPoint.html">CBLFocusPoint</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLLiveViewZoomLevelProperty.html">CBLLiveViewZoomLevelProperty</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/CBLLiveViewZoomLevelPropertyValue.html">CBLLiveViewZoomLevelPropertyValue</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLPropertyValue.html">CBLPropertyValue</a>
                 </li>
                 <li class="nav-group-task">
@@ -1382,10 +1434,13 @@ terminated. If the <code>error</code> parameter of the callback is <code>nil</co
               <a href="../Type%20Definitions.html">Type Definitions</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationRequestBlock">CBLCameraAuthenticationRequestBlock</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionUserInterventionBlock">CBLCameraConnectionUserInterventionBlock</a>
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraAuthenticationResolvedBlock">CBLCameraAuthenticationResolvedBlock</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLCamera.h@T@CBLCameraConnectionCompleteBlock">CBLCameraConnectionCompleteBlock</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCameraManualDiscovery.h@T@CBLCameraCreationOperationCallback">CBLCameraCreationOperationCallback</a>
@@ -1471,7 +1526,7 @@ terminated. If the <code>error</code> parameter of the callback is <code>nil</co
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2023-08-18)</p>
+          <p>&copy; 2023 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2023-11-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>
