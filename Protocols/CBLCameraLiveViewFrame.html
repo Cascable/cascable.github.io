@@ -299,7 +299,8 @@
                           <p>Returns the raw image data for the frame. See the <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelFormat">rawPixelFormat</a></code> and <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelFormatDescription">rawPixelFormatDescription</a></code> properties
 for detailed information on the pixel format.</p>
 
-<p>It may be necessary to crop this image to avoid black bars. See <code>rawImageCropRect</code>.</p>
+<p>It may be necessary to crop this image to avoid black bars. See <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelCropRect">rawPixelCropRect</a></code>. It may be neccessary to resize this
+image to avoid distortion. See <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)naturalImageSize">naturalImageSize</a></code>.</p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     While the pixel format is usually stable once a live view stream starts, some cameras can change pixel formats
@@ -440,7 +441,9 @@ mid-stream. It&rsquo;s important to be able to handle this if you&rsquo;re worki
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Returns the rectangle with which to crop the image contained in <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelData">rawPixelData</a></code> to avoid black bars.</p>
+                          <p>Returns the rectangle with which to crop the image contained in <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelData">rawPixelData</a></code> to avoid black bars. It may also
+be neccessary to resize the image after cropping at the render site to avoid distortion. See <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)naturalImageSize">naturalImageSize</a></code> for
+details.</p>
 
                         </div>
                         <div class="declaration">
@@ -473,7 +476,8 @@ mid-stream. It&rsquo;s important to be able to handle this if you&rsquo;re worki
                         <div class="pointer"></div>
                         <div class="abstract">
                           <p>Returns an NSImage or UIImage for this live view frame. Any required pixel format conversion and cropping will be
-applied for you. Due to this, the pixel size of this image may be different to the value of <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelSize">rawPixelSize</a></code>.</p>
+applied for you. Due to this, the pixel size of this image may be different to the value of <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelSize">rawPixelSize</a></code>. It may
+be neccessary to resize this image at the render site to avoid distortion. See <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)naturalImageSize">naturalImageSize</a></code> for details.</p>
 
                         </div>
                         <div class="declaration">
@@ -495,6 +499,83 @@ applied for you. Due to this, the pixel size of this image may be different to t
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)naturalImageSize"></a>
+                      <a name="//apple_ref/objc/Property/naturalImageSize" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)naturalImageSize">naturalImageSize</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the live view frame&rsquo;s &ldquo;natural&rdquo; image size - i.e., the size at which it should be rendered to appear correctly.
+Usually, this is the same as the <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)rawPixelCropRect">rawPixelCropRect</a></code> property&rsquo;s size value (and the <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)image">image</a></code> property&rsquo;s size value), but
+in some cases cameras can deliver distorted images due to factors such as (for e.g.) line skipping.</p>
+
+<p>If this value is different to the aforementioned size values, the image needs to be resized by the client (i.e., you)
+in order to render correctly to the user.</p>
+
+<p>Due to the performance implications of this operation, it is <strong>highly</strong> recommended that this is done at the UI level
+so it can be performed by the device&rsquo;s GPU. An example of this would be setting a view&rsquo;s aspect ratio based on this
+value, then having it stretch its contents to fit.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">CGSize</span> <span class="n">naturalImageSize</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">naturalImageSize</span><span class="p">:</span> <span class="kt">CGSize</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)requiresImageResizeToAvoidDistortion"></a>
+                      <a name="//apple_ref/objc/Property/requiresImageResizeToAvoidDistortion" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)requiresImageResizeToAvoidDistortion">requiresImageResizeToAvoidDistortion</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns <code>YES</code> if the frame&rsquo;s <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)naturalImageSize">naturalImageSize</a></code> value is different to the size of the image delivered by the camera
+(including any crop rect), otherwise <code>NO</code>.</p>
+
+<p>If this value is <code>YES</code>, the frame&rsquo;s image may need to be resized to not appear distorted. See <code><a href="../Protocols/CBLCameraLiveViewFrame.html#/c:objc(pl)CBLCameraLiveViewFrame(py)naturalImageSize">naturalImageSize</a></code>
+for details.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">requiresImageResizeToAvoidDistortion</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">requiresImageResizeToAvoidDistortion</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/c:objc(pl)CBLCameraLiveViewFrame(py)aspect"></a>
                       <a name="//apple_ref/objc/Property/aspect" class="dashAnchor"></a>
                       <a class="token" href="#/c:objc(pl)CBLCameraLiveViewFrame(py)aspect">aspect</a>
@@ -505,8 +586,8 @@ applied for you. Due to this, the pixel size of this image may be different to t
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Returns the aspect in which the live view coordinate system is mapped.
- All geometric values returns by this class are relative to this property.</p>
+                          <p>Returns the aspect in which the live view coordinate system is mapped. All values related to focus and zoom geometry
+returned by this class are relative to this property.</p>
 
                         </div>
                         <div class="declaration">
@@ -1366,7 +1447,7 @@ applied for you. Due to this, the pixel size of this image may be different to t
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2024 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2024-04-04)</p>
+          <p>&copy; 2024 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2024-04-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>
