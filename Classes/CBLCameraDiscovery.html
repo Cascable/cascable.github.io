@@ -116,7 +116,7 @@
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">manualDiscovery</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CBLCameraManualDiscovery.html">CBLCameraManualDiscovery</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">manualDiscovery</span><span class="p">:</span> <span class="n">any</span> <span class="kt"><a href="../Protocols/CBLCameraManualDiscovery.html">CBLCameraManualDiscovery</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -244,7 +244,7 @@ short — cameras will truncate long names.</p>
 <p>Changes to this property will not take effect if the receiver is already searching for devices.</p>
 
 <p>The default value is <code>CBLCameraDiscoveryModeNetworkAndUSB</code>, although USB cameras will only be detected if
-<code><a href="../Classes/CBLCameraDiscovery.html#/c:objc(cs)CBLCameraDiscovery(py)operatingSystemIsNewEnoughForWiredCameras">operatingSystemIsNewEnoughForWiredCameras</a></code> returns <code>YES</code>.</p>
+<code>operatingSystemIsNewEnoughForWiredCameras</code> returns <code>YES</code>.</p>
 
                         </div>
                         <div class="declaration">
@@ -266,9 +266,9 @@ short — cameras will truncate long names.</p>
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(cs)CBLCameraDiscovery(py)operatingSystemIsNewEnoughForWiredCameras"></a>
-                      <a name="//apple_ref/objc/Property/operatingSystemIsNewEnoughForWiredCameras" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(cs)CBLCameraDiscovery(py)operatingSystemIsNewEnoughForWiredCameras">operatingSystemIsNewEnoughForWiredCameras</a>
+                      <a name="/c:objc(cs)CBLCameraDiscovery(py)platformSupportsWiredCameras"></a>
+                      <a name="//apple_ref/objc/Property/platformSupportsWiredCameras" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)CBLCameraDiscovery(py)platformSupportsWiredCameras">platformSupportsWiredCameras</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -276,19 +276,19 @@ short — cameras will truncate long names.</p>
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Returns <code>YES</code> if the current environment is running an operating system new enough to support wired cameras.</p>
+                          <p>Returns <code>YES</code> if the current platform is running an operating system that supports wired cameras.</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">operatingSystemIsNewEnoughForWiredCameras</span><span class="p">;</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">platformSupportsWiredCameras</span><span class="p">;</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">operatingSystemIsNewEnoughForWiredCameras</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">platformSupportsWiredCameras</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -409,7 +409,7 @@ current authorization status, this may trigger one or more dialog boxes to the u
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">availableCameras</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">availableCameras</span><span class="p">:</span> <span class="p">[</span><span class="n">any</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -545,7 +545,7 @@ current authorization status, this may trigger one or more dialog boxes to the u
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt">CameraDiscoveryDelegate</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="p">(</span><span class="n">any</span> <span class="kt">CameraDiscoveryDelegate</span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -869,6 +869,9 @@ current authorization status, this may trigger one or more dialog boxes to the u
                   <a href="../Enums/CBLFileStreamInstruction.html">CBLFileStreamInstruction</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Enums/CBLFileSystemItemMutableRatingType.html">CBLFileSystemItemMutableRatingType</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/CBLFileSystemModificationOperation.html">CBLFileSystemModificationOperation</a>
                 </li>
                 <li class="nav-group-task">
@@ -1154,7 +1157,7 @@ current authorization status, this may trigger one or more dialog boxes to the u
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2024 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2024-04-19)</p>
+          <p>&copy; 2024 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2024-07-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>

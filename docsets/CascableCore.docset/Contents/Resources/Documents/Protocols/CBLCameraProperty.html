@@ -147,7 +147,7 @@
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">camera</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">camera</span><span class="p">:</span> <span class="p">(</span><span class="n">any</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)CBLCamera">CBLCamera</a></span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -243,7 +243,7 @@
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">currentValue</span><span class="p">:</span> <span class="kt">PropertyValue</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">currentValue</span><span class="p">:</span> <span class="p">(</span><span class="n">any</span> <span class="kt">PropertyValue</span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -282,7 +282,7 @@ when the object is deallocated. Make sure you store this token somewhere to keep
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addObserver</span><span class="p">(</span><span class="n">_</span> <span class="nv">observerCallback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">CameraPropertyObservationCallback</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CameraPropertyObservation</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addObserver</span><span class="p">(</span><span class="n">_</span> <span class="nv">observerCallback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">CameraPropertyObservationCallback</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">any</span> <span class="kt">CameraPropertyObservation</span></code></pre>
 
                           </div>
                         </div>
@@ -337,7 +337,7 @@ when the object is deallocated. Make sure you store this token somewhere to keep
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeObserver</span><span class="p">(</span><span class="n">_</span> <span class="nv">observer</span><span class="p">:</span> <span class="kt">CameraPropertyObservation</span><span class="p">)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeObserver</span><span class="p">(</span><span class="n">_</span> <span class="nv">observer</span><span class="p">:</span> <span class="n">any</span> <span class="kt">CameraPropertyObservation</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -402,7 +402,7 @@ if the property&rsquo;s <code><a href="../Protocols/CBLCameraProperty.html#/c:ob
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">pendingValue</span><span class="p">:</span> <span class="kt">PropertyValue</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">pendingValue</span><span class="p">:</span> <span class="p">(</span><span class="n">any</span> <span class="kt">PropertyValue</span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -435,7 +435,7 @@ property&rsquo;s <code><a href="../Protocols/CBLCameraProperty.html#/c:objc(pl)C
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">validSettableValues</span><span class="p">:</span> <span class="p">[</span><span class="kt">PropertyValue</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">validSettableValues</span><span class="p">:</span> <span class="p">[</span><span class="n">any</span> <span class="kt">PropertyValue</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -468,7 +468,7 @@ property&rsquo;s <code><a href="../Protocols/CBLCameraProperty.html#/c:objc(pl)C
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">validValue</span><span class="p">(</span><span class="n">matchingCommonValue</span> <span class="nv">commonValue</span><span class="p">:</span> <span class="kt">PropertyCommonValue</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">PropertyValue</span><span class="p">?</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">validValue</span><span class="p">(</span><span class="n">matchingCommonValue</span> <span class="nv">commonValue</span><span class="p">:</span> <span class="kt">PropertyCommonValue</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">any</span> <span class="kt">PropertyValue</span><span class="p">)?</span></code></pre>
 
                           </div>
                         </div>
@@ -526,7 +526,7 @@ this method is only useable if the property&rsquo;s <code><a href="../Protocols/
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setValue</span><span class="p">(</span><span class="n">_</span> <span class="nv">newValue</span><span class="p">:</span> <span class="kt">PropertyValue</span><span class="p">,</span> <span class="n">completionQueue</span> <span class="nv">queue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setValue</span><span class="p">(</span><span class="n">_</span> <span class="nv">newValue</span><span class="p">:</span> <span class="n">any</span> <span class="kt">PropertyValue</span><span class="p">,</span> <span class="n">completionQueue</span> <span class="nv">queue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -603,7 +603,7 @@ this method is only useable if the property&rsquo;s <code><a href="../Protocols/
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setValue</span><span class="p">(</span><span class="n">_</span> <span class="nv">newValue</span><span class="p">:</span> <span class="kt">PropertyValue</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setValue</span><span class="p">(</span><span class="n">_</span> <span class="nv">newValue</span><span class="p">:</span> <span class="n">any</span> <span class="kt">PropertyValue</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -1109,6 +1109,9 @@ words, this method is moving the value towards the beginning of a list of values
                   <a href="../Enums/CBLFileStreamInstruction.html">CBLFileStreamInstruction</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Enums/CBLFileSystemItemMutableRatingType.html">CBLFileSystemItemMutableRatingType</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/CBLFileSystemModificationOperation.html">CBLFileSystemModificationOperation</a>
                 </li>
                 <li class="nav-group-task">
@@ -1394,7 +1397,7 @@ words, this method is moving the value towards the beginning of a list of values
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2024 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2024-04-19)</p>
+          <p>&copy; 2024 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2024-07-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CBLCameraAEResult Class Reference</title>
+    <title>CBLFileSystemItemMutableRatingType Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -11,8 +11,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/objc/Class/CBLCameraAEResult" class="dashAnchor"></a>
-    <a title="CBLCameraAEResult Class Reference"></a>
+    <a name="//apple_ref/objc/Enum/CBLFileSystemItemMutableRatingType" class="dashAnchor"></a>
+    <a title="CBLFileSystemItemMutableRatingType Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
         <p>
@@ -30,7 +30,7 @@
             <a href="../index.html">CascableCore Reference</a>
             <img id="carat" src="../img/carat.png" alt=""/>
           </span>
-          CBLCameraAEResult Class Reference
+          CBLFileSystemItemMutableRatingType Enumeration Reference
         </p>
       </div>
     </div>
@@ -39,21 +39,20 @@
         <article class="main-content">
           <section>
             <section class="section">
-              <h1>CBLCameraAEResult</h1>
+              <h1>CBLFileSystemItemMutableRatingType</h1>
                 <div class="declaration">
                   <div class="language">
                     <p class="aside-title">Objective-C</p>
-                    <pre class="highlight objective_c"><code>
-<span class="k">@interface</span> <span class="nc">CBLCameraAEResult</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+                    <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">CBLFileSystemItemMutableRatingType</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
 
                   </div>
                   <div class="language">
                     <p class="aside-title">Swift</p>
-                    <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">AEResult</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
+                    <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">FileSystemItemMutableRatingType</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
 
                   </div>
                 </div>
-              <p>This class represents an autoexposure result from a camera. Some or all of these values may be <code>nil</code> depending on the camera&rsquo;s autoexposure mode.</p>
+              <p>Describes the type of rating a particular filesystem item takes when changing the rating.</p>
 
             </section>
             <section class="section task-group-section">
@@ -62,9 +61,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(cs)CBLCameraAEResult(py)autoExposureClipped"></a>
-                      <a name="//apple_ref/objc/Property/autoExposureClipped" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(cs)CBLCameraAEResult(py)autoExposureClipped">autoExposureClipped</a>
+                      <a name="/c:@E@CBLFileSystemItemMutableRatingType@CBLFileSystemItemMutableRatingTypeNone"></a>
+                      <a name="//apple_ref/objc/Case/CBLFileSystemItemMutableRatingTypeNone" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@E@CBLFileSystemItemMutableRatingType@CBLFileSystemItemMutableRatingTypeNone">CBLFileSystemItemMutableRatingTypeNone</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -72,20 +71,19 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Returns <code>YES</code> if the result is clipped (i.e., the camera couldn&rsquo;t correctly expose for the scene). 
- Cameras typically flash their autoexposure indicators when this happens.</p>
+                          <p>The item is not able to have its rating mutated.</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">autoExposureClipped</span><span class="p">;</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="n">CBLFileSystemItemMutableRatingTypeNone</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">autoExposureClipped</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="k">none</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                           </div>
                         </div>
@@ -95,9 +93,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(cs)CBLCameraAEResult(py)shutterSpeed"></a>
-                      <a name="//apple_ref/objc/Property/shutterSpeed" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(cs)CBLCameraAEResult(py)shutterSpeed">shutterSpeed</a>
+                      <a name="/c:@E@CBLFileSystemItemMutableRatingType@CBLFileSystemItemMutableRatingTypeIPTC"></a>
+                      <a name="//apple_ref/objc/Case/CBLFileSystemItemMutableRatingTypeIPTC" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@E@CBLFileSystemItemMutableRatingType@CBLFileSystemItemMutableRatingTypeIPTC">CBLFileSystemItemMutableRatingTypeIPTC</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -105,19 +103,19 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Returns the shutter speed as calculated by the camera&rsquo;s autoexposure, or <code>nil</code> if no value was computed.</p>
+                          <p>The item&rsquo;s rating takes an ITPC-standard rating in the range 0&hellip;5.</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">CBLShutterSpeedValue</span> <span class="o">*</span><span class="n">shutterSpeed</span><span class="p">;</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="n">CBLFileSystemItemMutableRatingTypeIPTC</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">@NSCopying</span> <span class="k">var</span> <span class="nv">shutterSpeed</span><span class="p">:</span> <span class="kt">CBLShutterSpeedValue</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">IPTC</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
 
                           </div>
                         </div>
@@ -127,9 +125,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:objc(cs)CBLCameraAEResult(py)ISOValue"></a>
-                      <a name="//apple_ref/objc/Property/ISOValue" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(cs)CBLCameraAEResult(py)ISOValue">ISOValue</a>
+                      <a name="/c:@E@CBLFileSystemItemMutableRatingType@CBLFileSystemItemMutableRatingTypeBoolean"></a>
+                      <a name="//apple_ref/objc/Case/CBLFileSystemItemMutableRatingTypeBoolean" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@E@CBLFileSystemItemMutableRatingType@CBLFileSystemItemMutableRatingTypeBoolean">CBLFileSystemItemMutableRatingTypeBoolean</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -137,51 +135,19 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Returns the ISO value as calculated by the camera&rsquo;s autoexposure, or <code>nil</code> if no value was computed.</p>
+                          <p>The items&rsquo;s rating is effectively boolean (or &ldquo;starred&rdquo;) in the range 0&hellip;1.</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">CBLISOValue</span> <span class="o">*</span><span class="n">ISOValue</span><span class="p">;</span></code></pre>
+                            <pre class="highlight objective_c"><code><span class="n">CBLFileSystemItemMutableRatingTypeBoolean</span></code></pre>
 
                           </div>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">@NSCopying</span> <span class="k">var</span> <span class="nv">isoValue</span><span class="p">:</span> <span class="kt">CBLISOValue</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:objc(cs)CBLCameraAEResult(py)apertureValue"></a>
-                      <a name="//apple_ref/objc/Property/apertureValue" class="dashAnchor"></a>
-                      <a class="token" href="#/c:objc(cs)CBLCameraAEResult(py)apertureValue">apertureValue</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Returns the aperture value as calculated by the camera&rsquo;s autoexposure, or <code>nil</code> if no value was computed.</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Objective-C</p>
-                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">CBLApertureValue</span> <span class="o">*</span><span class="n">apertureValue</span><span class="p">;</span></code></pre>
-
-                          </div>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">@NSCopying</span> <span class="k">var</span> <span class="nv">apertureValue</span><span class="p">:</span> <span class="kt">CBLApertureValue</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">boolean</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
 
                           </div>
                         </div>
