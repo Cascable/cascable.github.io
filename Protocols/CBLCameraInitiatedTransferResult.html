@@ -199,6 +199,49 @@ set to only save images to the connected host would set this to <code>YES</code>
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferResult(py)dateProduced"></a>
+                      <a name="//apple_ref/objc/Property/dateProduced" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferResult(py)dateProduced">dateProduced</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the date and time at which the request was produced. CascableCore will attempt to match this value to
+the underlying image&rsquo;s EXIF timestamp, if available. Otherwise, this will be the date and time at which the
+request was received from the camera.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Since EXIF doesn&rsquo;t tend to have the concept of timezones, dates from this property will also adhere to
+  that &ldquo;standard&rdquo; in that they&rsquo;ll be expressed in the GMT+0 timezone. I.e., an image produced at 14:00 local
+  time in California will actually be expressed at 14:00 GMT. When dealing with these values (or showing them
+  to the user), make sure you account for this - when using date formatters, this as simple as explicitly
+  setting the formatter&rsquo;s timezone to GMT+0.
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">dateProduced</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateProduced</span><span class="p">:</span> <span class="kt">Date</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/c:objc(pl)CBLCameraInitiatedTransferResult(im)suggestedFileNameExtensionForRepresentation:"></a>
                       <a name="//apple_ref/objc/Method/-suggestedFileNameExtensionForRepresentation:" class="dashAnchor"></a>
                       <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferResult(im)suggestedFileNameExtensionForRepresentation:">-suggestedFileNameExtensionForRepresentation:<wbr></a>
@@ -278,6 +321,49 @@ not recognised by the operating system.</p>
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">uti</span><span class="p">(</span><span class="k">for</span> <span class="nv">representation</span><span class="p">:</span> <span class="kt">CameraInitiatedTransferRepresentation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferResult(im)fileSizeForRepresentation:"></a>
+                      <a name="//apple_ref/objc/Method/-fileSizeForRepresentation:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferResult(im)fileSizeForRepresentation:">-fileSizeForRepresentation:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the file size of a given representation, or <code>0</code> if the size is unknown or the representation isn&rsquo;t available.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The file size of the preview representation of a result generated with an original representation may be
+  unknown, since the preview is generated on-demand in this situation.</p>
+
+</div><div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>You must only pass a single representation to this method, otherwise <code>0</code> will be returned.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nf">fileSizeForRepresentation</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Enums/CBLCameraInitiatedTransferRepresentation.html">CBLCameraInitiatedTransferRepresentation</a></span><span class="p">)</span><span class="nv">representation</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fileSize</span><span class="p">(</span><span class="k">for</span> <span class="nv">representation</span><span class="p">:</span> <span class="kt">CameraInitiatedTransferRepresentation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
 
                           </div>
                         </div>
@@ -372,6 +458,104 @@ not recognised by the operating system.</p>
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferResult(im)writeRepresentation:toURL:completionQueue:completionHandler:"></a>
+                      <a name="//apple_ref/objc/Method/-writeRepresentation:toURL:completionQueue:completionHandler:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferResult(im)writeRepresentation:toURL:completionQueue:completionHandler:">-writeRepresentation:<wbr>toURL:<wbr>completionQueue:<wbr>completionHandler:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Write the given representation to disk.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>You must only pass a single representation to this method, otherwise an error will be returned.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeRepresentation</span><span class="p">:</span>
+            <span class="p">(</span><span class="n"><a href="../Enums/CBLCameraInitiatedTransferRepresentation.html">CBLCameraInitiatedTransferRepresentation</a></span><span class="p">)</span><span class="nv">representation</span>
+                      <span class="nf">toURL</span><span class="p">:(</span><span class="n">NSURL</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span><span class="nv">destinationUrl</span>
+            <span class="nf">completionQueue</span><span class="p">:(</span><span class="n">dispatch_queue_t</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">completionQueue</span>
+          <span class="nf">completionHandler</span><span class="p">:</span>
+              <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLConstants.h@T@CBLErrorableOperationCallback">CBLErrorableOperationCallback</a></span><span class="p">)</span><span class="nv">completionHandler</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">_</span> <span class="nv">representation</span><span class="p">:</span> <span class="kt">CameraInitiatedTransferRepresentation</span><span class="p">,</span> <span class="n">to</span> <span class="nv">destinationUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">completionQueue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>representation</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The representation to write.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>destinationUrl</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The URL at which to write the representation. CascableCore will attempt to create the parent
+                  directory tree if it isn&rsquo;t already present.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completionQueue</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The queue on which to call the completion handler.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completionHandler</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The completion handler to be called when the operation succeeds or fails.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/c:objc(pl)CBLCameraInitiatedTransferResult(im)generateDataForRepresentation:completionHandler:"></a>
                       <a name="//apple_ref/objc/Method/-generateDataForRepresentation:completionHandler:" class="dashAnchor"></a>
                       <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferResult(im)generateDataForRepresentation:completionHandler:">-generateDataForRepresentation:<wbr>completionHandler:<wbr></a>
@@ -437,6 +621,96 @@ not recognised by the operating system.</p>
                                 <td>
                                   <div>
                                     <p>The completion handler, called on the main queue, when the operation succeeds or fails.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferResult(im)generateDataForRepresentation:completionQueue:completionHandler:"></a>
+                      <a name="//apple_ref/objc/Method/-generateDataForRepresentation:completionQueue:completionHandler:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferResult(im)generateDataForRepresentation:completionQueue:completionHandler:">-generateDataForRepresentation:<wbr>completionQueue:<wbr>completionHandler:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Retrieve the given representation as an in-memory data object.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>You must only pass a single representation to this method, otherwise an error will be returned.</p>
+
+</div><div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>This operation may fail if the representation is large enough to risk crashes due to high memory usage.
+     If this happens, the resulting error will have the code <code>CBLErrorCodeObjectTooLarge</code>.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">generateDataForRepresentation</span><span class="p">:</span>
+            <span class="p">(</span><span class="n"><a href="../Enums/CBLCameraInitiatedTransferRepresentation.html">CBLCameraInitiatedTransferRepresentation</a></span><span class="p">)</span><span class="nv">representation</span>
+                      <span class="nf">completionQueue</span><span class="p">:(</span><span class="n">dispatch_queue_t</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="nv">completionQueue</span>
+                    <span class="nf">completionHandler</span><span class="p">:</span>
+                        <span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">_Nonnull</span><span class="p">)(</span><span class="n">NSData</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
+                                          <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="n">completionHandler</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">generateData</span><span class="p">(</span><span class="k">for</span> <span class="nv">representation</span><span class="p">:</span> <span class="kt">CameraInitiatedTransferRepresentation</span><span class="p">,</span> <span class="nv">completionQueue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>representation</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The representation to retrieve.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completionQueue</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The queue on which to call the completion handler.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completionHandler</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The completion handler to be called when the operation succeeds or fails.</p>
                                   </div>
                                 </td>
                               </tr>
@@ -879,6 +1153,9 @@ not recognised by the operating system.</p>
                   <a href="../Protocols/CBLVideoFormatPropertyValue.html">CBLVideoFormatPropertyValue</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLVideoMetadata.html">CBLVideoMetadata</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLVideoTimerValue.html">CBLVideoTimerValue</a>
                 </li>
               </ul>
@@ -961,6 +1238,12 @@ not recognised by the operating system.</p>
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLPropertyCommonValue">CBLPropertyCommonValue</a>
                 </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLVideoMetadataDelivery">CBLVideoMetadataDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLVideoMetadataPreflight">CBLVideoMetadataPreflight</a>
+                </li>
               </ul>
             </li>
             <li class="nav-group-name">
@@ -979,7 +1262,7 @@ not recognised by the operating system.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2024 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2024-07-18)</p>
+          <p>&copy; 2024 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2024-11-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>

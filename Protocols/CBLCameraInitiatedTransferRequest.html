@@ -205,6 +205,49 @@ This value may not be available until the transfer completes (or at all) — see
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferRequest(py)dateProduced"></a>
+                      <a name="//apple_ref/objc/Property/dateProduced" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferRequest(py)dateProduced">dateProduced</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the date and time at which the request was produced. CascableCore will attempt to match this value
+to the underlying image&rsquo;s EXIF timestamp, if available. Otherwise, this will be the date and time at which
+the request was received from the camera.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Since EXIF doesn&rsquo;t tend to have the concept of timezones, dates from this property will also adhere to
+  that &ldquo;standard&rdquo; in that they&rsquo;ll be expressed in the GMT+0 timezone. I.e., an image produced at 14:00 local
+  time in California will actually be expressed at 14:00 GMT. When dealing with these values (or showing them
+  to the user), make sure you account for this - when using date formatters, this as simple as explicitly
+  setting the formatter&rsquo;s timezone to GMT+0.
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nonnull</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">dateProduced</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">dateProduced</span><span class="p">:</span> <span class="kt">Date</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/c:objc(pl)CBLCameraInitiatedTransferRequest(py)availableRepresentations"></a>
                       <a name="//apple_ref/objc/Property/availableRepresentations" class="dashAnchor"></a>
                       <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferRequest(py)availableRepresentations">availableRepresentations</a>
@@ -263,6 +306,93 @@ This value may not be available until the transfer completes (or at all) — see
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">canProvide</span><span class="p">(</span><span class="n">_</span> <span class="nv">representation</span><span class="p">:</span> <span class="kt">CameraInitiatedTransferRepresentation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferRequest(im)predictedFileSizeForRepresentation:"></a>
+                      <a name="//apple_ref/objc/Method/-predictedFileSizeForRepresentation:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferRequest(im)predictedFileSizeForRepresentation:">-predictedFileSizeForRepresentation:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns a predicted file size for the given representation, or <code>0</code> if the representation isn&rsquo;t available
+or its size is currently unknown.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>It&rsquo;s very rare that a preview representation&rsquo;s size will be known at this stage.</p>
+
+</div><div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>You must only pass a single representation to this method, otherwise <code>0</code> will be returned.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nf">predictedFileSizeForRepresentation</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Enums/CBLCameraInitiatedTransferRepresentation.html">CBLCameraInitiatedTransferRepresentation</a></span><span class="p">)</span><span class="nv">representation</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">predictedFileSize</span><span class="p">(</span><span class="k">for</span> <span class="nv">representation</span><span class="p">:</span> <span class="kt">CameraInitiatedTransferRepresentation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLCameraInitiatedTransferRequest(im)predictedUTIForRepresentation:"></a>
+                      <a name="//apple_ref/objc/Method/-predictedUTIForRepresentation:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLCameraInitiatedTransferRequest(im)predictedUTIForRepresentation:">-predictedUTIForRepresentation:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns the file type UTI for the given representation, or <code>nil</code> if the representation isn&rsquo;t available or if the
+format of the requested representation is unknown before loading.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>You must only pass a single representation to this method, otherwise <code>nil</code> will be returned.</p>
+
+</div><div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This method may fall back to returning <code>kUTTypeData</code> if the original representation is in a RAW image format
+not recognised by the operating system.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">predictedUTIForRepresentation</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Enums/CBLCameraInitiatedTransferRepresentation.html">CBLCameraInitiatedTransferRepresentation</a></span><span class="p">)</span><span class="nv">representation</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">predictedUTI</span><span class="p">(</span><span class="k">for</span> <span class="nv">representation</span><span class="p">:</span> <span class="kt">CameraInitiatedTransferRepresentation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                           </div>
                         </div>
@@ -882,6 +1012,9 @@ particularly useful if, for example, you want to show previews of RAW images.</p
                   <a href="../Protocols/CBLVideoFormatPropertyValue.html">CBLVideoFormatPropertyValue</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLVideoMetadata.html">CBLVideoMetadata</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLVideoTimerValue.html">CBLVideoTimerValue</a>
                 </li>
               </ul>
@@ -964,6 +1097,12 @@ particularly useful if, for example, you want to show previews of RAW images.</p
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLPropertyCommonValue">CBLPropertyCommonValue</a>
                 </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLVideoMetadataDelivery">CBLVideoMetadataDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLVideoMetadataPreflight">CBLVideoMetadataPreflight</a>
+                </li>
               </ul>
             </li>
             <li class="nav-group-name">
@@ -982,7 +1121,7 @@ particularly useful if, for example, you want to show previews of RAW images.</p
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2024 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2024-07-18)</p>
+          <p>&copy; 2024 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2024-11-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>

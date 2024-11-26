@@ -904,6 +904,154 @@ operation to continue, or <code>NO</code> to cancel.</p>
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(im)fetchVideoMetadataWithPreflightBlock:metadataDeliveryBlock:"></a>
+                      <a name="//apple_ref/objc/Method/-fetchVideoMetadataWithPreflightBlock:metadataDeliveryBlock:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(im)fetchVideoMetadataWithPreflightBlock:metadataDeliveryBlock:">-fetchVideoMetadataWithPreflightBlock:<wbr>metadataDeliveryBlock:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Fetch video metadata for the given file system item. Only works with known video types.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fetchVideoMetadataWithPreflightBlock</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLVideoMetadataPreflight">CBLVideoMetadataPreflight</a></span><span class="p">)</span><span class="nv">preflight</span>
+                       <span class="nf">metadataDeliveryBlock</span><span class="p">:</span>
+                           <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLVideoMetadataDelivery">CBLVideoMetadataDelivery</a></span><span class="p">)</span><span class="nv">delivery</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchVideoMetadata</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">VideoMetadataPreflight</span><span class="p">,</span> <span class="n">metadataDeliveryBlock</span> <span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">VideoMetadataDelivery</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>preflight</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A block that will be called when the metadata is about to be fetched. Return <code>YES</code> to allow the
+operation to continue, or <code>NO</code> to cancel.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>delivery</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block that will be called when the metadata has successfully been fetched, or an error occurred.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(pl)CBLFileSystemItem(im)fetchVideoMetadataWithPreflightBlock:metadataDeliveryBlock:deliveryQueue:"></a>
+                      <a name="//apple_ref/objc/Method/-fetchVideoMetadataWithPreflightBlock:metadataDeliveryBlock:deliveryQueue:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(pl)CBLFileSystemItem(im)fetchVideoMetadataWithPreflightBlock:metadataDeliveryBlock:deliveryQueue:">-fetchVideoMetadataWithPreflightBlock:<wbr>metadataDeliveryBlock:<wbr>deliveryQueue:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Fetch video metadata for the given file system item. Only works with known video types.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fetchVideoMetadataWithPreflightBlock</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLVideoMetadataPreflight">CBLVideoMetadataPreflight</a></span><span class="p">)</span><span class="nv">preflight</span>
+                       <span class="nf">metadataDeliveryBlock</span><span class="p">:</span>
+                           <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLVideoMetadataDelivery">CBLVideoMetadataDelivery</a></span><span class="p">)</span><span class="nv">delivery</span>
+                               <span class="nf">deliveryQueue</span><span class="p">:</span>
+                                   <span class="p">(</span><span class="n">nonnull</span> <span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">deliveryQueue</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchVideoMetadata</span><span class="p">(</span><span class="n">preflightBlock</span> <span class="nv">preflight</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">VideoMetadataPreflight</span><span class="p">,</span> <span class="n">metadataDeliveryBlock</span> <span class="nv">delivery</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">VideoMetadataDelivery</span><span class="p">,</span> <span class="nv">deliveryQueue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>preflight</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A block that will be called when the metadata is about to be fetched. Return <code>YES</code> to allow the
+operation to continue, or <code>NO</code> to cancel.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>delivery</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The block that will be called when the metadata has successfully been fetched, or an error occurred.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>deliveryQueue</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The queue on which the delivery block will be called.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/c:objc(pl)CBLFileSystemItem(im)fetchPreviewWithPreflightBlock:previewDeliveryBlock:"></a>
                       <a name="//apple_ref/objc/Method/-fetchPreviewWithPreflightBlock:previewDeliveryBlock:" class="dashAnchor"></a>
                       <a class="token" href="#/c:objc(pl)CBLFileSystemItem(im)fetchPreviewWithPreflightBlock:previewDeliveryBlock:">-fetchPreviewWithPreflightBlock:<wbr>previewDeliveryBlock:<wbr></a>
@@ -1651,6 +1799,9 @@ contain the value returned in the <code>preflight</code> block.</p>
                   <a href="../Protocols/CBLVideoFormatPropertyValue.html">CBLVideoFormatPropertyValue</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Protocols/CBLVideoMetadata.html">CBLVideoMetadata</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Protocols/CBLVideoTimerValue.html">CBLVideoTimerValue</a>
                 </li>
               </ul>
@@ -1733,6 +1884,12 @@ contain the value returned in the <code>preflight</code> block.</p>
                 <li class="nav-group-task">
                   <a href="../Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLPropertyCommonValue">CBLPropertyCommonValue</a>
                 </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLVideoMetadataDelivery">CBLVideoMetadataDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLVideoMetadataPreflight">CBLVideoMetadataPreflight</a>
+                </li>
               </ul>
             </li>
             <li class="nav-group-name">
@@ -1751,7 +1908,7 @@ contain the value returned in the <code>preflight</code> block.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2024 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2024-07-18)</p>
+          <p>&copy; 2024 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2024-11-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>

@@ -1102,7 +1102,7 @@ you can cancel requests for thumbnails that are no longer onscreen.</p>
                           <p>The callback block preflight signature for fetching image EXIF metadata. This will be called just before the metadata
 is about to be fetched.</p>
 
-<p>This can be useful when implementing (example) a scrolling list of iamges — if the user is scrolling quickly,
+<p>This can be useful when implementing (example) a scrolling list of images — if the user is scrolling quickly,
 you can cancel metadata requests for images that are no longer onscreen.</p>
 
                         </div>
@@ -1213,6 +1213,142 @@ you can cancel metadata requests for images that are no longer onscreen.</p>
                                 <td>
                                   <div>
                                     <p>If the operation succeeded, ImageIO-compatible metadata.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:CBLFileSystemItem.h@T@CBLVideoMetadataPreflight"></a>
+                      <a name="//apple_ref/objc/Type/CBLVideoMetadataPreflight" class="dashAnchor"></a>
+                      <a class="token" href="#/c:CBLFileSystemItem.h@T@CBLVideoMetadataPreflight">CBLVideoMetadataPreflight</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The callback block preflight signature for fetching video metadata. This will be called just before the metadata
+is about to be fetched.</p>
+
+<p>This can be useful when implementing (example) a scrolling list of thumbnails — if the user is scrolling quickly,
+you can cancel metadata requests for images that are no longer onscreen.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="n">CBLVideoMetadataPreflight</span><span class="p">)(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/CBLFileSystemItem.html">CBLFileSystemItem</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">)</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">VideoMetadataPreflight</span> <span class="o">=</span> <span class="p">(</span><span class="n">any</span> <span class="kt">FileSystemItem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>item</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The filesystem item the metadata will be fetched for.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>Return <code>YES</code> to continue to fetch the metadata, otherwise <code>NO</code> to cancel.</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:CBLFileSystemItem.h@T@CBLVideoMetadataDelivery"></a>
+                      <a name="//apple_ref/objc/Type/CBLVideoMetadataDelivery" class="dashAnchor"></a>
+                      <a class="token" href="#/c:CBLFileSystemItem.h@T@CBLVideoMetadataDelivery">CBLVideoMetadataDelivery</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The callback block signature for a completed or failed video metadata requests.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">CBLVideoMetadataDelivery</span><span class="p">)(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/CBLFileSystemItem.html">CBLFileSystemItem</a></span><span class="o">&gt;</span> <span class="n">_Nonnull</span><span class="p">,</span>
+                                         <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
+                                         <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/CBLVideoMetadata.html">CBLVideoMetadata</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">VideoMetadataDelivery</span> <span class="o">=</span> <span class="p">(</span><span class="n">any</span> <span class="kt">FileSystemItem</span><span class="p">,</span> <span class="p">(</span><span class="n">any</span> <span class="kt">Error</span><span class="p">)?,</span> <span class="p">(</span><span class="n">any</span> <span class="kt">VideoMetadata</span><span class="p">)?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>item</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The filesystem item the metadata is for.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>error</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>If the operation failed, an error object that describes the failure.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>videoMetadata</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>If the operation succeeded, the metadata.</p>
                                   </div>
                                 </td>
                               </tr>
@@ -1817,6 +1953,9 @@ the desired instruction.</p>
                   <a href="Protocols/CBLVideoFormatPropertyValue.html">CBLVideoFormatPropertyValue</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Protocols/CBLVideoMetadata.html">CBLVideoMetadata</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Protocols/CBLVideoTimerValue.html">CBLVideoTimerValue</a>
                 </li>
               </ul>
@@ -1899,6 +2038,12 @@ the desired instruction.</p>
                 <li class="nav-group-task">
                   <a href="Type%20Definitions.html#/c:CBLCameraPropertyAPI.h@T@CBLPropertyCommonValue">CBLPropertyCommonValue</a>
                 </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLVideoMetadataDelivery">CBLVideoMetadataDelivery</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Type%20Definitions.html#/c:CBLFileSystemItem.h@T@CBLVideoMetadataPreflight">CBLVideoMetadataPreflight</a>
+                </li>
               </ul>
             </li>
             <li class="nav-group-name">
@@ -1917,7 +2062,7 @@ the desired instruction.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2024 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2024-07-18)</p>
+          <p>&copy; 2024 <a class="link" href="https://github.com/cascable/" target="_blank" rel="external noopener">Cascable AB</a>. All rights reserved. (Last updated: 2024-11-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>
